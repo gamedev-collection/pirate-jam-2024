@@ -1,0 +1,7620 @@
+fileFormatVersion: 2
+guid: 4e7cca6f858a316438ad1e9a64945f4e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Natural-no-bg_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d913b3b3880cd4ca9f450e883f40a9
+      internalID: -1603483713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d6c716b33690a40bc040b7cb668a70
+      internalID: 1524567535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861b62c999c5c6b4ba605f9cdba35378
+      internalID: 1931012227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70baa4dd71cfe834abd530fbaf8480ff
+      internalID: 1153731668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_4
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ace8d65b461c1c468a933b080ee37ba
+      internalID: -1998315981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_5
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c02485b94ada664ab240f66cd80b15b
+      internalID: -708482528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cda04e3d2a110544a2d13b2c932683b
+      internalID: -240349006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc0d72d1756832448300a35a672ecdc
+      internalID: 1016147793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b7ee4f90594664f8ac451cc81f5c69
+      internalID: -2030100479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_9
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c2bf3991c8067449f5057e08bd5e9a
+      internalID: -1166935647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_10
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44d9c0ad41cc8b469382ed6b35cfb41
+      internalID: -1613849253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_11
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8ca348dd438b14190f0460086c1b2f
+      internalID: 1611971871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_12
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 220
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6012e6e0d1a7a9543b164127a8db886a
+      internalID: 239805118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_13
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5788d4ae0b061af4f895c2b00cad4e62
+      internalID: -683065574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_14
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2421129a55b62e1499694ba7401588aa
+      internalID: -1095826666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60891fc016d829e40ba2bab544fb895d
+      internalID: -1293579789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bffe12a0e899894ba2ec5bc7225bf09
+      internalID: -2040235963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_17
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5945b1590a7270b4a9fbda2d486834d8
+      internalID: -1583135297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_18
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1d54cc8568b404ea3ca7092164bea3
+      internalID: -1948327187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7816479a7bf7a34a8303811aa05a8da
+      internalID: -1902435058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_20
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd30c62d2c8029745b592703f14a6f93
+      internalID: 1645065943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1901bd37b872c047972115cd9423c6a
+      internalID: 684869027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_22
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702c34cf648278846b2eb8807ca7fc8e
+      internalID: -704581436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_23
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9578428336bb2244a9447fc9d40adbd
+      internalID: -914419000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_24
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9259bf667aa837d4b85227a6a2c402d8
+      internalID: -1283817561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46c833df9a5bce4dace952d413a9e95
+      internalID: 1106827020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_26
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56700a90bd5f8ac45931912f3b6f914e
+      internalID: -1909751736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_27
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cd9e6b15c8fab46918c2994032be54
+      internalID: 1006068854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_28
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e9fc2dd0e65304289ccf804d9f3ca0
+      internalID: 1906670702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_29
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d35d2752664024ebb443804f6bbba9
+      internalID: -860402471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_30
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a91191ee03c6eb469e1be43fc44bb33
+      internalID: -504282831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_31
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00065df1c4dc2624ebbcd2b629a5f49d
+      internalID: 1154994792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_32
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 210
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44e27e85293ec347b9de3e466bf3eb5
+      internalID: -1300010871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_33
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d0320b1a8bb3f4a9ac1368374b9d51
+      internalID: 451737634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_34
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c1538ad9a853949a05f3a34bbc6991
+      internalID: 675774849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_35
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c515f4372ef61e8478ab568ec9cbf72b
+      internalID: 1044230561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_36
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3bce81ce93cca9478b080d28c0012f7
+      internalID: 77349659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_37
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd57ac956b106c4e90cf3cc09594e37
+      internalID: 1913554370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_38
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcabd654dd66fc46b3e438df92f6743
+      internalID: 612297132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_39
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ff9788f78c97641bf585d04aa56c22
+      internalID: 1080516447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_40
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b5cfa71ab55f3489740d579ba33c4a
+      internalID: -77391729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_41
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b17a6d5ceaa4349b042a25a15624b7
+      internalID: 1619183383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_42
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bca670eb931844c9bc8c31526bf12e
+      internalID: -711745387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_43
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec9daeed4363ff41bf1369bbfd7853f
+      internalID: -948310528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_44
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d802c70a608fc074d9007485bceb2c0d
+      internalID: 2096898093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ddc4d34df84d848a63608d7a5b831b
+      internalID: 2047934702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_46
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f92931a09e632646bd6aec0ac4f14d2
+      internalID: 340696121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_47
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2366354cae4ae3740a1e372613595ba4
+      internalID: 1534567537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_48
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef8ab39994c83940b50f1bedaf08e1d
+      internalID: -849160976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_49
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b44a3c7b0981f468b1cbd6e735907a
+      internalID: 1429854356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_50
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88501002d498a5419ad986640955721
+      internalID: 2285887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_51
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1d3dd1c8fb92140bd3f1646617ad11
+      internalID: -1146098885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_52
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6251eebd3e45e6a41b5f480f02a298c4
+      internalID: -1762967656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_53
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 200
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b959614e6e10dda4796f0ba7e73b6d2e
+      internalID: 451857332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_54
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfea43cd7767f54abbda0a2c0d6ef92
+      internalID: 1850108431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_55
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842db7aeb3901004db4b2b5a26ca302e
+      internalID: 243130784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_56
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e42cc84939a91849a51081ae4ad794d
+      internalID: -1620858382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_57
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e884fcd26f735904495033994e98f892
+      internalID: 263359136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_58
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a37becd119dca4094be9ddd7260cce
+      internalID: 233385882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_59
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c77c515fb68954eb3663faad6a7d69
+      internalID: 1377750868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_60
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c2bb70e1f7ed74b8c44c346d0a25be
+      internalID: 1141847978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_61
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c71dd06a5c9524683e9785126fe12a
+      internalID: -1640887786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_62
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c42ee03a04d4f74d9c747a5f55d9196
+      internalID: 1275582133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_63
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225eab458e4a4c54baf208f13e7c5f0f
+      internalID: 606140654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_64
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c89ead277794c42a1f909ac228ad01
+      internalID: -283189950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_65
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8da532819c865464f9a6e39dbf5e2373
+      internalID: -1270908671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_66
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ba80634bfcde94c894d7cfe90f0773
+      internalID: 607773081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_67
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06edd84aba886d341a807cc33433fd1c
+      internalID: 1064057941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_68
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905db284302f0a04e9b013faf9c5e76e
+      internalID: 613464575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_69
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55af5cad9ad55fa4e82121914f9def19
+      internalID: 1848074602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_70
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ca6e5b77cc4b84bb0a324a31fb86a7
+      internalID: -1457353855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_71
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f44f299d84ade1419c123b4dc2deece
+      internalID: 124532074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_72
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 190
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb2446ba2a01fb43a33300e4fdb7d33
+      internalID: 1955181074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_73
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 934880b82b0c75d499e80a5b4287252a
+      internalID: 859474542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_74
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce455d749c515e44aacb6dc0d3b0fe79
+      internalID: 555567458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_75
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdeee9f61dd6b644a3bc4ce71d7d100
+      internalID: -693475712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_76
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de06c8ee1ebb25e49a3462d80a0e17e5
+      internalID: 1656162893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_77
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fe68246b56559478b07ff1d91cc374
+      internalID: 387576114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_78
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f00c4266b7621a479d3ab7e72c81f5c
+      internalID: 249591239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_79
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced578195847c0943b4e3c02da6392eb
+      internalID: -700442189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_80
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8548613773abca4ab4e2b71e570e6d5
+      internalID: 722075224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_81
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8c53056cffbfe4f853ada53bd941b6
+      internalID: 1046047149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_82
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843064876e9559f438c3754c12bc8e4d
+      internalID: -1222599856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_83
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d70730c34a1fd4d8c3f4e08d749c58
+      internalID: -1472345276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_84
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28933a415b6d0ee4ba7cb3afc742fc8f
+      internalID: -97202476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_85
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be1db96701ff3754ea9e05c313c7c8fe
+      internalID: -494845176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_86
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafacecbb516a3d41a349bd01a68569d
+      internalID: 1266710688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_87
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593b3cbf5f33daf438364cf66920ed06
+      internalID: 817642045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_88
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c27d32f2d44a464094add714a3c85b8
+      internalID: 1408903198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_89
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5ac96fe0cba2e4f98b361025d82c0c
+      internalID: 845224672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_90
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11721e194723c194d9bf1b22a3502fd1
+      internalID: -1432462254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_91
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 180
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a3120713c3226439e288097155cfdc
+      internalID: -1411509622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_92
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e8199098feef54babc77068af65312
+      internalID: -11783515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_93
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c547970667e613e4b86102b1ba6db184
+      internalID: -615341074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_94
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a009301bdc2c204bb039d717dcb6ee4
+      internalID: -1648620842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_95
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21e49ed9671f974f83373d23e027735
+      internalID: -832004881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_96
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40dd12544bd8fb4d87132d7ba98974c
+      internalID: 1068026266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_97
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5ecb6d90fdb1b43b8a2733ebe92978
+      internalID: -754059293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_98
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cf3d97f6026c3448f84eff073eb2b9
+      internalID: 2093104336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_99
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d2ec83f24de9441942eeedabac9432
+      internalID: -660892879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_100
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3853cdceb55adb4fa04f18c42953aca
+      internalID: -1063508246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_101
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae403bd943ddfdd48a30528cc0934b44
+      internalID: 360155890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_102
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb56f4f4d6f7b04cba85f869a367081
+      internalID: -1449514215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_103
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f0c697eb978c94f9e3c8b4e8cd8581
+      internalID: -2120309193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_104
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0d0751714ce1e4792174502aa2c19b
+      internalID: -1358115526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_105
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5b92835af7f394b904d7188fd697f7
+      internalID: 453088043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_106
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5898cb01601429b4d91bf9965d03700e
+      internalID: -1520630757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_107
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 170
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5f425d5295624240b2fe7e44abf58e1
+      internalID: 614472759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_108
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032c2ed5d99375543824c9e20f8a9f8a
+      internalID: 2095225202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_109
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8558545312c41e45a5adbe6c225e778
+      internalID: 1198767385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_110
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d36bbf85a6f6374f9955cc164e2cae6
+      internalID: -1276970531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_111
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7b8db7b64f91e48951b18e66c055a5
+      internalID: -2105454668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_112
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61661d475e0c26f479255a8bb4c9668d
+      internalID: -1762343997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_113
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41183fbc6dd1f94ab1114a26cd34023
+      internalID: -1494910461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_114
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c81717c8f062746a1670b3b99015ad
+      internalID: -1099675972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_115
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b76b68602f82ad4ebf35a42c16039dc
+      internalID: -1579277241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_116
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a8e6327a7d214449954704a4704252
+      internalID: -520985067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_117
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f89e151e66439642bd3c1736dcbc41e
+      internalID: -158069343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_118
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51442ed59340e3346a370e8782cc9e91
+      internalID: 1527254654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_119
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 160
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80181ecf8c5b8c44db8994baef83b1e7
+      internalID: -1835722873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_120
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 150
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80700fea0bec2df4a88b3a297aa625a5
+      internalID: 1391371629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_121
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 150
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b5f296f4ed2f94f9e4b41c8ed80724
+      internalID: -1360262656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_122
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 150
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8915acd66af5efd428ca7fe3b2cc591c
+      internalID: 1586756383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_123
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 150
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f0797cabedc044d808a60bbb3435fa
+      internalID: -14260433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_124
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 150
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbdec2432d2c974abf055cb6e836a0a
+      internalID: -1207812744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_125
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 150
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e709b57d2c1c34fb69b5aa8b755ff6
+      internalID: 1869335724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_126
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 150
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610635bbe2607d74089aa85937b61b28
+      internalID: 2067838019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_127
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 150
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901fc878dd157fb48862d4f42cbb557a
+      internalID: -460554686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_128
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d816207a1ced2a4cb76d652461bb3ea
+      internalID: 1233428330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_129
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baa4394e9be8dd44b8bd384d6950d26
+      internalID: 726968480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_130
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc279dd69926d1a44a9c9772d0e2525a
+      internalID: 2022087615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_131
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad645490bd0f774882f4ef5d98e585e
+      internalID: -2042511200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_132
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918b73845dd4a7040ba8fb02cedeac2a
+      internalID: -402352116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_133
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecac88f849d241844ab9ce36a5cbc00f
+      internalID: 1606146332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_134
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363cb3eceef45664f9c05e108f528c25
+      internalID: -412409286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_135
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f481525abf7cdc047b7ffe902e082d35
+      internalID: 1911208833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_136
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054ed0d728086934981dad70c745cc03
+      internalID: 1942238075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_137
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9fe7170b725ca448a0662f3f8b0f4f
+      internalID: -2075399388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_138
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 140
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc91809be177b864ea4b251e71c05a93
+      internalID: -1696874112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_139
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c1a5225a1496f49849d9c13bdde82a
+      internalID: -1472297228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_140
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160a974150bdad947ae0c005fa8181cf
+      internalID: 843046412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_141
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a486e56eb0709734f9c7cbdc7040eb70
+      internalID: -5605083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_142
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd0c0a171172ce48881f9aefac0b26e
+      internalID: -705467796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_143
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97162755ec7030b45900b03906c95ee8
+      internalID: 949893458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_144
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc87ff757d76b547954daba92e08fe5
+      internalID: 433664150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_145
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722e3596ae377834a9867185a96317e0
+      internalID: 82597249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_146
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcf5317e4483fa4e8a463d7aa3144a4
+      internalID: 839342060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_147
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f633324eb809a8c42b7a681fa4a32a91
+      internalID: 398000056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_148
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260c38632ae0de24b9c6e1be2a730c9d
+      internalID: -788104539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_149
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c42510d2e6315b4589468b7b094bb88
+      internalID: 187785489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_150
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200daa71b5a5d1648ba16a700718064d
+      internalID: 136633601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_151
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022c16d4363b61f4fad30bf223f44d9c
+      internalID: 1760655898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_152
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6dd8d8e9361b8409d970769c57fe38
+      internalID: -225331892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_153
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6512db4eca45179468437a07a1e759a5
+      internalID: -1593383098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_154
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b30d5c167a67f459fffc01068ef1be
+      internalID: -147803399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_155
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9762fb5525bcf5b409b029bf47cc97cc
+      internalID: -2086898133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_156
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 130
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7b56f04c63fb14b97efddb1aad6985
+      internalID: 2063282171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_157
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54580c1c7af6564185bdf96ea8731e4
+      internalID: -1378234759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_158
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713bc048b04437344907ac57b722b83c
+      internalID: -93335713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_159
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631b13721e6460c49b6db432524c1b56
+      internalID: -1328979513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_160
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad80361fd57f054f9ecad0f9204affa
+      internalID: 607311760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_161
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09635372e00ff9c4da79a59166cbe68e
+      internalID: -575704439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_162
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c760791dceaeec84ba6b8ec10ed81353
+      internalID: 935216239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_163
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce90e053d2b556645a0c40580d3791bf
+      internalID: 1617265032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_164
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22c35cdf42e78e4cb29f8bb43650960
+      internalID: -1085154792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_165
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cd5e50ccac8744b80c7e67c95302ca
+      internalID: -239685126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_166
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb1f25e8cb1bd44a995178d9b975010
+      internalID: 958170974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_167
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d3057177e922b40a6e0dd33bb133bb
+      internalID: 1575398789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_168
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f726e88710d70d647aba7cea073e6580
+      internalID: -724171783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_169
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50afb0eda0c9b9c458419240c7acabb5
+      internalID: 1939275710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_170
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dfb73eaaa6ba244084bd982c08b8c4d
+      internalID: 388831372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_171
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1068e2ab89759c74d98328b16cbeef88
+      internalID: 1090689370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_172
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631d958860dc35a4ebcb22257b566200
+      internalID: -1202781415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_173
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f99c9fe80def643bf00099b2df027e
+      internalID: -171549600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_174
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83ce00d98cb6094f82599751d7bcc92
+      internalID: -1620615268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_175
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 120
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127a90e8f56bfc84a98003b36482fba8
+      internalID: 1255109718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_176
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b95efaf8b979df4e85cdd1c2cde2889
+      internalID: 1746107692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_177
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3172277b1515f4a4c97bce26aa461b11
+      internalID: -524792736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_178
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4e60bfb85ffea4a96760c04162bf70
+      internalID: -1234484470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_179
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e847bb2ecb7316e4f8f750a9c3a091b2
+      internalID: 522775189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_180
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2c39a3774176c47aea4ae23b0fc998
+      internalID: 651618610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_181
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b00cbff95fefd45bf0e01d79b8b0b8
+      internalID: 1764366009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_182
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3e86da619ac1c47841e8e0074b2c5b
+      internalID: -736963661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_183
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd65918a33c81542820475f54b19056
+      internalID: 1398390409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_184
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e79450a8964fd44d96ee46fe5a3613c
+      internalID: 1750809506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_185
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975a4a605c80ee24dafe50d6a8405591
+      internalID: -1611823389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_186
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15872a22c61c42444bef79498a218c17
+      internalID: 552221277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_187
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01eede7af4539c84595f85e2f3848d3b
+      internalID: -852565647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_188
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b21c20ba22f8e41894bfa096317e08
+      internalID: 1444070945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_189
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9391018a1d7400947b03c8c8922a09a4
+      internalID: -396522786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_190
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cba9d05674e4784594e7d5dfe781664
+      internalID: -716870228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_191
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 110
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93de850d909a2b8499eb5e68df278401
+      internalID: -360492324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_192
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9db7e25d0d90b42884f80b543c2f81
+      internalID: -1851329847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_193
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efbee92b6f93fa48a8c6743542fd63e
+      internalID: -403692159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_194
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1b3db6b1c94a243893688a7506bbaf
+      internalID: 1027732765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_195
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb374a5f4988ff44bad045bd294992b9
+      internalID: -39958171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_196
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b3fd8e3f078ff43bb4c44d801febaf
+      internalID: 841400954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_197
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3232cb18cb8d5489e7ff43847a7d7b
+      internalID: -375752419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_198
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17bfc8cf3c99dc478f1a2c77ffa3d02
+      internalID: -730545534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_199
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b125f134bb5643546b65f24b8da7cce9
+      internalID: -1670560542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_200
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a5075f800299f44ad2f6cfcc0931ca
+      internalID: -1953978037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_201
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a987069fdc40e647b23753e40aa4abf
+      internalID: -560311353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_202
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6132dc48e6d418842878017ae26b182f
+      internalID: -169988700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_203
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f1b6c2cec2752408dc7e76ab8f15a9
+      internalID: 1829658582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_204
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f9d8f4d174a6e4d8856b6e391b0286
+      internalID: 577799844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_205
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aba603df9a53a544a7ac4065b18463d
+      internalID: 1480546373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_206
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a22051b7b25ad448101141fa6b1e8c
+      internalID: -1909434871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_207
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4f65ce4bed5ce4795cefec42cea43e
+      internalID: -1345602090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_208
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a4f681a5cc46e4c9510c70cc9f354e
+      internalID: -1385990983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_209
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f493641f6a7ec458bb11c9bf590ed0
+      internalID: -47815493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_210
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06abc9a9c3b7f8c44ad506ce6ea241e8
+      internalID: 408421134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_211
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4696d760860789458507640c96d2ada
+      internalID: -332877745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_212
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 100
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc8ae4e266099c43b30652bca583999
+      internalID: 1751336153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_213
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d97d518df801ca4eb3f163ebd61b50f
+      internalID: -1691920447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_214
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c0b60807167a34ea49a47fc8f2a55d
+      internalID: -690459595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_215
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3045fd4dbcb78e1488618b0f05aa46ab
+      internalID: -1846368204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_216
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4356f64a8c3c82249b790183bd8f1612
+      internalID: -826906790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_217
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728888e16b660dc40ae842471690afe5
+      internalID: -922009772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_218
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471e2d22b6af1cb4980b8050f9a9f187
+      internalID: 1809571677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_219
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e563519d8ba834bb743a1cefb4b4b6
+      internalID: 408090045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_220
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8383c11cbb5dbc4ebfff223f8151e0f
+      internalID: -899125530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_221
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b22abea3d2945d42975dd6cd7cfeac3
+      internalID: -1385017633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_222
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427d61f545fdead4ca0a60dca171ae78
+      internalID: 814276646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_223
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7b446f5db57144587d70535132e121
+      internalID: 1970106785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_224
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f8d7167c4b8394399a0e53ecf343e3
+      internalID: -186344872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_225
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1106207607d275a49bd399c94951a3d6
+      internalID: 1097876260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_226
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657dbbc9a31bbf1439086dcfdf3fbe8e
+      internalID: -1795331418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_227
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8069b4b944bb47241b707b6fb4b3f80c
+      internalID: -1949338654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_228
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5831999379678bf44b5597b0def76881
+      internalID: 460689551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_229
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefad06bbb3d49a4a8c95f951ae7ee6f
+      internalID: -63296644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_230
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 90
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d0ef8b0ccd047459801d044982f326
+      internalID: -1608461481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_231
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc4d24eb4ab91845858922e617c66fb
+      internalID: -456016644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_232
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351ab9b4607fc4149bc090dc588958d9
+      internalID: 1800253297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_233
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a470be26d1293e4bba97d441e0594b1
+      internalID: -1738456883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_234
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f10826fe928bb8b45ba0ccc1b82e72c7
+      internalID: -1086201968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_235
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef3965274312a742931abb4adcb1b33
+      internalID: -1420878072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_236
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8c177f88e84f641a468a1e9208ef36
+      internalID: 1691564339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_237
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9fc36abad0854449d46a4d302fbbf2
+      internalID: -992481930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_238
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aff398e23eef114e8b57d2554f899e9
+      internalID: -1143442250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_239
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2306cff2ab551d84a8ae057e0ad5ab94
+      internalID: -1992542702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_240
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 80
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cb7d1d4caecd74e9a552626bac9d13
+      internalID: -467412478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_241
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6d3c09b70f5e4438bde7b41dde3d65
+      internalID: 1205095792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_242
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa41f24859eb0a24a8f5699bc4f19cfd
+      internalID: -213897471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_243
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6685413a94c514a49a5406f62ed10447
+      internalID: 1322971656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_244
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc53fb7bbd8b4984192e84fc91de052f
+      internalID: 763199948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_245
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7269ed1dc1ab44a4d919bbfdffff2f30
+      internalID: -1715491055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_246
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af347f8ac5024345b747a389168be92
+      internalID: -719689041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_247
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a45cdc004d0164aa09a5addcb49039
+      internalID: 1893828670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_248
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 70
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7fff3ac7fae5242b5750ea3a3b298b
+      internalID: 460875419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_249
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47096fb03d1024b468aa7adab612eeae
+      internalID: 1370791810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_250
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e231791a6c6f7cf408bbbe37c3a2489e
+      internalID: -640523092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_251
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19517bd8ca2bce4fa9ba5a4552d210f
+      internalID: -1611724694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_252
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726ae4bd9fc220d488b67a85b03d114c
+      internalID: -190499615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_253
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f761cd82d3eeab9478bce10082c18784
+      internalID: 1083660693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_254
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd913e23a1efddf4da1f8c8fa7f34f68
+      internalID: -882693754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_255
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3093829695d28004d8fbb79fc1e764cb
+      internalID: 1499300339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_256
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c019389d1634e4298c973d2ad637b5
+      internalID: -1878013357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_257
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb47004243385d04d8ee5f03df13d809
+      internalID: 1777171142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_258
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c364f55b68bd646aec181a6b32ba77
+      internalID: 214977599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_259
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65297466aad65e646967c28a5e4dd8df
+      internalID: 1693558191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_260
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1462121259d2e6640abe5666f9eb3baa
+      internalID: 393027687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_261
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f71632bca92d045bf9cac852173c08
+      internalID: -1288603616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_262
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a136a4dbb62e34d8733f990fdd96cb
+      internalID: 1069321242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_263
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd585f81b83ae1438701fe0609430b0
+      internalID: -226237819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_264
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 60
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7ba0f70b857fa41a4add04cbee706b
+      internalID: 1181579921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_265
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4701a086827234cb9b0bb6746ac113
+      internalID: -942581287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_266
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4036298f4053794f98d4a03dd3a6a8c
+      internalID: 415719758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_267
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7224d3c94674d4b8fa44fbbfbec9d1
+      internalID: 2012828522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_268
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8832cd1a1f1b24b949f23699d4b541
+      internalID: -1700001906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_269
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb74c389468db443a72d05959979373
+      internalID: -1260105335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_270
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8c351308da0864e866399ca93cbbad
+      internalID: -792415953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_271
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bd512ac15d11041b32f58b7bd4c792
+      internalID: 707817969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_272
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad48d10eb0022447841a2902534d772
+      internalID: -2071287253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_273
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac3d0a727558074bb9554059da1e869
+      internalID: -1382448265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_274
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee102d753bdfa4d4ca78de0b495b8a2a
+      internalID: -1739517443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_275
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64bf06a8489cf946921c63cad2174df
+      internalID: -1625538349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_276
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7077f5eb67ee44c95a90f49cfc2710
+      internalID: -625649270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_277
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b939726c6b3c45d46af40897427a9201
+      internalID: 888399347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_278
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473a3edc32a94b445901441023b078b7
+      internalID: -1179401596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_279
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 50
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc9e5ba0cc55544e84dc463498b6248
+      internalID: 827631139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_280
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ede227db45aeeb458265d53926bc852
+      internalID: -1465920750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_281
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52001bafaa7017e48a3fb6fc09d6b871
+      internalID: -1626735829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_282
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900aa88c426098945b4889dec776abef
+      internalID: -1385568012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_283
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238ddc998372a9645991da3a81572af6
+      internalID: -1373055861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_284
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af523e54dbe23bc4b9aac2865d224052
+      internalID: -2133260499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_285
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3330a55fac6666b4395f444c58dc30e6
+      internalID: -658033241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_286
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06fb1c5ada23194da9743466e663227
+      internalID: 2033734651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_287
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9655b8345acfa41ba8d535961b844f
+      internalID: 1055433105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_288
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c3bdcd1e834d0045b8aacb6e6f94e78
+      internalID: 1063549425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_289
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf01a761aa375fc43a410933f2d1107b
+      internalID: 899830918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_290
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63baf7fdfa19d35499f717dd23964b6e
+      internalID: 1994730694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_291
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b64ac864dcf764fb39cd14a2b32942
+      internalID: 2137458908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_292
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c151c40b008478d4cb38632cddc6b44c
+      internalID: 1362853149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_293
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace20231899ebdd41bfffe5ffff9c0a5
+      internalID: -1849266120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_294
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8b8fbf2e8523d458e739e24abf27c2
+      internalID: 1039399395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_295
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa63973b2e7b0a438c7e220749cab74
+      internalID: 1580618722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_296
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb14381311e35d946960e9093bfec358
+      internalID: 1165159055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_297
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4f64787f9c28743af3d85f47c920a5
+      internalID: 1558968543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_298
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc0d64bf09ac6945a03bc9727986b0b
+      internalID: -710923637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_299
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b06c5f8a3a41464588e1f0b0c186683
+      internalID: -956878287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_300
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c709c9f6956b66a4b97dba89e3b46ada
+      internalID: -564895812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_301
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 40
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde995da6e4856842b27e661cd765dc5
+      internalID: 416802353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_302
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dcff3e356704b047a98767eefb1b06b
+      internalID: -1990572201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_303
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57f0015055b5ef4eb777b31300feb98
+      internalID: -1340981481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_304
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845c051e0072c8742baac087ad890af6
+      internalID: 1662009896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_305
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47291e330f668e14183b09a59bc34899
+      internalID: 712240120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_306
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526f5f0f1b933ed458e92dae3433ffb5
+      internalID: -78119470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_307
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d09517525fc527f40bd42a04a633cb65
+      internalID: 853664646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_308
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef19e99db7160942af0920f731c3cac
+      internalID: 1600899964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_309
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811e543bb4292484fa5b0a5d1565687b
+      internalID: 223317449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_310
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6799f466d21d7e74f8b6c87cda31802f
+      internalID: 100214005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_311
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50740fdf5f8f7a54abbbb20ce5919b99
+      internalID: -1719293224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_312
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c12afee8fca53c42bd86a91709f3349
+      internalID: 1400728630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_313
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1149dc370fd9a8408e0cecc590b3a2f
+      internalID: -494488906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_314
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755960535e855e04c9d1bde023403b18
+      internalID: 708380176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_315
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d329dd00cd61184cb69604c7fb52144
+      internalID: -172625938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_316
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae8f682077c58b4f929e557b0284be1
+      internalID: 629789925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_317
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 30
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4741a30e34240a642b691bd80f9ae3c2
+      internalID: -1233404987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_318
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49ae6697dbb93e43a4820faaea8765d
+      internalID: -317470756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_319
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbc0c15791b2314b8e282253289312e
+      internalID: 1419756344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_320
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd2eb96476ab3942afb83d51558c64e
+      internalID: 37619769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_321
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cafb02c4f3229247a69c9466d1c07ba
+      internalID: 1372629873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_322
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54169230ea4fc14b985e4e5d69300bd
+      internalID: 1765647990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_323
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6a9e1ac079c7d45bbecde8421d30f9
+      internalID: 559006883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_324
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f2d2461ea678149b1981059a714982
+      internalID: 691945566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_325
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5366aea8e815de944883e68b193a95c7
+      internalID: 1010521946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_326
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 307610a10c99ba14f8c6941392362f5d
+      internalID: -943563123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_327
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5571ffd22b58534b92232aba4a22257
+      internalID: 312202832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_328
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12035ee999978364482640303004c3f5
+      internalID: 454493987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_329
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abb861b21ffb42458d33b0827b0e9b6
+      internalID: -1546183811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_330
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d187ecd0cde36dc419097612b94895ee
+      internalID: -1585760341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_331
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251a1c90143bbb24987929b0cde0a162
+      internalID: 431427570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_332
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8eafa0c1ce8e140a3ac127677a3bd6
+      internalID: 587593401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_333
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 20
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b89e8924c0abc478abb54516d85b57
+      internalID: -1703885519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_334
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b20b43e447ff034a80eee03229be86a
+      internalID: -1729320838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_335
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e318f500784b34b9db5c40d39cf7f8
+      internalID: -849404229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_336
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a231528a74f4a479a640a5b1f97475
+      internalID: 1479129684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_337
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dbab239c1345641ada7e8171815e17
+      internalID: 302141508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_338
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f07a99598b6ce48a55d0ea39d00938
+      internalID: -2047723322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Natural-no-bg_339
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 10
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d984d99e2a0985a4e87993de57878d93
+      internalID: 1365406504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Natural-no-bg_0: -1603483713
+      Natural-no-bg_1: 1524567535
+      Natural-no-bg_10: -1613849253
+      Natural-no-bg_100: -1063508246
+      Natural-no-bg_101: 360155890
+      Natural-no-bg_102: -1449514215
+      Natural-no-bg_103: -2120309193
+      Natural-no-bg_104: -1358115526
+      Natural-no-bg_105: 453088043
+      Natural-no-bg_106: -1520630757
+      Natural-no-bg_107: 614472759
+      Natural-no-bg_108: 2095225202
+      Natural-no-bg_109: 1198767385
+      Natural-no-bg_11: 1611971871
+      Natural-no-bg_110: -1276970531
+      Natural-no-bg_111: -2105454668
+      Natural-no-bg_112: -1762343997
+      Natural-no-bg_113: -1494910461
+      Natural-no-bg_114: -1099675972
+      Natural-no-bg_115: -1579277241
+      Natural-no-bg_116: -520985067
+      Natural-no-bg_117: -158069343
+      Natural-no-bg_118: 1527254654
+      Natural-no-bg_119: -1835722873
+      Natural-no-bg_12: 239805118
+      Natural-no-bg_120: 1391371629
+      Natural-no-bg_121: -1360262656
+      Natural-no-bg_122: 1586756383
+      Natural-no-bg_123: -14260433
+      Natural-no-bg_124: -1207812744
+      Natural-no-bg_125: 1869335724
+      Natural-no-bg_126: 2067838019
+      Natural-no-bg_127: -460554686
+      Natural-no-bg_128: 1233428330
+      Natural-no-bg_129: 726968480
+      Natural-no-bg_13: -683065574
+      Natural-no-bg_130: 2022087615
+      Natural-no-bg_131: -2042511200
+      Natural-no-bg_132: -402352116
+      Natural-no-bg_133: 1606146332
+      Natural-no-bg_134: -412409286
+      Natural-no-bg_135: 1911208833
+      Natural-no-bg_136: 1942238075
+      Natural-no-bg_137: -2075399388
+      Natural-no-bg_138: -1696874112
+      Natural-no-bg_139: -1472297228
+      Natural-no-bg_14: -1095826666
+      Natural-no-bg_140: 843046412
+      Natural-no-bg_141: -5605083
+      Natural-no-bg_142: -705467796
+      Natural-no-bg_143: 949893458
+      Natural-no-bg_144: 433664150
+      Natural-no-bg_145: 82597249
+      Natural-no-bg_146: 839342060
+      Natural-no-bg_147: 398000056
+      Natural-no-bg_148: -788104539
+      Natural-no-bg_149: 187785489
+      Natural-no-bg_15: -1293579789
+      Natural-no-bg_150: 136633601
+      Natural-no-bg_151: 1760655898
+      Natural-no-bg_152: -225331892
+      Natural-no-bg_153: -1593383098
+      Natural-no-bg_154: -147803399
+      Natural-no-bg_155: -2086898133
+      Natural-no-bg_156: 2063282171
+      Natural-no-bg_157: -1378234759
+      Natural-no-bg_158: -93335713
+      Natural-no-bg_159: -1328979513
+      Natural-no-bg_16: -2040235963
+      Natural-no-bg_160: 607311760
+      Natural-no-bg_161: -575704439
+      Natural-no-bg_162: 935216239
+      Natural-no-bg_163: 1617265032
+      Natural-no-bg_164: -1085154792
+      Natural-no-bg_165: -239685126
+      Natural-no-bg_166: 958170974
+      Natural-no-bg_167: 1575398789
+      Natural-no-bg_168: -724171783
+      Natural-no-bg_169: 1939275710
+      Natural-no-bg_17: -1583135297
+      Natural-no-bg_170: 388831372
+      Natural-no-bg_171: 1090689370
+      Natural-no-bg_172: -1202781415
+      Natural-no-bg_173: -171549600
+      Natural-no-bg_174: -1620615268
+      Natural-no-bg_175: 1255109718
+      Natural-no-bg_176: 1746107692
+      Natural-no-bg_177: -524792736
+      Natural-no-bg_178: -1234484470
+      Natural-no-bg_179: 522775189
+      Natural-no-bg_18: -1948327187
+      Natural-no-bg_180: 651618610
+      Natural-no-bg_181: 1764366009
+      Natural-no-bg_182: -736963661
+      Natural-no-bg_183: 1398390409
+      Natural-no-bg_184: 1750809506
+      Natural-no-bg_185: -1611823389
+      Natural-no-bg_186: 552221277
+      Natural-no-bg_187: -852565647
+      Natural-no-bg_188: 1444070945
+      Natural-no-bg_189: -396522786
+      Natural-no-bg_19: -1902435058
+      Natural-no-bg_190: -716870228
+      Natural-no-bg_191: -360492324
+      Natural-no-bg_192: -1851329847
+      Natural-no-bg_193: -403692159
+      Natural-no-bg_194: 1027732765
+      Natural-no-bg_195: -39958171
+      Natural-no-bg_196: 841400954
+      Natural-no-bg_197: -375752419
+      Natural-no-bg_198: -730545534
+      Natural-no-bg_199: -1670560542
+      Natural-no-bg_2: 1931012227
+      Natural-no-bg_20: 1645065943
+      Natural-no-bg_200: -1953978037
+      Natural-no-bg_201: -560311353
+      Natural-no-bg_202: -169988700
+      Natural-no-bg_203: 1829658582
+      Natural-no-bg_204: 577799844
+      Natural-no-bg_205: 1480546373
+      Natural-no-bg_206: -1909434871
+      Natural-no-bg_207: -1345602090
+      Natural-no-bg_208: -1385990983
+      Natural-no-bg_209: -47815493
+      Natural-no-bg_21: 684869027
+      Natural-no-bg_210: 408421134
+      Natural-no-bg_211: -332877745
+      Natural-no-bg_212: 1751336153
+      Natural-no-bg_213: -1691920447
+      Natural-no-bg_214: -690459595
+      Natural-no-bg_215: -1846368204
+      Natural-no-bg_216: -826906790
+      Natural-no-bg_217: -922009772
+      Natural-no-bg_218: 1809571677
+      Natural-no-bg_219: 408090045
+      Natural-no-bg_22: -704581436
+      Natural-no-bg_220: -899125530
+      Natural-no-bg_221: -1385017633
+      Natural-no-bg_222: 814276646
+      Natural-no-bg_223: 1970106785
+      Natural-no-bg_224: -186344872
+      Natural-no-bg_225: 1097876260
+      Natural-no-bg_226: -1795331418
+      Natural-no-bg_227: -1949338654
+      Natural-no-bg_228: 460689551
+      Natural-no-bg_229: -63296644
+      Natural-no-bg_23: -914419000
+      Natural-no-bg_230: -1608461481
+      Natural-no-bg_231: -456016644
+      Natural-no-bg_232: 1800253297
+      Natural-no-bg_233: -1738456883
+      Natural-no-bg_234: -1086201968
+      Natural-no-bg_235: -1420878072
+      Natural-no-bg_236: 1691564339
+      Natural-no-bg_237: -992481930
+      Natural-no-bg_238: -1143442250
+      Natural-no-bg_239: -1992542702
+      Natural-no-bg_24: -1283817561
+      Natural-no-bg_240: -467412478
+      Natural-no-bg_241: 1205095792
+      Natural-no-bg_242: -213897471
+      Natural-no-bg_243: 1322971656
+      Natural-no-bg_244: 763199948
+      Natural-no-bg_245: -1715491055
+      Natural-no-bg_246: -719689041
+      Natural-no-bg_247: 1893828670
+      Natural-no-bg_248: 460875419
+      Natural-no-bg_249: 1370791810
+      Natural-no-bg_25: 1106827020
+      Natural-no-bg_250: -640523092
+      Natural-no-bg_251: -1611724694
+      Natural-no-bg_252: -190499615
+      Natural-no-bg_253: 1083660693
+      Natural-no-bg_254: -882693754
+      Natural-no-bg_255: 1499300339
+      Natural-no-bg_256: -1878013357
+      Natural-no-bg_257: 1777171142
+      Natural-no-bg_258: 214977599
+      Natural-no-bg_259: 1693558191
+      Natural-no-bg_26: -1909751736
+      Natural-no-bg_260: 393027687
+      Natural-no-bg_261: -1288603616
+      Natural-no-bg_262: 1069321242
+      Natural-no-bg_263: -226237819
+      Natural-no-bg_264: 1181579921
+      Natural-no-bg_265: -942581287
+      Natural-no-bg_266: 415719758
+      Natural-no-bg_267: 2012828522
+      Natural-no-bg_268: -1700001906
+      Natural-no-bg_269: -1260105335
+      Natural-no-bg_27: 1006068854
+      Natural-no-bg_270: -792415953
+      Natural-no-bg_271: 707817969
+      Natural-no-bg_272: -2071287253
+      Natural-no-bg_273: -1382448265
+      Natural-no-bg_274: -1739517443
+      Natural-no-bg_275: -1625538349
+      Natural-no-bg_276: -625649270
+      Natural-no-bg_277: 888399347
+      Natural-no-bg_278: -1179401596
+      Natural-no-bg_279: 827631139
+      Natural-no-bg_28: 1906670702
+      Natural-no-bg_280: -1465920750
+      Natural-no-bg_281: -1626735829
+      Natural-no-bg_282: -1385568012
+      Natural-no-bg_283: -1373055861
+      Natural-no-bg_284: -2133260499
+      Natural-no-bg_285: -658033241
+      Natural-no-bg_286: 2033734651
+      Natural-no-bg_287: 1055433105
+      Natural-no-bg_288: 1063549425
+      Natural-no-bg_289: 899830918
+      Natural-no-bg_29: -860402471
+      Natural-no-bg_290: 1994730694
+      Natural-no-bg_291: 2137458908
+      Natural-no-bg_292: 1362853149
+      Natural-no-bg_293: -1849266120
+      Natural-no-bg_294: 1039399395
+      Natural-no-bg_295: 1580618722
+      Natural-no-bg_296: 1165159055
+      Natural-no-bg_297: 1558968543
+      Natural-no-bg_298: -710923637
+      Natural-no-bg_299: -956878287
+      Natural-no-bg_3: 1153731668
+      Natural-no-bg_30: -504282831
+      Natural-no-bg_300: -564895812
+      Natural-no-bg_301: 416802353
+      Natural-no-bg_302: -1990572201
+      Natural-no-bg_303: -1340981481
+      Natural-no-bg_304: 1662009896
+      Natural-no-bg_305: 712240120
+      Natural-no-bg_306: -78119470
+      Natural-no-bg_307: 853664646
+      Natural-no-bg_308: 1600899964
+      Natural-no-bg_309: 223317449
+      Natural-no-bg_31: 1154994792
+      Natural-no-bg_310: 100214005
+      Natural-no-bg_311: -1719293224
+      Natural-no-bg_312: 1400728630
+      Natural-no-bg_313: -494488906
+      Natural-no-bg_314: 708380176
+      Natural-no-bg_315: -172625938
+      Natural-no-bg_316: 629789925
+      Natural-no-bg_317: -1233404987
+      Natural-no-bg_318: -317470756
+      Natural-no-bg_319: 1419756344
+      Natural-no-bg_32: -1300010871
+      Natural-no-bg_320: 37619769
+      Natural-no-bg_321: 1372629873
+      Natural-no-bg_322: 1765647990
+      Natural-no-bg_323: 559006883
+      Natural-no-bg_324: 691945566
+      Natural-no-bg_325: 1010521946
+      Natural-no-bg_326: -943563123
+      Natural-no-bg_327: 312202832
+      Natural-no-bg_328: 454493987
+      Natural-no-bg_329: -1546183811
+      Natural-no-bg_33: 451737634
+      Natural-no-bg_330: -1585760341
+      Natural-no-bg_331: 431427570
+      Natural-no-bg_332: 587593401
+      Natural-no-bg_333: -1703885519
+      Natural-no-bg_334: -1729320838
+      Natural-no-bg_335: -849404229
+      Natural-no-bg_336: 1479129684
+      Natural-no-bg_337: 302141508
+      Natural-no-bg_338: -2047723322
+      Natural-no-bg_339: 1365406504
+      Natural-no-bg_34: 675774849
+      Natural-no-bg_35: 1044230561
+      Natural-no-bg_36: 77349659
+      Natural-no-bg_37: 1913554370
+      Natural-no-bg_38: 612297132
+      Natural-no-bg_39: 1080516447
+      Natural-no-bg_4: -1998315981
+      Natural-no-bg_40: -77391729
+      Natural-no-bg_41: 1619183383
+      Natural-no-bg_42: -711745387
+      Natural-no-bg_43: -948310528
+      Natural-no-bg_44: 2096898093
+      Natural-no-bg_45: 2047934702
+      Natural-no-bg_46: 340696121
+      Natural-no-bg_47: 1534567537
+      Natural-no-bg_48: -849160976
+      Natural-no-bg_49: 1429854356
+      Natural-no-bg_5: -708482528
+      Natural-no-bg_50: 2285887
+      Natural-no-bg_51: -1146098885
+      Natural-no-bg_52: -1762967656
+      Natural-no-bg_53: 451857332
+      Natural-no-bg_54: 1850108431
+      Natural-no-bg_55: 243130784
+      Natural-no-bg_56: -1620858382
+      Natural-no-bg_57: 263359136
+      Natural-no-bg_58: 233385882
+      Natural-no-bg_59: 1377750868
+      Natural-no-bg_6: -240349006
+      Natural-no-bg_60: 1141847978
+      Natural-no-bg_61: -1640887786
+      Natural-no-bg_62: 1275582133
+      Natural-no-bg_63: 606140654
+      Natural-no-bg_64: -283189950
+      Natural-no-bg_65: -1270908671
+      Natural-no-bg_66: 607773081
+      Natural-no-bg_67: 1064057941
+      Natural-no-bg_68: 613464575
+      Natural-no-bg_69: 1848074602
+      Natural-no-bg_7: 1016147793
+      Natural-no-bg_70: -1457353855
+      Natural-no-bg_71: 124532074
+      Natural-no-bg_72: 1955181074
+      Natural-no-bg_73: 859474542
+      Natural-no-bg_74: 555567458
+      Natural-no-bg_75: -693475712
+      Natural-no-bg_76: 1656162893
+      Natural-no-bg_77: 387576114
+      Natural-no-bg_78: 249591239
+      Natural-no-bg_79: -700442189
+      Natural-no-bg_8: -2030100479
+      Natural-no-bg_80: 722075224
+      Natural-no-bg_81: 1046047149
+      Natural-no-bg_82: -1222599856
+      Natural-no-bg_83: -1472345276
+      Natural-no-bg_84: -97202476
+      Natural-no-bg_85: -494845176
+      Natural-no-bg_86: 1266710688
+      Natural-no-bg_87: 817642045
+      Natural-no-bg_88: 1408903198
+      Natural-no-bg_89: 845224672
+      Natural-no-bg_9: -1166935647
+      Natural-no-bg_90: -1432462254
+      Natural-no-bg_91: -1411509622
+      Natural-no-bg_92: -11783515
+      Natural-no-bg_93: -615341074
+      Natural-no-bg_94: -1648620842
+      Natural-no-bg_95: -832004881
+      Natural-no-bg_96: 1068026266
+      Natural-no-bg_97: -754059293
+      Natural-no-bg_98: 2093104336
+      Natural-no-bg_99: -660892879
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
