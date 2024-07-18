@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(fileName = "New PathTile", menuName = "Tiles/PathTile")]
 public class PathTile : RuleTile

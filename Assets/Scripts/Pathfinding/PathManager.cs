@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+using System.Linq;
 using UnityEngine;
 
 public class PathManager : Singleton<PathManager>
@@ -9,24 +7,18 @@ public class PathManager : Singleton<PathManager>
     public PathNode startNode;
 
     public List<List<PathNode>> AllPaths { get; private set; }
+    private readonly Dictionary<PathNode, List<PathNode>> _adjacencyList = new Dictionary<PathNode, List<PathNode>>();
 
     private void Start()
     {
-        FindAllPaths();
-
-        foreach (var path in AllPaths)
-        {
-            if (path is null) continue;
-            Debug.Log("Found Path");
-            foreach (var pathNode in path)
-            {
-                Debug.Log($"Node: {pathNode.name}", pathNode.gameObject);
-            }
-        }
+        GenerateAllPaths();
+        
+        PrintPaths();
     }
 
-    public void FindAllPaths()
+    public void GenerateAllPaths()
     {
+        BuildAdjacencyList();
         AllPaths = new List<List<PathNode>>();
         var currentPath = new List<PathNode>();
         var visitedNodes = new HashSet<PathNode>();
@@ -35,7 +27,7 @@ public class PathManager : Singleton<PathManager>
     
     private void DFS(PathNode currentNode, List<PathNode> currentPath, HashSet<PathNode> visitedNodes)
     {
-        if (currentNode == null || !currentNode.isWalkable || visitedNodes.Contains(currentNode))
+        if (currentNode == null || visitedNodes.Contains(currentNode))
         {
             return;
         }
@@ -51,7 +43,7 @@ public class PathManager : Singleton<PathManager>
         else
         {
             // Explore all adjacent nodes
-            foreach (var nextNode in currentNode.nextNodes)
+            foreach (var nextNode in _adjacencyList[currentNode])
             {
                 DFS(nextNode, currentPath, visitedNodes);
             }
@@ -60,5 +52,38 @@ public class PathManager : Singleton<PathManager>
         // Backtrack
         currentPath.RemoveAt(currentPath.Count - 1);
         visitedNodes.Remove(currentNode);
+    }
+    
+    private void BuildAdjacencyList()
+    {
+        _adjacencyList.Clear();
+        var allNodes = FindObjectsOfType<PathNode>();
+        foreach (var node in allNodes)
+        {
+            if (!_adjacencyList.ContainsKey(node))
+            {
+                _adjacencyList[node] = new List<PathNode>();
+            }
+
+            foreach (var path in node.nextPaths.Where(path => path.isWalkable && path.nextNode != null))
+            {
+                _adjacencyList[node].Add(path.nextNode);
+
+                if (!_adjacencyList.ContainsKey(path.nextNode))
+                {
+                    _adjacencyList[path.nextNode] = new List<PathNode>();
+                }
+
+                _adjacencyList[path.nextNode].Add(node); // Make it bidirectional
+            }
+        }
+    }
+
+    private void PrintPaths()
+    {
+        foreach (var pathString in AllPaths.Select(path => path.Aggregate("", (current, node) => current + (node.name + " -> "))))
+        {
+            Debug.Log("Path: " + pathString.TrimEnd(' ', '-', '>'));
+        }
     }
 }

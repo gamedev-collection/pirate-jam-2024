@@ -1,15 +1,13 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
+using System.Linq;
 using UnityEngine;
 
 public class PathNode : MonoBehaviour
 {
     public bool isStart;
     public bool isEnd;
-    public bool isWalkable;
-    public List<PathNode> nextNodes = new List<PathNode>();
+    public List<Path> nextPaths = new List<Path>();
 
     private void OnDrawGizmos()
     {
@@ -30,14 +28,18 @@ public class PathNode : MonoBehaviour
         
         Gizmos.DrawCube(transform.position, new Vector3(0.3f,0.3f,0.3f));
         
-        if (nextNodes.Count <= 0) return;
-
-        Gizmos.color = Color.blue;
-        
-        foreach (var nextNode in nextNodes)
+        if (nextPaths.Count <= 0) return;
+        foreach (var path in nextPaths.Where(path => path.nextNode is not null))
         {
-            if (nextNode is null) return;
-            Gizmos.DrawLine(transform.position, nextNode.transform.position);
+            Gizmos.color = path.isWalkable ? Color.blue : Color.red;
+            Gizmos.DrawLine(transform.position, path.nextNode.transform.position);
         }
     }
+}
+
+[Serializable]
+public struct Path
+{
+    public bool isWalkable;
+    public PathNode nextNode;
 }
