@@ -5,6 +5,4 @@ using UnityEngine.Tilemaps;
 public class PathTile : RuleTile
 {
     public bool walkable;
-    public bool isStart;
-    public bool isEnd;
 }

@@ -4,9 +4,9 @@ using UnityEngine.Tilemaps;
 
 public static class TilemapExtensions
 {
-    public static T[] GetTiles<T>(this Tilemap tilemap) where T : TileBase
+    public static Dictionary<Vector3, T> GetTiles<T>(this Tilemap tilemap) where T : TileBase
     {
-        var tiles = new List<T>();
+        var tiles = new Dictionary<Vector3, T>();
 
         foreach (var pos in tilemap.cellBounds.allPositionsWithin)
         {
@@ -15,10 +15,10 @@ public static class TilemapExtensions
             var tile = tilemap.GetTile<T>(pos);
             if (tile != null)
             {
-                tiles.Add(tile);
+                tiles[pos] = tile;
             }
         }
 
-        return tiles.ToArray();
+        return tiles;
     }
 }
