@@ -6,6 +6,8 @@ public class PathManager : Singleton<PathManager>
 {
     public PathNode startNode;
 
+    public bool debugMode = false;
+    
     public List<List<PathNode>> AllPaths { get; private set; }
     private readonly Dictionary<PathNode, List<PathNode>> _adjacencyList = new Dictionary<PathNode, List<PathNode>>();
 
@@ -13,7 +15,7 @@ public class PathManager : Singleton<PathManager>
     {
         GenerateAllPaths();
         
-        PrintPaths();
+        if (debugMode) PrintPaths();
     }
 
     public void GenerateAllPaths()
@@ -23,6 +25,27 @@ public class PathManager : Singleton<PathManager>
         var currentPath = new List<PathNode>();
         var visitedNodes = new HashSet<PathNode>();
         DFS(startNode, currentPath, visitedNodes);
+    }
+
+    public List<PathNode> GetPathWithLeastNodes()
+    {
+        if (AllPaths == null || AllPaths.Count == 0)
+        {
+            return null;
+        }
+
+        List<PathNode> shortestNodePath = null;
+        var leastNodeCount = int.MaxValue;
+
+        foreach (var path in AllPaths)
+        {
+            var nodeCount = path.Count;
+            if (nodeCount >= leastNodeCount) continue;
+            leastNodeCount = nodeCount;
+            shortestNodePath = path;
+        }
+
+        return shortestNodePath;
     }
     
     private void DFS(PathNode currentNode, List<PathNode> currentPath, HashSet<PathNode> visitedNodes)
