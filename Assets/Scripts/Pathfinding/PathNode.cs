@@ -8,7 +8,7 @@ public class PathNode : MonoBehaviour
     public bool isStart;
     public bool isEnd;
     public List<Path> nextPaths = new List<Path>();
-
+    
     private void OnDrawGizmos()
     {
         if (isStart)
