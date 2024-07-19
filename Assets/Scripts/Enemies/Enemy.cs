@@ -20,7 +20,7 @@ public class Enemy: MonoBehaviour
 
     private void Start()
     {
-        FindPath();
+        //FindPath();
     }
 
     private void Update()
@@ -61,6 +61,11 @@ public class Enemy: MonoBehaviour
     {
         OnEnemyDestroyed?.Invoke(gameObject);
         Destroy(gameObject);
+    }
+
+    public void SetPath(List<PathNode> path)
+    {
+        _path = path;
     }
     
     private void FindPath()

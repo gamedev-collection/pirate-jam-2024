@@ -8,6 +8,27 @@ public class PathNode : MonoBehaviour
     public bool isStart;
     public bool isEnd;
     public List<Path> nextPaths = new List<Path>();
+
+    public void EnableWalkable(int index)
+    {
+        SetWalkable(index, true);
+    }
+    
+    public void DisableWalkable(int index)
+    {
+        SetWalkable(index, false);
+    }
+    
+    private void SetWalkable(int index, bool isWalkable)
+    {
+        if (index < 0 || index > nextPaths.Count) return;
+
+        var path = nextPaths[index];
+        path.isWalkable = isWalkable;
+        nextPaths[index] = path;
+        
+        PathManager.Instance.GenerateAllPaths();
+    }
     
     private void OnDrawGizmos()
     {

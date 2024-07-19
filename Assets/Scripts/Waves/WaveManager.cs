@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WaveManager : Singleton<WaveManager>
 {
@@ -13,6 +14,7 @@ public class WaveManager : Singleton<WaveManager>
 
     private void Start()
     {
+        PathManager.Instance.GenerateAllPaths();
         StartCoroutine(StartNextWave());
     }
 
@@ -34,10 +36,13 @@ public class WaveManager : Singleton<WaveManager>
     {
         foreach (var enemyCount in wave.enemies)
         {
-            Debug.Log($"Spawning wave {enemyCount.count}, {enemyCount.enemyPrefab.name}");
+            var randomIndex = Random.Range(0, PathManager.Instance.AllPaths.Count);
+            var path = PathManager.Instance.AllPaths[randomIndex];
+            
             for (var i = 0; i < enemyCount.count; i++)
             {
-                SpawnEnemy(enemyCount.enemyPrefab);
+                SpawnEnemy(enemyCount.enemyPrefab, path);
+                
                 yield return new WaitForSeconds(1f / enemyCount.rate);
             }
             
@@ -45,11 +50,12 @@ public class WaveManager : Singleton<WaveManager>
         }
     }
 
-    private void SpawnEnemy(GameObject prefab)
+    private void SpawnEnemy(GameObject prefab, List<PathNode> path)
     {
         var spawnedObject = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         
         spawnedObject.GetComponent<Enemy>().OnEnemyDestroyed += HandleEnemyDestroyed;
+        spawnedObject.GetComponent<Enemy>().SetPath(path);
         
         _activeEnemies.Add(spawnedObject);
     }

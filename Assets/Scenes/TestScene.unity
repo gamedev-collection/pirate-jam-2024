@@ -362,7 +362,19 @@ MonoBehaviour:
       rate: 1
     onWaveFinish:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1571205037}
+          m_TargetAssemblyTypeName: PathNode, Assembly-CSharp
+          m_MethodName: DisableWalkable
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     timeBetweenEnemySpawning: 5
   - enemies:
     - enemyPrefab: {fileID: 7759671852312040146, guid: 578108c03c165c6499a0198ec05bb8dc, type: 3}
@@ -377,7 +389,7 @@ MonoBehaviour:
     onWaveFinish:
       m_PersistentCalls:
         m_Calls: []
-    timeBetweenEnemySpawning: 10
+    timeBetweenEnemySpawning: 5
   spawnPoint: {fileID: 1586966164}
   timeBetweenWaves: 5
 --- !u!4 &540754615
