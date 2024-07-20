@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,30 +9,44 @@ public class WaveManager : Singleton<WaveManager>
 {
     public List<Wave> waves;
     public Transform spawnPoint;
-    public float timeBetweenWaves = 5f;
+    public float waveStartupTime = 2f;
+
+    public bool WaveActive => _activeEnemies.Count > 0 || _waveActive;
     
     private readonly List<GameObject> _activeEnemies = new List<GameObject>();
+
+    private Queue<Wave> _waveQueue = new Queue<Wave>();
+    private bool _waveActive = false;
 
     private void Start()
     {
         PathManager.Instance.GenerateAllPaths();
-        StartCoroutine(StartNextWave());
+
+        if (waves is null || waves.Count <= 0) return;
+
+        _waveQueue = new Queue<Wave>(waves);
     }
 
-    private IEnumerator StartNextWave()
+    public void QueueNextWave()
     {
-        foreach (var wave in waves)
-        {
-            yield return StartCoroutine(SpawnWave(wave));
-            
-            yield return new WaitUntil(() => _activeEnemies.Count == 0);
-            
-            yield return new WaitForSeconds(timeBetweenWaves);
-            
-            wave.onWaveFinish?.Invoke();
-        }
-    }
+        if (_waveQueue.Count <= 0) return;
 
+        var wave = _waveQueue.Dequeue();
+        StartCoroutine(StartNextWave(wave));
+    }
+    
+    private IEnumerator StartNextWave(Wave wave)
+    {
+        _waveActive = true;
+        yield return new WaitForSeconds(waveStartupTime);
+        
+        yield return StartCoroutine(SpawnWave(wave));
+        
+        yield return new WaitUntil(() => _activeEnemies.Count == 0);
+        _waveActive = false;
+        wave.onWaveFinish?.Invoke();
+    }
+    
     private IEnumerator SpawnWave(Wave wave)
     {
         foreach (var enemyCount in wave.enemies)

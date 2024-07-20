@@ -1,10 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
-using Random = UnityEngine.Random;
 
 public class Enemy: MonoBehaviour
 {
@@ -12,17 +8,13 @@ public class Enemy: MonoBehaviour
     public int maxHp;
     public float movementSpeed;
     public float size;
+    public float damage;
 
     private List<PathNode> _path;
     private int _pathIndex = 0;
 
     public event Action<GameObject> OnEnemyDestroyed;
-
-    private void Start()
-    {
-        //FindPath();
-    }
-
+    
     private void Update()
     {
         Move();
@@ -34,7 +26,7 @@ public class Enemy: MonoBehaviour
         {
             var target = _path[_pathIndex];
             var direction = target.transform.position - transform.position;
-            transform.Translate(direction.normalized * movementSpeed * Time.deltaTime, Space.World);
+            transform.Translate(direction.normalized * (movementSpeed * Time.deltaTime), Space.World);
 
             if (Vector3.Distance(transform.position, target.transform.position) < 0.2f)
             {
@@ -66,12 +58,5 @@ public class Enemy: MonoBehaviour
     public void SetPath(List<PathNode> path)
     {
         _path = path;
-    }
-    
-    private void FindPath()
-    {
-        //var randomIndex = Random.Range(0, PathManager.Instance.AllPaths.Count);
-        //_path = PathManager.Instance.AllPaths[randomIndex];
-        _path = PathManager.Instance.GetPathWithLeastNodes();
     }
 }
