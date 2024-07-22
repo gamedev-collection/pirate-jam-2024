@@ -1,0 +1,172 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum ShadowDirection
+{
+    None,
+    North,
+    East,
+    South,
+    West
+}
+
+public class Obelisk : MonoBehaviour
+{
+    [Header("Settings")]
+    [SerializeField] private int _shadowDistance = 3;
+    [SerializeField] private LayerMask _raycastLayers;
+    [SerializeField] private ShadowDirection _shadowDirection = ShadowDirection.North;
+
+    [Header("Affected Paths")]
+    [SerializeField] private List<PathNodeWithDir> _pathNodesNorth = new List<PathNodeWithDir>();
+    [SerializeField] private List<PathNodeWithDir> _pathNodesEast = new List<PathNodeWithDir>();
+    [SerializeField] private List<PathNodeWithDir> _pathNodesSouth = new List<PathNodeWithDir>();
+    [SerializeField] private List<PathNodeWithDir> _pathNodesWest = new List<PathNodeWithDir>();
+
+    [Header("Shadow Objects - N E S W")]
+    [SerializeField] private GameObject[] _shadowVisuals;
+    public int ShadowDistance { get; set; }
+
+    private Vector2 shadowVector = Vector2.up;
+    private List<Tower> _buffedTowers = new List<Tower>();
+
+    private void Awake()
+    {
+        SetShadowDirection(ShadowDirection.North);
+    }
+
+    public void SetNextShadowDirection()
+    {
+        SetShadowDirection(GetNextShadowDirection());
+    }
+
+    public void SetPrevShadowDirection()
+    {
+        SetShadowDirection(GetPrevShadowDirection());
+    }
+
+    public void SetShadowDirection(ShadowDirection direction)
+    {
+        _shadowDirection = direction;
+
+        foreach (GameObject obj in _shadowVisuals)
+        {
+            if (obj != null) obj.SetActive(false);
+        }
+
+        switch (direction)
+        {
+            case ShadowDirection.North:
+                shadowVector = Vector2.up;
+                _shadowVisuals[0].SetActive(true);
+                break;
+            case ShadowDirection.East:
+                shadowVector = Vector2.right;
+                _shadowVisuals[1].SetActive(true);
+                break;
+            case ShadowDirection.South:
+                shadowVector = Vector2.down;
+                _shadowVisuals[2].SetActive(true);
+                break;
+            case ShadowDirection.West:
+                shadowVector = Vector2.left;
+                _shadowVisuals[3].SetActive(true);
+                break;
+            case ShadowDirection.None:
+                break;
+        }
+
+        if (_shadowDirection != ShadowDirection.None) FindShadowedObjects(); LockShadowedPaths();
+    }
+
+    public void FindShadowedObjects()
+    {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, shadowVector, _shadowDistance, _raycastLayers);
+
+        foreach (RaycastHit2D hit in hits)
+        {
+            if (hit.transform.TryGetComponent<Tower>(out Tower hitTower))
+            {
+                Debug.Log(hitTower.ToString());
+                BuffTower(hitTower);
+            }
+        }
+    }
+
+    private void BuffTower(Tower tower)
+    {
+        // buff code goes here
+    }
+
+    private void LockShadowedPaths()
+    {
+        switch (_shadowDirection)
+        {
+            case ShadowDirection.North:
+                foreach(PathNodeWithDir path in _pathNodesNorth) path._pathNode.DisableWalkable(path._direction);
+                foreach(PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
+                foreach(PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
+                foreach(PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
+                break;
+            case ShadowDirection.East:
+                foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.DisableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
+                break;
+            case ShadowDirection.South:
+                foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.DisableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
+                break;
+            case ShadowDirection.West:
+                foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.DisableWalkable(path._direction);
+                break;
+            case ShadowDirection.None:
+                break;
+        }
+    }
+
+    private ShadowDirection GetNextShadowDirection()
+    {
+        ShadowDirection newDirection = _shadowDirection;
+
+        switch (_shadowDirection)
+        {
+            case ShadowDirection.North: newDirection = ShadowDirection.West; break;
+            case ShadowDirection.West: newDirection = ShadowDirection.South; break;
+            case ShadowDirection.South: newDirection = ShadowDirection.East; break;
+            case ShadowDirection.East: newDirection = ShadowDirection.North; break;
+        }
+
+        return newDirection;
+    }
+
+    private ShadowDirection GetPrevShadowDirection()
+    {
+        ShadowDirection newDirection = _shadowDirection;
+
+        switch (_shadowDirection)
+        {
+            case ShadowDirection.North: newDirection = ShadowDirection.East; break;
+            case ShadowDirection.East: newDirection = ShadowDirection.South; break;
+            case ShadowDirection.South: newDirection = ShadowDirection.West; break;
+            case ShadowDirection.West: newDirection = ShadowDirection.North; break;
+        }
+
+        return newDirection;
+    }
+}
+
+[Serializable]
+public struct PathNodeWithDir
+{
+    public PathNode _pathNode;
+    public int _direction;
+}

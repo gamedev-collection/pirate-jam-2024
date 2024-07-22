@@ -12,6 +12,8 @@ public class TowerManager : Singleton<TowerManager>
 
     public OverlayTile overlayPrefab;
     public Transform overlayContainer;
+
+    public event Action<Tower> OnTowerPlaced;
     
     private GameObject _towerPrefab;
     private Dictionary<Vector2Int, OverlayTile> Map { get; set; }
@@ -60,7 +62,8 @@ public class TowerManager : Singleton<TowerManager>
         var newTower = Instantiate(_towerPrefab, tile.transform.position, Quaternion.identity);
         var towerComp = newTower.GetComponent<Tower>();
         _activeTowers.Add(newTower.transform.position, towerComp);
-        
+        OnTowerPlaced?.Invoke(towerComp);
+
         InBuildmode = false;
         placementMap.gameObject.SetActive(false);
     }
