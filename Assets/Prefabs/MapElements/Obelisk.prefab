@@ -355,6 +355,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _shadowDirection: 1
+  _runeSlot: {fileID: 0}
   _pathNodesNorth: []
   _pathNodesEast: []
   _pathNodesSouth: []

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static Unity.Collections.Unicode;
 
 public abstract class Tower : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public abstract class Tower : MonoBehaviour
 
     public ContactFilter2D filter;
 
-    private int actualDamage;
-    private float actualAttackRate;
-    private float actualRange;
+    protected int actualDamage;
+    protected float actualAttackRate;
+    protected float actualRange;
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public abstract class Tower : MonoBehaviour
         var results = new List<Collider2D>();
         var enemies = new List<Enemy>();
         
-        var hits = Physics2D.OverlapCircle(transform.position, range, filter, results);
+        var hits = Physics2D.OverlapCircle(transform.position, actualRange, filter, results);
 
         if (hits > 0 && results.Count > 0)
         {
@@ -43,18 +44,29 @@ public abstract class Tower : MonoBehaviour
     public abstract void Delete();
     public virtual void ApplyRune(Rune rune)
     {
+        if (rune == runeSlot) return;
+
         ResetStats();
+        runeSlot = rune;
         SO_Rune runeData = rune.RuneData;
 
         actualDamage += runeData.damageBuff;
         actualAttackRate += runeData.attackRateBuff;
         actualRange += runeData.rangeBuff;
+        Debug.Log("Applied Rune: " + rune.RuneData.runeName);
+    }
+
+    public virtual void RemoveRune()
+    {
+        ResetStats();
+        Debug.Log("Removed Rune: " + runeSlot.RuneData.runeName);
+        runeSlot = null;
     }
     
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(transform.position, range);
+        Gizmos.DrawWireSphere(transform.position, actualRange);
     }
 
     private void ResetStats()

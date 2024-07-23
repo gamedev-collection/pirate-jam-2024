@@ -51,6 +51,8 @@ public class Obelisk : MonoBehaviour
 
     public void SetShadowDirection(ShadowDirection direction)
     {
+        DebuffTowers();
+
         _shadowDirection = direction;
 
         foreach (GameObject obj in _shadowVisuals)
@@ -91,18 +93,28 @@ public class Obelisk : MonoBehaviour
         {
             if (hit.transform.TryGetComponent<Tower>(out Tower hitTower))
             {
-                Debug.Log(hitTower.ToString());
-                BuffTower(hitTower);
+                if(!_buffedTowers.Contains(hitTower)) _buffedTowers.Add(hitTower);
             }
         }
+
+        if (_runeSlot != null) BuffTowers();
     }
 
-    private void BuffTower(Tower tower)
+    private void BuffTowers()
     {
-       if(_runeSlot != null)
+        foreach (Tower tower in _buffedTowers)
         {
             tower.ApplyRune(_runeSlot);
         }
+    }
+
+    private void DebuffTowers()
+    {
+        foreach(Tower tower in _buffedTowers)
+        {
+            tower.RemoveRune();
+        }
+        _buffedTowers.Clear();
     }
 
     private void LockShadowedPaths()
@@ -110,10 +122,10 @@ public class Obelisk : MonoBehaviour
         switch (_shadowDirection)
         {
             case ShadowDirection.North:
-                foreach(PathNodeWithDir path in _pathNodesNorth) path._pathNode.DisableWalkable(path._direction);
-                foreach(PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
-                foreach(PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
-                foreach(PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.DisableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
+                foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
                 break;
             case ShadowDirection.East:
                 foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);

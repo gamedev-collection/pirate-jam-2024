@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: SO_Rune_Test
   m_EditorClassIdentifier: 
   runeName: Test Rune
+  onHitEffect: 1
+  damageBuff: 2
+  attackRateBuff: -0.1
+  rangeBuff: 1
