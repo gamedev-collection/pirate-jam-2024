@@ -53,13 +53,11 @@ public abstract class Tower : MonoBehaviour
         actualDamage += runeData.damageBuff;
         actualAttackRate += runeData.attackRateBuff;
         actualRange += runeData.rangeBuff;
-        Debug.Log("Applied Rune: " + rune.RuneData.runeName);
     }
 
     public virtual void RemoveRune()
     {
         ResetStats();
-        Debug.Log("Removed Rune: " + runeSlot.RuneData.runeName);
         runeSlot = null;
     }
     
