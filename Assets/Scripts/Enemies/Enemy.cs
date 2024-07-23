@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class Enemy: MonoBehaviour
 {
-    private int _currentHp;
-    public int maxHp;
-    public float movementSpeed;
-    public float size;
-    public float damage;
+    public int CurrentHp { get; private set; }
+    public int maxHp = 10;
+    public float movementSpeed = 5;
+    public float size = 1;
+    public float damage = 1;
 
     private List<PathNode> _path;
     private int _pathIndex = 0;
 
     public event Action<GameObject> OnEnemyDestroyed;
-    
+
+    private void Start()
+    {
+        CurrentHp = maxHp;
+    }
+
     private void Update()
     {
         Move();
@@ -40,10 +45,10 @@ public class Enemy: MonoBehaviour
         }
     }
     
-    public virtual void TakeDamage(int amount)
+    public virtual void TakeDamage(int amount, Rune rune)
     {
-        _currentHp -= amount;
-        if (_currentHp <= 0)
+        CurrentHp -= amount;
+        if (CurrentHp <= 0)
         {
             Die();
         }
