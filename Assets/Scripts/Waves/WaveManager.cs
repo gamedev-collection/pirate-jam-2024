@@ -64,7 +64,6 @@ public class WaveManager : Singleton<WaveManager>
             for (var i = 0; i < enemyCount.count; i++)
             {
                 SpawnEnemy(enemyCount.enemyPrefab, path);
-                enemiesLeftForCurrentWave--;
                 yield return new WaitForSeconds(1f / enemyCount.rate);
             }
             
@@ -89,6 +88,7 @@ public class WaveManager : Singleton<WaveManager>
 
     private void HandleEnemyDestroyed(GameObject enemy)
     {
+        enemiesLeftForCurrentWave--;
         _activeEnemies.Remove(enemy);
     }
 }
