@@ -29,8 +29,10 @@ public class Obelisk : MonoBehaviour
     [Header("Shadow Objects - N E S W")]
     [SerializeField] private GameObject[] _shadowVisuals;
 
-    public int ShadowDistance { get; set; }
+    public int ShadowDistance { get { return _shadowDistance; } set { _shadowDistance = value; } }
+    public Rune RuneSlot { get { return _runeSlot; } }
 
+    private GameObject _runeVisual;
     private Vector2 _shadowVector = Vector2.up;
     private List<Tower> _buffedTowers = new List<Tower>();
 
@@ -93,11 +95,28 @@ public class Obelisk : MonoBehaviour
         {
             if (hit.transform.TryGetComponent<Tower>(out Tower hitTower))
             {
-                if(!_buffedTowers.Contains(hitTower)) _buffedTowers.Add(hitTower);
+                if (!_buffedTowers.Contains(hitTower)) _buffedTowers.Add(hitTower);
             }
         }
 
         if (_runeSlot != null) BuffTowers();
+    }
+
+    public void ApplyRune(Rune rune)
+    {
+        _runeSlot = rune;
+        _runeVisual = rune.gameObject;
+        _runeVisual.transform.position = transform.position;
+        _runeVisual.transform.parent = transform;
+    }
+
+    public void RemoveRune()
+    {
+        Destroy(_runeVisual);
+        _runeSlot = null;
+        _runeVisual = null;
+
+        DebuffTowers();
     }
 
     private void BuffTowers()
@@ -110,7 +129,7 @@ public class Obelisk : MonoBehaviour
 
     private void DebuffTowers()
     {
-        foreach(Tower tower in _buffedTowers)
+        foreach (Tower tower in _buffedTowers)
         {
             tower.RemoveRune();
         }

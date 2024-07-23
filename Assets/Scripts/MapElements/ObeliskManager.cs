@@ -1,12 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using static Obelisk;
 
 public class ObeliskManager : Singleton<ObeliskManager>
 {
     [SerializeField] private Obelisk[] _obelisks;
+
+    [SerializeField] private LayerMask _obeliskLayerMask;
+
+    private Rune _selectedRunePrefab;
+    private GameObject _runePlacementVisual;
+
+    public bool InRunePlacementMode { get; private set; }
 
     private void Awake()
     {
@@ -16,6 +25,29 @@ public class ObeliskManager : Singleton<ObeliskManager>
     private void OnDestroy()
     {
         TowerManager.Instance.OnTowerPlaced -= OnNewTowerPlaced;
+    }
+
+    private void Update()
+    {
+        if (InRunePlacementMode)
+        {
+            if (_runePlacementVisual)
+            {
+                Vector3 mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
+                _runePlacementVisual.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Obelisk clickedObelisk = GetClickedObelisk();
+                if (clickedObelisk) HandleRunePlacement(clickedObelisk);
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                CancelActiveRune(true);
+            }
+        }
     }
 
     public void RotateShadowsToNext()
@@ -41,9 +73,50 @@ public class ObeliskManager : Singleton<ObeliskManager>
 
     private void OnNewTowerPlaced(Tower tower)
     {
-        foreach(Obelisk obelisk in _obelisks)
+        foreach (Obelisk obelisk in _obelisks)
         {
             obelisk.FindShadowedObjects();
         }
     }
+
+    #region RUNES
+
+    public void SetActiveRune(Rune runePrefab)
+    {
+        _selectedRunePrefab = runePrefab;
+        _runePlacementVisual = Instantiate(_selectedRunePrefab, Vector3.zero, Quaternion.identity, this.transform).gameObject;
+        InRunePlacementMode = true;
+    }
+
+    public void CancelActiveRune(bool deleteVisual)
+    {
+        _selectedRunePrefab = null;
+        InRunePlacementMode = false;
+
+        if (deleteVisual) Destroy(_runePlacementVisual);
+        else _runePlacementVisual = null;
+    }
+
+    private Obelisk GetClickedObelisk()
+    {
+        var mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
+        var mousePos2d = new Vector2(mousePos.x, mousePos.y);
+
+        var hits = Physics2D.RaycastAll(mousePos2d, Vector2.zero, 15f, _obeliskLayerMask);
+        if (hits.Length > 0)
+        {
+            var firstHit = hits.OrderByDescending(i => i.collider.transform.position.z).First();
+            if (firstHit.transform.TryGetComponent<Obelisk>(out Obelisk clickedObelisk) && clickedObelisk.RuneSlot == null) return clickedObelisk;
+        }
+
+        return null;
+    }
+
+    private void HandleRunePlacement(Obelisk obelisk)
+    {
+        obelisk.ApplyRune(_runePlacementVisual.GetComponent<Rune>());
+        CancelActiveRune(false);
+    }
+
+    #endregion
 }
