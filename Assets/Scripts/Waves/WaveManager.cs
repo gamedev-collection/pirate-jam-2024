@@ -12,6 +12,11 @@ public class WaveManager : Singleton<WaveManager>
     public float waveStartupTime = 2f;
 
     public bool WaveActive => _activeEnemies.Count > 0 || _waveActive;
+
+    public int WaveCount => waves.Count;
+    public int EnemiesLeft => _activeEnemies.Count;
+    public int totalEnemiesForCurrentWave = 0;
+    public int enemiesLeftForCurrentWave = 0;
     
     private readonly List<GameObject> _activeEnemies = new List<GameObject>();
 
@@ -49,6 +54,8 @@ public class WaveManager : Singleton<WaveManager>
     
     private IEnumerator SpawnWave(Wave wave)
     {
+        SetCurrentWaveEnemyTotal(wave);
+        
         foreach (var enemyCount in wave.enemies)
         {
             var randomIndex = Random.Range(0, PathManager.Instance.AllPaths.Count);
@@ -57,7 +64,7 @@ public class WaveManager : Singleton<WaveManager>
             for (var i = 0; i < enemyCount.count; i++)
             {
                 SpawnEnemy(enemyCount.enemyPrefab, path);
-                
+                enemiesLeftForCurrentWave--;
                 yield return new WaitForSeconds(1f / enemyCount.rate);
             }
             
@@ -73,6 +80,11 @@ public class WaveManager : Singleton<WaveManager>
         spawnedObject.GetComponent<Enemy>().SetPath(path);
         
         _activeEnemies.Add(spawnedObject);
+    }
+    
+    private void SetCurrentWaveEnemyTotal(Wave wave)
+    {
+        enemiesLeftForCurrentWave = totalEnemiesForCurrentWave = wave.enemies.Sum(waveEnemy => waveEnemy.count);
     }
 
     private void HandleEnemyDestroyed(GameObject enemy)
