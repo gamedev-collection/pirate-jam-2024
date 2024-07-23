@@ -35,7 +35,7 @@ public class AreaTower: Tower
         
     }
 
-    public override void ApplyUpgrade()
+    public override void ApplyRune(Rune rune)
     {
         
     }

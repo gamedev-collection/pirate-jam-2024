@@ -18,6 +18,7 @@ public class Obelisk : MonoBehaviour
     [SerializeField] private int _shadowDistance = 3;
     [SerializeField] private LayerMask _raycastLayers;
     [SerializeField] private ShadowDirection _shadowDirection = ShadowDirection.North;
+    [SerializeField] private Rune _runeSlot;
 
     [Header("Affected Paths")]
     [SerializeField] private List<PathNodeWithDir> _pathNodesNorth = new List<PathNodeWithDir>();
@@ -27,9 +28,10 @@ public class Obelisk : MonoBehaviour
 
     [Header("Shadow Objects - N E S W")]
     [SerializeField] private GameObject[] _shadowVisuals;
+
     public int ShadowDistance { get; set; }
 
-    private Vector2 shadowVector = Vector2.up;
+    private Vector2 _shadowVector = Vector2.up;
     private List<Tower> _buffedTowers = new List<Tower>();
 
     private void Awake()
@@ -59,19 +61,19 @@ public class Obelisk : MonoBehaviour
         switch (direction)
         {
             case ShadowDirection.North:
-                shadowVector = Vector2.up;
+                _shadowVector = Vector2.up;
                 _shadowVisuals[0].SetActive(true);
                 break;
             case ShadowDirection.East:
-                shadowVector = Vector2.right;
+                _shadowVector = Vector2.right;
                 _shadowVisuals[1].SetActive(true);
                 break;
             case ShadowDirection.South:
-                shadowVector = Vector2.down;
+                _shadowVector = Vector2.down;
                 _shadowVisuals[2].SetActive(true);
                 break;
             case ShadowDirection.West:
-                shadowVector = Vector2.left;
+                _shadowVector = Vector2.left;
                 _shadowVisuals[3].SetActive(true);
                 break;
             case ShadowDirection.None:
@@ -83,7 +85,7 @@ public class Obelisk : MonoBehaviour
 
     public void FindShadowedObjects()
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, shadowVector, _shadowDistance, _raycastLayers);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, _shadowVector, _shadowDistance, _raycastLayers);
 
         foreach (RaycastHit2D hit in hits)
         {
@@ -97,7 +99,10 @@ public class Obelisk : MonoBehaviour
 
     private void BuffTower(Tower tower)
     {
-        // buff code goes here
+       if(_runeSlot != null)
+        {
+            tower.ApplyRune(_runeSlot);
+        }
     }
 
     private void LockShadowedPaths()

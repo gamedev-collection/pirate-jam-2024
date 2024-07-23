@@ -13,6 +13,16 @@ public abstract class Tower : MonoBehaviour
 
     public ContactFilter2D filter;
 
+    private int actualDamage;
+    private float actualAttackRate;
+    private float actualRange;
+
+    private void Awake()
+    {
+        if(runeSlot) ApplyRune(runeSlot);
+        else ResetStats();
+    }
+
     //public abstract Enemy FindTarget();
     public virtual List<Enemy> FindTargets()
     {
@@ -31,11 +41,26 @@ public abstract class Tower : MonoBehaviour
     
     public abstract void Attack(Enemy target);
     public abstract void Delete();
-    public abstract void ApplyUpgrade();
+    public virtual void ApplyRune(Rune rune)
+    {
+        ResetStats();
+        SO_Rune runeData = rune.RuneData;
+
+        actualDamage += runeData.damageBuff;
+        actualAttackRate += runeData.attackRateBuff;
+        actualRange += runeData.rangeBuff;
+    }
     
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, range);
+    }
+
+    private void ResetStats()
+    {
+        actualDamage = damage;
+        actualAttackRate = attackRate;
+        actualRange = range;
     }
 }

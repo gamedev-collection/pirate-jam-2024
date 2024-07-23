@@ -63,7 +63,9 @@ public class BasicTower : Tower
     {
     }
 
-    public override void ApplyUpgrade()
+    public override void ApplyRune(Rune rune)
     {
+        runeSlot = rune;
+        Debug.Log("Applied Rune: " + rune.RuneData.runeName);
     }
 }
