@@ -13,6 +13,7 @@ public enum OnHitEffect
 public class SO_Rune : ScriptableObject
 {
     public string runeName = "Rune";
+    public int cost;
 
     [Header("On-Hit Effect")]
     public OnHitEffect onHitEffect = OnHitEffect.None;

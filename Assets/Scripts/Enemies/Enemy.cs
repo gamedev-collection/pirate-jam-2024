@@ -8,7 +8,8 @@ public class Enemy: MonoBehaviour
     public int maxHp = 10;
     public float movementSpeed = 5;
     public float size = 1;
-    public float damage = 1;
+    public int damage = 1;
+    public int price = 1;
 
     private List<PathNode> _path;
     private int _pathIndex = 0;
@@ -40,7 +41,7 @@ public class Enemy: MonoBehaviour
         }
         else
         {
-            // TODO: Enemy reached end.
+            UIManager.Instance.TakeDamage(damage);
             Die();
         }
     }
@@ -48,10 +49,10 @@ public class Enemy: MonoBehaviour
     public virtual void TakeDamage(int amount, Rune rune)
     {
         CurrentHp -= amount;
-        if (CurrentHp <= 0)
-        {
-            Die();
-        }
+        
+        if (CurrentHp > 0) return;
+        UIManager.Instance.money += price;
+        Die();
     }
     
     public virtual void Die()
