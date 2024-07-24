@@ -12,6 +12,7 @@ public class UIManager: Singleton<UIManager>
     public TMP_Text waveText;
     public TMP_Text enemyText;
     public TMP_Text moneyText;
+    public Slider healthSlider;
 
     public Transform towerShopContainer;
     public GameObject towerShopPrefab;
@@ -26,7 +27,7 @@ public class UIManager: Singleton<UIManager>
     private void Start()
     {
         CurrentHealth = maxHealth;
-        
+        UpdateHealthBar();
         CreateTowerShop();
     }
 
@@ -60,10 +61,16 @@ public class UIManager: Singleton<UIManager>
     public void TakeDamage(int amount)
     {
         CurrentHealth -= amount;
+        UpdateHealthBar();
         if (CurrentHealth <= 0)
         {
             GameOver();
         }
+    }
+
+    private void UpdateHealthBar()
+    {
+        healthSlider.value = (float)CurrentHealth / (float)maxHealth;
     }
 
     private void GameOver()

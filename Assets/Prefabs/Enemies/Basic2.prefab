@@ -101,7 +101,7 @@ MonoBehaviour:
   maxHp: 10
   movementSpeed: 2
   size: 1
-  damage: 0
+  damage: 1
   price: 50
 --- !u!61 &-6655687272893948343
 BoxCollider2D:

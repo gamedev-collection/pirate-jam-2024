@@ -322,7 +322,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2715723894962821243}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -332,9 +332,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -523, y: -78}
+  m_AnchoredPosition: {x: -623.0001, y: -177.99997}
   m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4117692229583909723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -416,7 +416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4765153172569007075}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WaveManager, Assembly-CSharp
+        m_MethodName: QueueNextWave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &3896109668739496573
 Animator:
   serializedVersion: 5
@@ -563,6 +575,7 @@ MonoBehaviour:
   waveText: {fileID: 5390928901064406096}
   enemyText: {fileID: 3744950847109567983}
   moneyText: {fileID: 5813937383622144961}
+  healthSlider: {fileID: 8374766787694175638}
   towerShopContainer: {fileID: 1356665937484201539}
   towerShopPrefab: {fileID: 5143130970292174358, guid: 6777cbbb804a7cb409c5c67436be1549, type: 3}
   towerPrefabs:
@@ -605,7 +618,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.000017166138, y: 0}
+  m_SizeDelta: {x: 0, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6058485442946210477
 CanvasRenderer:
@@ -811,8 +824,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39
-  m_fontSizeBase: 39
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1643,6 +1656,10 @@ PrefabInstance:
     - target: {fileID: 8862212915765785426, guid: 14498a6db3dcd94438ed6f63c481fa25, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -217.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176141495580750399, guid: 14498a6db3dcd94438ed6f63c481fa25, type: 3}
+      propertyPath: m_text
+      value: Fools Remaining
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2497,6 +2514,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1165758662266611848, guid: 945fd044dcc3fa648b30748a598d5e10, type: 3}
+      propertyPath: m_Value
+      value: 0.765
+      objectReference: {fileID: 0}
     - target: {fileID: 4409282814476715766, guid: 945fd044dcc3fa648b30748a598d5e10, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2531,3 +2552,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 50814534050442822, guid: 945fd044dcc3fa648b30748a598d5e10, type: 3}
   m_PrefabInstance: {fileID: 7211597080651648286}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8374766787694175638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1165758662266611848, guid: 945fd044dcc3fa648b30748a598d5e10, type: 3}
+  m_PrefabInstance: {fileID: 7211597080651648286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
