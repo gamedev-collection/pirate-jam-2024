@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,30 +11,36 @@ public class AED_CanvasGroup : AnimatedEnableDisable
     [SerializeField] private float _enableDelay;
     [SerializeField] private float _disableDelay;
 
-    private bool _isAnimating = false;
+
+
+    public bool IsAnimating { get; private set; }
+    public bool IsEnabling { get; private set; }
+    public bool IsDisabling { get; private set; }
 
     public override void AnimatedDisable()
     {
+        IsDisabling = true;
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
-        if(!_isAnimating) StartCoroutine(DoAnimateCanvasGroup(1, 0, _duration, _disableDelay));
+        if(!IsAnimating) StartCoroutine(DoAnimateCanvasGroup(1, 0, _duration, _disableDelay));
     }
 
     public override void AnimatedEnable()
     {
+        IsEnabling = true;
         _canvasGroup.interactable = true;
         _canvasGroup.blocksRaycasts = true;
-        if (!_isAnimating) StartCoroutine(DoAnimateCanvasGroup(0, 1, _duration, _enableDelay));
+        if (!IsAnimating) StartCoroutine(DoAnimateCanvasGroup(0, 1, _duration, _enableDelay));
     }
 
     public void AnimatedEnableWithoutDelay()
     {
-        if (!_isAnimating) StartCoroutine(DoAnimateCanvasGroup(0, 1, _duration, 0f));
+        if (!IsAnimating) StartCoroutine(DoAnimateCanvasGroup(0, 1, _duration, 0f));
     }
 
     private IEnumerator DoAnimateCanvasGroup(float startValue, float endValue, float duration, float delay)
     {
-        _isAnimating = true;
+        IsAnimating = true;
         yield return new WaitForSeconds(delay);
 
         float elapsedTime = 0f;
@@ -46,7 +53,11 @@ public class AED_CanvasGroup : AnimatedEnableDisable
         }
 
         _canvasGroup.alpha = endValue;
-        _isAnimating = false;
+        IsAnimating = false;
+
+        if (IsEnabling) IsEnabling = false;
+        if (IsDisabling) IsDisabling = false;
+
         yield return null;
     }
 }
