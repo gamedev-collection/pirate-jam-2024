@@ -3101,6 +3101,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Back
       objectReference: {fileID: 0}
+    - target: {fileID: 1982581101675627541, guid: d0b5d3b1023f1c545a58a0c373f9befc, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281009696
+      objectReference: {fileID: 0}
     - target: {fileID: 3670275444106139975, guid: d0b5d3b1023f1c545a58a0c373f9befc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4538,6 +4542,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 948282318}
     m_Modifications:
+    - target: {fileID: 810890257366323019, guid: 47b988b8c7843cd46870d9f0148dabc3, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281009696
+      objectReference: {fileID: 0}
     - target: {fileID: 2913698894507663234, guid: 47b988b8c7843cd46870d9f0148dabc3, type: 3}
       propertyPath: m_Name
       value: btn_levelSelect
