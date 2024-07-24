@@ -66,6 +66,7 @@ public class TowerManager : Singleton<TowerManager>
 
         InBuildmode = false;
         placementMap.gameObject.SetActive(false);
+        UIManager.Instance.money -= _towerPrefab.GetComponent<Tower>().cost;
     }
     
     private static RaycastHit2D? GetFocusedOnTile()

@@ -101,7 +101,7 @@ MonoBehaviour:
   damage: 1
   attackRate: 0.4
   range: 3
-  cost: 0
+  cost: 150
   runeSlot: {fileID: 0}
   projectile: {fileID: 0}
   filter:

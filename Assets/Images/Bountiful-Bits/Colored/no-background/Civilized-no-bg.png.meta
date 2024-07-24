@@ -5725,10 +5725,10 @@ TextureImporter:
       name: Civilized-no-bg_266
       rect:
         serializedVersion: 2
-        x: 61
+        x: 60
         y: 190
-        width: 9
-        height: 9
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5746,10 +5746,10 @@ TextureImporter:
       name: Civilized-no-bg_267
       rect:
         serializedVersion: 2
-        x: 81
+        x: 80
         y: 190
-        width: 9
-        height: 9
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -10992,6 +10992,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Civilized-no-bg_517
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 239
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c73c00d29b8a842babf64f9c05a5c7
+      internalID: 94675088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -11468,6 +11489,7 @@ TextureImporter:
       Civilized-no-bg_514: 287496005
       Civilized-no-bg_515: 781405498
       Civilized-no-bg_516: 1266611515
+      Civilized-no-bg_517: 94675088
       Civilized-no-bg_52: 1140632729
       Civilized-no-bg_53: 287210352
       Civilized-no-bg_54: 1037471137

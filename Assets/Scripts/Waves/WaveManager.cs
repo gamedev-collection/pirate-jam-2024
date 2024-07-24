@@ -12,11 +12,9 @@ public class WaveManager : Singleton<WaveManager>
     public float waveStartupTime = 2f;
 
     public bool WaveActive => _activeEnemies.Count > 0 || _waveActive;
-
-    public int WaveCount => waves.Count;
-    public int EnemiesLeft => _activeEnemies.Count;
-    public int totalEnemiesForCurrentWave = 0;
-    public int enemiesLeftForCurrentWave = 0;
+    
+    private int _totalEnemiesForCurrentWave = 0;
+    private int _enemiesLeftForCurrentWave = 0;
     
     private readonly List<GameObject> _activeEnemies = new List<GameObject>();
 
@@ -30,6 +28,17 @@ public class WaveManager : Singleton<WaveManager>
         if (waves is null || waves.Count <= 0) return;
 
         _waveQueue = new Queue<Wave>(waves);
+    }
+
+    public string GetWaveText()
+    {
+        var currentWave = waves.Count - _waveQueue.Count;
+        return $"{currentWave} / {waves.Count}";
+    }
+
+    public string GetEnemyText()
+    {
+        return $"{_enemiesLeftForCurrentWave} / {_totalEnemiesForCurrentWave}";
     }
 
     public void QueueNextWave()
@@ -56,11 +65,11 @@ public class WaveManager : Singleton<WaveManager>
     {
         SetCurrentWaveEnemyTotal(wave);
         
+        var randomIndex = Random.Range(0, PathManager.Instance.AllPaths.Count);
+        var path = PathManager.Instance.AllPaths[randomIndex];
+        
         foreach (var enemyCount in wave.enemies)
         {
-            var randomIndex = Random.Range(0, PathManager.Instance.AllPaths.Count);
-            var path = PathManager.Instance.AllPaths[randomIndex];
-            
             for (var i = 0; i < enemyCount.count; i++)
             {
                 SpawnEnemy(enemyCount.enemyPrefab, path);
@@ -83,12 +92,12 @@ public class WaveManager : Singleton<WaveManager>
     
     private void SetCurrentWaveEnemyTotal(Wave wave)
     {
-        enemiesLeftForCurrentWave = totalEnemiesForCurrentWave = wave.enemies.Sum(waveEnemy => waveEnemy.count);
+        _enemiesLeftForCurrentWave = _totalEnemiesForCurrentWave = wave.enemies.Sum(waveEnemy => waveEnemy.count);
     }
 
     private void HandleEnemyDestroyed(GameObject enemy)
     {
-        enemiesLeftForCurrentWave--;
+        _enemiesLeftForCurrentWave--;
         _activeEnemies.Remove(enemy);
     }
 }
