@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using static Unity.Collections.Unicode;
 
 public abstract class Tower : MonoBehaviour
@@ -18,13 +20,29 @@ public abstract class Tower : MonoBehaviour
     protected float actualAttackRate;
     protected float actualRange;
 
+    public SpriteRenderer rangeIndicator;
+
     private void Awake()
     {
         if(runeSlot) ApplyRune(runeSlot);
         else ResetStats();
+        
+        if (rangeIndicator is null) return; 
+        
+        rangeIndicator.enabled = false;
+        rangeIndicator.transform.localScale = new Vector2(range * 2, range * 2);
+    }
+    
+    private void OnMouseEnter()
+    {
+        EnableRangeIndicator();
+    }
+    
+    private void OnMouseExit()
+    {
+        DisableRangeIndicator();
     }
 
-    //public abstract Enemy FindTarget();
     public virtual List<Enemy> FindTargets()
     {
         var results = new List<Collider2D>();
@@ -59,6 +77,16 @@ public abstract class Tower : MonoBehaviour
     {
         ResetStats();
         runeSlot = null;
+    }
+
+    public void EnableRangeIndicator()
+    {
+        rangeIndicator.enabled = true;
+    }
+    
+    public void DisableRangeIndicator()
+    {
+        rangeIndicator.enabled = false;
     }
     
     private void OnDrawGizmos()

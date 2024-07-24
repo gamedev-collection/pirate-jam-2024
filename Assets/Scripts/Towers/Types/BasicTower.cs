@@ -24,25 +24,6 @@ public class BasicTower : Tower
             _lastAttackTime = Time.time;
         }
     }
-
-    /*
-    public override Enemy FindTarget()
-    {
-        var enemies = FindObjectsOfType<Enemy>();
-        Enemy nearestEnemy = null;
-        var nearestDistance = float.MaxValue;
-
-        foreach (var enemy in enemies)
-        {
-            var distance = Vector3.Distance(transform.position, enemy.transform.position);
-            if (!(distance < nearestDistance) || !(distance <= range)) continue;
-            nearestEnemy = enemy;
-            nearestDistance = distance;
-        }
-
-        return nearestEnemy;
-    }
-    */
     
     public override void Attack(Enemy target)
     {
