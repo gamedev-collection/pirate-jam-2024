@@ -11,6 +11,8 @@ public class WaveManager : Singleton<WaveManager>
     public Transform spawnPoint;
     public float waveStartupTime = 2f;
 
+    public PathVisualiser pathVisualiser;
+
     public bool WaveActive => _activeEnemies.Count > 0 || _waveActive;
     
     private int _totalEnemiesForCurrentWave = 0;
@@ -21,9 +23,12 @@ public class WaveManager : Singleton<WaveManager>
     private Queue<Wave> _waveQueue = new Queue<Wave>();
     private bool _waveActive = false;
 
+    private List<PathNode> _path = new List<PathNode>();
+
     private void Start()
     {
         PathManager.Instance.GenerateAllPaths();
+        GetNewPath();
 
         if (waves is null || waves.Count <= 0) return;
 
@@ -52,27 +57,30 @@ public class WaveManager : Singleton<WaveManager>
     private IEnumerator StartNextWave(Wave wave)
     {
         _waveActive = true;
+        pathVisualiser?.DisablePathVisualiser();
+
         yield return new WaitForSeconds(waveStartupTime);
         
         yield return StartCoroutine(SpawnWave(wave));
         
         yield return new WaitUntil(() => _activeEnemies.Count == 0);
+        
         _waveActive = false;
         wave.onWaveFinish?.Invoke();
+        
+        pathVisualiser?.EnablePathVisualiser();
+        GetNewPath();
     }
     
     private IEnumerator SpawnWave(Wave wave)
     {
         SetCurrentWaveEnemyTotal(wave);
         
-        var randomIndex = Random.Range(0, PathManager.Instance.AllPaths.Count);
-        var path = PathManager.Instance.AllPaths[randomIndex];
-        
         foreach (var enemyCount in wave.enemies)
         {
             for (var i = 0; i < enemyCount.count; i++)
             {
-                SpawnEnemy(enemyCount.enemyPrefab, path);
+                SpawnEnemy(enemyCount.enemyPrefab);
                 yield return new WaitForSeconds(1f / enemyCount.rate);
             }
             
@@ -80,12 +88,12 @@ public class WaveManager : Singleton<WaveManager>
         }
     }
 
-    private void SpawnEnemy(GameObject prefab, List<PathNode> path)
+    private void SpawnEnemy(GameObject prefab)
     {
         var spawnedObject = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
         
         spawnedObject.GetComponent<Enemy>().OnEnemyDestroyed += HandleEnemyDestroyed;
-        spawnedObject.GetComponent<Enemy>().SetPath(path);
+        spawnedObject.GetComponent<Enemy>().SetPath(_path);
         
         _activeEnemies.Add(spawnedObject);
     }
@@ -99,5 +107,12 @@ public class WaveManager : Singleton<WaveManager>
     {
         _enemiesLeftForCurrentWave--;
         _activeEnemies.Remove(enemy);
+    }
+
+    private void GetNewPath()
+    {
+        var randomIndex = Random.Range(0, PathManager.Instance.AllPaths.Count);
+        _path = PathManager.Instance.AllPaths[randomIndex];
+        pathVisualiser?.VisualisePath(_path);
     }
 }
