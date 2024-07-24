@@ -15,12 +15,14 @@ public class AED_CanvasGroup : AnimatedEnableDisable
     public override void AnimatedDisable()
     {
         _canvasGroup.interactable = false;
+        _canvasGroup.blocksRaycasts = false;
         if(!_isAnimating) StartCoroutine(DoAnimateCanvasGroup(1, 0, _duration, _disableDelay));
     }
 
     public override void AnimatedEnable()
     {
         _canvasGroup.interactable = true;
+        _canvasGroup.blocksRaycasts = true;
         if (!_isAnimating) StartCoroutine(DoAnimateCanvasGroup(0, 1, _duration, _enableDelay));
     }
 
