@@ -16,16 +16,16 @@ public abstract class Tower : MonoBehaviour
 
     public ContactFilter2D filter;
 
-    protected int actualDamage;
-    protected float actualAttackRate;
-    protected float actualRange;
+    //protected int actualDamage;
+    //protected float actualAttackRate;
+    //protected float actualRange;
 
     public SpriteRenderer rangeIndicator;
-
+    
     private void Awake()
     {
-        if(runeSlot) ApplyRune(runeSlot);
-        else ResetStats();
+        //if(runeSlot) ApplyRune(runeSlot);
+        //else RemoveRune();
         
         if (rangeIndicator is null) return; 
         
@@ -48,7 +48,7 @@ public abstract class Tower : MonoBehaviour
         var results = new List<Collider2D>();
         var enemies = new List<Enemy>();
         
-        var hits = Physics2D.OverlapCircle(transform.position, actualRange, filter, results);
+        var hits = Physics2D.OverlapCircle(transform.position, range, filter, results);
 
         if (hits > 0 && results.Count > 0)
         {
@@ -60,22 +60,14 @@ public abstract class Tower : MonoBehaviour
     
     public abstract void Attack(Enemy target);
     public abstract void Delete();
+    
     public virtual void ApplyRune(Rune rune)
     {
-        if (rune == runeSlot) return;
-
-        ResetStats();
         runeSlot = rune;
-        SO_Rune runeData = rune.RuneData;
-
-        actualDamage += runeData.damageBuff;
-        actualAttackRate += runeData.attackRateBuff;
-        actualRange += runeData.rangeBuff;
     }
 
     public virtual void RemoveRune()
     {
-        ResetStats();
         runeSlot = null;
     }
 
@@ -92,13 +84,15 @@ public abstract class Tower : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(transform.position, actualRange);
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 
+    /*
     private void ResetStats()
     {
         actualDamage = damage;
         actualAttackRate = attackRate;
         actualRange = range;
     }
+    */
 }

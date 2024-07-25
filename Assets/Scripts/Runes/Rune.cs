@@ -1,7 +1,28 @@
 ﻿using UnityEngine;
 
-public class Rune : MonoBehaviour
+public abstract class Rune : MonoBehaviour
 {
-    [SerializeField] private SO_Rune _runeData;
-    public SO_Rune RuneData { get { return _runeData; } }
+    public string runeName = "Rune";
+    public int cost;
+
+    protected Enemy Enemy;
+
+    public void Init(Enemy enemy)
+    {
+        Enemy = enemy;
+    }
+
+    public abstract void ApplyEffect();
+
+    protected abstract void OnEffectRenew();
+
+    protected void TakeDamage(int amount)
+    {
+        Enemy.TakeDamage(amount);
+    }
+
+    protected void OnEffectEnd()
+    {
+        Destroy(this);
+    }
 }
