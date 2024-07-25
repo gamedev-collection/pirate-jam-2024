@@ -15,6 +15,8 @@ public abstract class Rune : MonoBehaviour
     protected Enemy Enemy;
     protected Tower Tower;
 
+    protected bool EffectApplied = false;
+
     public void Init(Enemy enemy)
     {
         Enemy = enemy;
