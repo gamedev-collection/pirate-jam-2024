@@ -16,6 +16,9 @@ public abstract class Tower : MonoBehaviour
 
     public ContactFilter2D filter;
 
+    public string towerName = "Tower";
+    [TextArea]public string towerDescription = "Tower Description";
+
     protected int actualDamage;
     protected float actualAttackRate;
     protected float actualRange;
