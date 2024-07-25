@@ -10,6 +10,7 @@ public class Tooltip : MonoBehaviour
     [SerializeField] private LayoutElement _layoutElement;
     [SerializeField] private int characterWrapLimit;
     [SerializeField] private Vector2 _positionOffset;
+    [SerializeField] private GameObject _headerDeco;
 
     [Header("Textfields")]
     [SerializeField] private TextMeshProUGUI _headerText;
@@ -17,11 +18,15 @@ public class Tooltip : MonoBehaviour
 
     public virtual void SetText(string body, string header = "")
     {
-        if (string.IsNullOrEmpty(header)) _headerText.gameObject.SetActive(false);
+        if (string.IsNullOrEmpty(header))
+        {
+            _headerText.gameObject.SetActive(false);
+            if(_headerDeco) _headerDeco.gameObject.SetActive(false);
+        }
         else
         {
             _headerText.gameObject.SetActive(true);
-            if (_headerText) _headerText.text = header;
+            _headerText.text = header;
         }
 
         if (_bodyText) _bodyText.text = body;

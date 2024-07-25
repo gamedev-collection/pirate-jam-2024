@@ -634,6 +634,7 @@ MonoBehaviour:
   _layoutElement: {fileID: 4053439289655951788}
   characterWrapLimit: 0
   _positionOffset: {x: 10, y: 10}
+  _headerDeco: {fileID: 0}
   _headerText: {fileID: 0}
   _bodyText: {fileID: 0}
 --- !u!1 &5127559730836681157
@@ -728,7 +729,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 20
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -944,6 +945,7 @@ MonoBehaviour:
   _layoutElement: {fileID: 5592144581621175483}
   characterWrapLimit: 0
   _positionOffset: {x: 10, y: 10}
+  _headerDeco: {fileID: 0}
   _headerText: {fileID: 3339615754186457346}
   _bodyText: {fileID: 7018438669640364673}
   _costText: {fileID: 3970633862497729207}
@@ -1043,7 +1045,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
+  m_fontSize: 20
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -1330,7 +1332,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
+  m_fontSize: 20
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
@@ -1499,7 +1501,7 @@ MonoBehaviour:
     m_Left: 20
     m_Right: 20
     m_Top: 20
-    m_Bottom: 15
+    m_Bottom: 20
   m_ChildAlignment: 0
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
@@ -1559,6 +1561,7 @@ MonoBehaviour:
   _layoutElement: {fileID: 1282754680809093884}
   characterWrapLimit: 0
   _positionOffset: {x: 10, y: 10}
+  _headerDeco: {fileID: 3521617360581733840}
   _headerText: {fileID: 5171042618499154998}
   _bodyText: {fileID: 1878773401518118286}
 --- !u!1 &8494845853637422394
@@ -2241,7 +2244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4535228150573945269, guid: af640ebb4dd49cb4c804d864fc790d87, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4535228150573945269, guid: af640ebb4dd49cb4c804d864fc790d87, type: 3}
       propertyPath: m_fontSizeBase
