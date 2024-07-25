@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 545201216574217532}
   - component: {fileID: 8544818767892432552}
   - component: {fileID: 5894272857352701442}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a97d0809505104486380507b05fe1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 2
+  maxHp: 10
   movementSpeed: 2
   size: 1
   damage: 0

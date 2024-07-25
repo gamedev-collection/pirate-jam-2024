@@ -24,7 +24,7 @@ public class ObeliskManager : Singleton<ObeliskManager>
 
     private void OnDestroy()
     {
-        TowerManager.Instance.OnTowerPlaced -= OnNewTowerPlaced;
+        //TowerManager.Instance.OnTowerPlaced -= OnNewTowerPlaced;
     }
 
     private void Update()

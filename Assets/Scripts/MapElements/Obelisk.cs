@@ -131,7 +131,7 @@ public class Obelisk : MonoBehaviour
     {
         foreach (Tower tower in _buffedTowers)
         {
-            tower.RemoveRune();
+            tower.RemoveRune(_runeSlot);
         }
         _buffedTowers.Clear();
     }

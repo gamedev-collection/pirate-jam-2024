@@ -9,7 +9,7 @@ public class BasicTower : Tower
 
     private void Start()
     {
-        _lastAttackTime = -actualAttackRate;
+        _lastAttackTime = -1f / attackRate;
     }
 
     private void Update()
@@ -17,7 +17,7 @@ public class BasicTower : Tower
         if (!WaveManager.Instance.WaveActive) return;
 
         var targets = FindTargets();
-        if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= actualAttackRate)
+        if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= 1f / attackRate)
         {
             var target = targets.OrderBy(enemy => enemy.CurrentHp).First();
             Attack(target);
@@ -36,7 +36,7 @@ public class BasicTower : Tower
         
         if (projectileScript != null)
         {
-            projectileScript.Init(actualDamage, runeSlot, direction);
+            projectileScript.Init(damage, runeSlot, direction);
         }
     }
 
