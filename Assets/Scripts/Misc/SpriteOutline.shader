@@ -92,7 +92,7 @@ Properties
 				fixed4 c = SampleSpriteTexture(IN.texcoord) * IN.color;
 
 				// If outline is enabled and there is a pixel, try to draw an outline.
-				if (_Outline > 0 && c.a != 0) {
+				if (_Outline > 0) {
 					float totalAlpha = 1.0;
 
 					[unroll(16)]

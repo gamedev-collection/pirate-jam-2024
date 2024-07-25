@@ -1894,6 +1894,7 @@ MonoBehaviour:
   placementMap: {fileID: 2137811351}
   overlayPrefab: {fileID: 2722215804292138876, guid: c9df68bf530bc3a4eb36372eb8d675ec, type: 3}
   overlayContainer: {fileID: 2065433769}
+  rangeIndicator: {fileID: 1540175351}
 --- !u!4 &895630955
 Transform:
   m_ObjectHideFlags: 0
@@ -2047,12 +2048,12 @@ GameObject:
   - component: {fileID: 1540175353}
   - component: {fileID: 1540175352}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: RangeIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1540175352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2065,8 +2066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac08826a7aef0ef48b3778817f6c9e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0.9245283, g: 0.008721821, b: 0.008721821, a: 1}
-  outlineSize: 8
+  color: {r: 0.007843149, g: 0.9254902, b: 0.3037456, a: 0.5019608}
+  outlineSize: 2
 --- !u!212 &1540175353
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2109,7 +2110,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

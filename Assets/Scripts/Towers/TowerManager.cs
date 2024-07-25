@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class TowerManager : Singleton<TowerManager>
 {
@@ -13,6 +14,8 @@ public class TowerManager : Singleton<TowerManager>
     public OverlayTile overlayPrefab;
     public Transform overlayContainer;
 
+    public GameObject rangeIndicator;
+    
     public event Action<Tower> OnTowerPlaced;
     
     private GameObject _towerPrefab;
@@ -30,11 +33,18 @@ public class TowerManager : Singleton<TowerManager>
         
         ConstructMapDict();
         placementMap.gameObject.SetActive(false);
+
+        if (rangeIndicator is null) return;
+        rangeIndicator.SetActive(false);
     }
 
     private void LateUpdate()
     {
         if (!InBuildmode) return;
+
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0f;
+        rangeIndicator.transform.position =mousePos;
         
         var hit = GetFocusedOnTile();
 
@@ -44,6 +54,7 @@ public class TowerManager : Singleton<TowerManager>
         if (Input.GetMouseButtonDown(0))
         {
             HandleMouseClick(tile);
+            rangeIndicator.SetActive(false);
         }
     }
 
@@ -53,6 +64,11 @@ public class TowerManager : Singleton<TowerManager>
         placementMap.gameObject.SetActive(true);
 
         _towerPrefab = towerPrefab;
+        var towerComponent = towerPrefab.GetComponent<Tower>();
+
+        rangeIndicator.GetComponent<SpriteOutline>().color = towerComponent.rangeIndicator.gameObject.GetComponent<SpriteOutline>().color;
+        rangeIndicator.SetActive(true);
+        rangeIndicator.transform.localScale = new Vector2(towerComponent.range * 2, towerComponent.range * 2);
     }
 
     private void HandleMouseClick(OverlayTile tile)
