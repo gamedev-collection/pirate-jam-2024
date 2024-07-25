@@ -263,7 +263,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Minions
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 352e11f80df60934297ada6d6f5037a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e69d9e6f38017004aab250d96af02085, type: 2}
   m_sharedMaterial: {fileID: 1831539975715340043, guid: 352e11f80df60934297ada6d6f5037a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
+  m_fontSize: 40
   m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
