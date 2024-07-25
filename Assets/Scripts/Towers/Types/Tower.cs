@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Serialization;
 using static Unity.Collections.Unicode;
@@ -15,19 +16,23 @@ public abstract class Tower : MonoBehaviour
     public GameObject projectile;
 
     public ContactFilter2D filter;
-
-    //protected int actualDamage;
-    //protected float actualAttackRate;
-    //protected float actualRange;
-
+    
     public SpriteRenderer rangeIndicator;
+
+    private int _originalDamage;
+    private float _originalRate;
+    private float _originalRange;
+    private Dictionary<Rune, GameObject> _runes = new Dictionary<Rune, GameObject>();
     
     private void Awake()
     {
-        //if(runeSlot) ApplyRune(runeSlot);
-        //else RemoveRune();
+        if (rangeIndicator is null) return;
+
+        _originalDamage = damage;
+        _originalRate = attackRate;
+        _originalRange = range;
         
-        if (rangeIndicator is null) return; 
+        if (runeSlot) ApplyRune(runeSlot);
         
         rangeIndicator.enabled = false;
         rangeIndicator.transform.localScale = new Vector2(range * 2, range * 2);
@@ -64,10 +69,35 @@ public abstract class Tower : MonoBehaviour
     public virtual void ApplyRune(Rune rune)
     {
         runeSlot = rune;
+
+        if (rune.runeType != ERuneType.Tower) return;
+        
+        Rune runeComp;
+        if (_runes.ContainsKey(rune))
+        {
+            runeComp = _runes[rune].GetComponent<Rune>();
+        }
+        else
+        {
+            var runeInstance = Instantiate(rune.gameObject, this.transform);
+            runeComp = runeInstance.GetComponent<Rune>();
+            _runes[rune] = runeInstance;
+        }
+            
+        runeComp.Init(this);
+        runeComp.ApplyEffect();
     }
 
-    public virtual void RemoveRune()
+    public virtual void RemoveRune(Rune rune)
     {
+        if (runeSlot.runeType == ERuneType.Tower)
+        {
+            var instance = _runes[rune];
+            instance?.GetComponent<Rune>().OnEffectEnd();
+
+            ResetStats();
+        }
+        
         runeSlot = null;
     }
 
@@ -86,13 +116,12 @@ public abstract class Tower : MonoBehaviour
         Gizmos.color = Color.white;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-
-    /*
+    
     private void ResetStats()
     {
-        actualDamage = damage;
-        actualAttackRate = attackRate;
-        actualRange = range;
+        damage = _originalDamage;
+        attackRate = _originalRate;
+        range = _originalRange;
     }
-    */
+
 }

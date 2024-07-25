@@ -56,7 +56,7 @@ public class Enemy: MonoBehaviour
     {
         CurrentHp -= amount;
 
-        if (rune is not null)
+        if (rune is not null && rune.runeType == ERuneType.Enemy)
         {
             Rune runeComp;
             if (_runes.ContainsKey(rune))

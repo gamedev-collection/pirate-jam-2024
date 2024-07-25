@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runeName: FireRune
   cost: 0
+  runeType: 1
   damagePerTick: 5
   tickRate: 2
   tickTimes: 5
