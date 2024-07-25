@@ -13,10 +13,6 @@ public class TooltipManager : Singleton<TooltipManager>
 
     private Tooltip _activeTooltip;
 
-    private void Awake()
-    {
-        Hide();
-    }
     public static void ShowBasicTooltip(string body, string header = "")
     {
         if (Instance._activeTooltip) Hide();
