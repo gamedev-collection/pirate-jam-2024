@@ -5,22 +5,34 @@ using UnityEngine;
 
 public class OnHitSplash : MonoBehaviour
 {
-    [SerializeField] protected int _damage = 1;
     [SerializeField] protected float _range = 1;
     [SerializeField] protected ContactFilter2D filter;
 
     [Header("Visuals")]
+    [SerializeField] private GameObject _visualContainer;
     [SerializeField] private GameObject _visualNormal;
     [SerializeField] private GameObject _visualDOT;
     [SerializeField] private GameObject _visualSlow;
 
+    protected int _damage;
     protected Rune _rune;
 
-    protected virtual void Initialize(Rune rune)
+    public virtual void Initialize(int damage, Rune rune = null)
     {
-        
-        if(rune.GetType() != typeof(FireRune)) { _visualDOT.SetActive(false);}
+        _visualContainer.transform.localScale *= _range;
+        _visualDOT.SetActive(false);
+        _visualSlow.SetActive(false);
+        _visualNormal.SetActive(false);
 
+        if (rune != null)
+        {
+            if (rune.GetType() == typeof(BuffRune)) { _visualNormal.SetActive(true); }
+            if (rune.GetType() == typeof(FireRune)) { _visualDOT.SetActive(true); }
+            if (rune.GetType() == typeof(FreezeRune)) { _visualSlow.SetActive(true); }
+        }
+        else _visualNormal.SetActive(true);
+
+        _damage = damage;
         this._rune = rune;
         DoHit(FindTargets());
     }
@@ -46,6 +58,6 @@ public class OnHitSplash : MonoBehaviour
             enemy.TakeDamage(_damage, _rune);
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject, 0.2f);
     }
 }

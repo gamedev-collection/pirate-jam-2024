@@ -99,12 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9b34ac046e11641ad8a7979cd74326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  attackRate: 1
+  damage: 1
+  attackRate: 0.2
   range: 5
   cost: 100
   runeSlot: {fileID: 0}
-  projectile: {fileID: 234386141113976813, guid: 3bc4b022e2e5b994db4a1996d890c578, type: 3}
+  projectile: {fileID: 234386141113976813, guid: 54d2ef67e9ade6349b87b1cdf4277902, type: 3}
   filter:
     useTriggers: 0
     useLayerMask: 0

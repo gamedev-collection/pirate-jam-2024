@@ -1350,6 +1350,14 @@ MonoBehaviour:
   _persistent: 0
   waves:
   - enemies:
+    - enemyPrefab: {fileID: 7759671852312040146, guid: 578108c03c165c6499a0198ec05bb8dc, type: 3}
+      count: 1
+      rate: 2
+    onWaveFinish:
+      m_PersistentCalls:
+        m_Calls: []
+    timeBetweenEnemySpawning: 0
+  - enemies:
     - enemyPrefab: {fileID: 7759671852312040146, guid: 578c8aff51e98704888eb09f1ac892e8, type: 3}
       count: 10
       rate: 2
@@ -7244,7 +7252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a10625adfd06e14f92be31652dcbcd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 1
+  _type: 0
   _header: 
   _body: Starts the next wave
   _dataObject: {fileID: 0}

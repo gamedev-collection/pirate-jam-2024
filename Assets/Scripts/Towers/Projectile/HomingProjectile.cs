@@ -21,13 +21,14 @@ public class HomingProjectile : MonoBehaviour
     [Header("Slowdown")]
     public bool slowdownWithScale = false;
     public float slowestSpeed;
-    [Range(0,1)]public float slowestCurvePoint;
+    [Range(0, 1)] public float slowestCurvePoint;
 
     [Header("OnHit Instantiate")]
     public bool onHitInstantiate = false;
-    public GameObject onHitObject;
+    public OnHitSplash onHitObject;
 
     private bool _isInitialised = false;
+    private bool _hasHitOnce = false;
     private int _damage;
     private float _startingDistance;
     private float _actualSpeed;
@@ -60,14 +61,18 @@ public class HomingProjectile : MonoBehaviour
             _direction = _lastTargetPos - transform.position;
         }
 
-        if(scaleOverDistance) UpdateScale(Vector3.Distance(_lastTargetPos, transform.position));
-        if(slowdownWithScale) UpdateSpeed(Vector3.Distance(_lastTargetPos, transform.position));
+        if (scaleOverDistance) UpdateScale(Vector3.Distance(_lastTargetPos, transform.position));
+        if (slowdownWithScale) UpdateSpeed(Vector3.Distance(_lastTargetPos, transform.position));
 
         _direction.Normalize();
 
         transform.position += _direction * _actualSpeed * Time.deltaTime;
 
-        if(Vector3.Distance(_startingPosition, transform.position) > _startingDistance) Destroy(gameObject);
+        if (Vector3.Distance(_startingPosition, transform.position) > _startingDistance)
+        {
+            if(onHitInstantiate) InstantiateSplashObject();
+            Destroy(gameObject);
+        }
         Destroy(gameObject, lifetime);
     }
 
@@ -78,7 +83,7 @@ public class HomingProjectile : MonoBehaviour
 
     private void UpdateScale(float distance)
     {
-        float percentage = 1-(distance / _startingDistance);
+        float percentage = 1 - (distance / _startingDistance);
         float value = scaleCurve.Evaluate(percentage);
         visual.transform.localScale = new Vector3(value, value, 1);
     }
@@ -99,10 +104,27 @@ public class HomingProjectile : MonoBehaviour
 
     protected virtual void OnHit(Collider2D col)
     {
-        var enemy = col.gameObject.GetComponent<Enemy>();
-        enemy?.TakeDamage(_damage, _rune);
-        if (onHitInstantiate) Instantiate(onHitObject);
+        if (!_hasHitOnce)
+        {
+            if (onHitInstantiate)
+            {
+                InstantiateSplashObject();
+            }
+            else
+            {
+                var enemy = col.gameObject.GetComponent<Enemy>();
+                enemy?.TakeDamage(_damage, _rune);
+            }
+            _hasHitOnce = true;
+        }
+
         Destroy(gameObject);
+    }
+
+    protected virtual void InstantiateSplashObject()
+    {
+        OnHitSplash splash = Instantiate(onHitObject, new Vector3(transform.position.x, transform.position.y, transform.position.z + 1), Quaternion.identity);
+        splash.Initialize(_damage, _rune);
     }
 
     private void OnDrawGizmos()

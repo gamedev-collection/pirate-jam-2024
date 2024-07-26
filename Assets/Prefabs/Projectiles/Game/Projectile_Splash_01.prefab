@@ -124,7 +124,7 @@ MonoBehaviour:
   slowestSpeed: 4
   slowestCurvePoint: 0.5
   onHitInstantiate: 1
-  onHitObject: {fileID: 6241804308602646730, guid: d17deb5af0e83e7428f8e2d43c4b3da1, type: 3}
+  onHitObject: {fileID: 4634416569675787440, guid: d17deb5af0e83e7428f8e2d43c4b3da1, type: 3}
 --- !u!50 &-1159821256378331509
 Rigidbody2D:
   serializedVersion: 4
@@ -179,7 +179,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.0931935, y: 2.0931935, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2748721544879590921}
