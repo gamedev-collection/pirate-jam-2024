@@ -18,6 +18,11 @@ public class UIManager: Singleton<UIManager>
     public GameObject towerShopPrefab;
     public List<GameObject> towerPrefabs = new List<GameObject>();
     private List<KeyValuePair<int, Button>> _towerShopButtons = new List<KeyValuePair<int, Button>>();
+
+    public Transform runeShopContainer;
+    public GameObject runeShopPrefab;
+    public List<GameObject> runePrefabs = new List<GameObject>();
+    private List<KeyValuePair<int, Button>> _runeShopButtons = new List<KeyValuePair<int, Button>>();
     
     public int maxHealth;
     public int CurrentHealth { get; private set; }
@@ -29,6 +34,7 @@ public class UIManager: Singleton<UIManager>
         CurrentHealth = maxHealth;
         UpdateHealthBar();
         CreateTowerShop();
+        CreateRuneShop();
     }
 
     private void Update()
@@ -41,10 +47,20 @@ public class UIManager: Singleton<UIManager>
 
         if (moneyText is not null) moneyText.text = money.ToString();
 
-        if (_towerShopButtons.Count <= 0) return;
-        foreach (var pair in _towerShopButtons)
+        if (_towerShopButtons.Count > 0)
         {
-            pair.Value.interactable = money >= pair.Key;
+            foreach (var pair in _towerShopButtons)
+            {
+                pair.Value.interactable = money >= pair.Key;
+            }
+        }
+
+        if (_runeShopButtons.Count > 0)
+        {
+            foreach (var pair in _runeShopButtons)
+            {
+                pair.Value.interactable = money >= pair.Key;
+            }
         }
     }
 
@@ -56,6 +72,11 @@ public class UIManager: Singleton<UIManager>
     public void SetActiveTower(GameObject towerPrefab)
     {
         TowerManager.Instance.SetActiveTower(towerPrefab);
+    }
+
+    public void SetActiveRune(Rune runePrefab)
+    {
+        ObeliskManager.Instance.SetActiveRune(runePrefab);
     }
 
     public void TakeDamage(int amount)
@@ -106,6 +127,33 @@ public class UIManager: Singleton<UIManager>
             btn.onClick.AddListener(delegate { SetActiveTower(towerObj); });
             
             _towerShopButtons.Add(new KeyValuePair<int, Button>(tower.cost, btn));
+        }
+    }
+
+    private void CreateRuneShop()
+    {
+        if (runeShopContainer is null || runeShopPrefab is null || runePrefabs.Count <= 0) return;
+        
+        foreach (var runeObj in runePrefabs)
+        {
+            // Instantiate shop item
+            var obj = Instantiate(runeShopPrefab, runeShopContainer);
+            var btn = obj.GetComponentInChildren<Button>();
+            var txt = obj.GetComponentInChildren<TMP_Text>();
+            
+            // Get rune component
+            var rune = runeObj.GetComponent<Rune>();
+            var runeSprite = rune.runeSprite;
+            
+            obj.GetComponentInChildren<Image>().sprite = runeSprite;
+
+            txt.text = rune.cost.ToString();
+            
+            btn.interactable = money >= rune.cost;
+
+            btn.onClick.AddListener(delegate { SetActiveRune(rune); });
+            
+            _towerShopButtons.Add(new KeyValuePair<int, Button>(rune.cost, btn));
         }
     }
 }
