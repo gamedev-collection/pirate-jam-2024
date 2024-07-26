@@ -55,7 +55,6 @@ public class Enemy: MonoBehaviour
     public void TakeDamage(int amount, Rune rune)
     {
         CurrentHp -= amount;
-
         if (rune is not null && rune.runeType == ERuneType.Enemy)
         {
             Rune runeComp;

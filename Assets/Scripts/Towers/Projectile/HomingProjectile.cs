@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.Rendering.DebugUI;
@@ -8,27 +10,39 @@ public class HomingProjectile : MonoBehaviour
 {
     public float lifetime = 2f;
     public float speed;
-    public float maxSlowdown;
+    public GameObject visual;
 
     [Header("Homing")]
     public bool homing = false;
 
     [Header("Scaling")]
     public bool scaleOverDistance = false;
-    public bool slowdownWithScale = false;
-    public GameObject visual;
     public AnimationCurve scaleCurve = AnimationCurve.Constant(0, 1, 1);
-    [Range(0,1)]public float slowestCurvePoint;
 
-    private int _damage;
-    private Rune _rune;
-    private Vector3 _direction;
+    [Header("Slowdown")]
+    public bool slowdownWithScale = false;
+    public float slowestSpeed;
+    [Range(0, 1)] public float slowestCurvePoint;
+
+    [Header("OnHit Instantiate")]
+    public bool onHitInstantiate = false;
+    public OnHitSplash onHitObject;
+
+    [Header("Visual")]
+    public Color colorNormal;
+    public Color colorDOT;
+    public Color colorSlow;
+
     private bool _isInitialised = false;
-    private Transform _target;
+    private bool _hasHitOnce = false;
+    private int _damage;
     private float _startingDistance;
     private float _actualSpeed;
-    private Vector3 _lastTargetPos;
+    private Transform _target;
     private Vector3 _startingPosition;
+    private Vector3 _lastTargetPos;
+    private Vector3 _direction;
+    private Rune _rune;
 
     public void Init(int damage, Rune rune, Transform target)
     {
@@ -40,6 +54,16 @@ public class HomingProjectile : MonoBehaviour
         _startingPosition = transform.position;
         _startingDistance = Vector3.Distance(_lastTargetPos, _startingPosition);
         _actualSpeed = speed;
+
+        Color color = colorNormal;
+        if (rune != null)
+        {
+            if (rune.GetType() == typeof(FireRune)) { color = colorDOT; }
+            if (rune.GetType() == typeof(FreezeRune)) { color = colorSlow; }
+        }
+        
+        if(visual) visual.GetComponent<SpriteRenderer>().material.color = color;
+
         _isInitialised = true;
 
     }
@@ -53,27 +77,30 @@ public class HomingProjectile : MonoBehaviour
             _direction = _lastTargetPos - transform.position;
         }
 
-        if(scaleOverDistance) UpdateScale(Vector3.Distance(_lastTargetPos, transform.position));
-        if(slowdownWithScale) UpdateSpeed(Vector3.Distance(_lastTargetPos, transform.position));
+        if (scaleOverDistance) UpdateScale(Vector3.Distance(_lastTargetPos, transform.position));
+        if (slowdownWithScale) UpdateSpeed(Vector3.Distance(_lastTargetPos, transform.position));
 
         _direction.Normalize();
 
+        visual.transform.Rotate(0, 0, _actualSpeed * 100 * Time.deltaTime);
         transform.position += _direction * _actualSpeed * Time.deltaTime;
 
-        if(Vector3.Distance(_startingPosition, transform.position) > _startingDistance) Destroy(gameObject);
+        if (Vector3.Distance(_startingPosition, transform.position) > _startingDistance)
+        {
+            if(onHitInstantiate) InstantiateSplashObject();
+            Destroy(gameObject);
+        }
         Destroy(gameObject, lifetime);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        var enemy = col.gameObject.GetComponent<Enemy>();
-        enemy?.TakeDamage(_damage, _rune);
-        Destroy(gameObject);
+        OnHit(col);
     }
 
     private void UpdateScale(float distance)
     {
-        float percentage = 1-(distance / _startingDistance);
+        float percentage = 1 - (distance / _startingDistance);
         float value = scaleCurve.Evaluate(percentage);
         visual.transform.localScale = new Vector3(value, value, 1);
     }
@@ -83,13 +110,38 @@ public class HomingProjectile : MonoBehaviour
         float percentage = 1 - (distance / _startingDistance);
         if (percentage < slowestCurvePoint)
         {
-            _actualSpeed = Mathf.Lerp(speed, maxSlowdown, Mathf.InverseLerp(0f, slowestCurvePoint, percentage));
+            _actualSpeed = Mathf.Lerp(speed, slowestSpeed, Mathf.InverseLerp(0f, slowestCurvePoint, percentage));
         }
 
         if (percentage > slowestCurvePoint)
         {
-            _actualSpeed = Mathf.Lerp(maxSlowdown, speed, Mathf.InverseLerp(slowestCurvePoint, 1f, percentage));
+            _actualSpeed = Mathf.Lerp(slowestSpeed, speed, Mathf.InverseLerp(slowestCurvePoint, 1f, percentage));
         }
+    }
+
+    protected virtual void OnHit(Collider2D col)
+    {
+        if (!_hasHitOnce)
+        {
+            if (onHitInstantiate)
+            {
+                InstantiateSplashObject();
+            }
+            else
+            {
+                var enemy = col.gameObject.GetComponent<Enemy>();
+                enemy?.TakeDamage(_damage, _rune);
+            }
+            _hasHitOnce = true;
+        }
+
+        Destroy(gameObject);
+    }
+
+    protected virtual void InstantiateSplashObject()
+    {
+        OnHitSplash splash = Instantiate(onHitObject, new Vector3(transform.position.x, transform.position.y, transform.position.z + 1), Quaternion.identity);
+        splash.Initialize(_damage, _rune);
     }
 
     private void OnDrawGizmos()

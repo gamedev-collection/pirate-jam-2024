@@ -47,6 +47,6 @@ MonoBehaviour:
   runeName: FireRune
   cost: 0
   runeType: 1
-  damagePerTick: 5
+  damagePerTick: 1
   tickRate: 2
-  tickTimes: 5
+  tickTimes: 3
