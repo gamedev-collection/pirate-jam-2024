@@ -7,19 +7,17 @@ public class FireRune : Rune
     public float tickRate;
     public int tickTimes;
 
-    private bool _hasStarted = false;
     private Coroutine _damageCoroutine;
     
-
     public override void ApplyEffect()
     {
-        if (_hasStarted)
+        if (EffectApplied)
         {
             OnEffectRenew();
         }
         else
         {
-            _hasStarted = true;
+            EffectApplied = true;
             StartDamageCoroutine();
         }
     }
@@ -48,7 +46,7 @@ public class FireRune : Rune
             tickCount++;
             yield return new WaitForSeconds(tickRate);
         }
-        _hasStarted = false;
+        EffectApplied = false;
         _damageCoroutine = null;
         OnEffectEnd();
     }

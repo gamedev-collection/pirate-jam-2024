@@ -6,16 +6,15 @@ public class BuffRune : Rune
     public float rangeBuff;
     public float attackRateBuff;
 
-    private bool _effectApplied;
-    
+
     public override void ApplyEffect()
     {
-        if (_effectApplied) return;
+        if (EffectApplied) return;
 
         Tower.damage += damageBuff;
         Tower.attackRate += attackRateBuff;
         Tower.range += rangeBuff;
-        _effectApplied = true;
+        EffectApplied = true;
     }
 
     protected override void OnEffectRenew()
