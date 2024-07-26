@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4657699747647398521}
   - component: {fileID: 857722231001289448}
-  - component: {fileID: 5041905706663506090}
   m_Layer: 0
   m_Name: Rune_TestRune
   m_TagString: Untagged
@@ -85,16 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5041905706663506090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5088968631959754050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39ed0f39ed645c6bf02a5f5d52ca601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _runeData: {fileID: 11400000, guid: 94d26915b63f5394ba40f2ce785bd6c1, type: 2}

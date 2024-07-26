@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Enemy: MonoBehaviour
@@ -15,6 +16,11 @@ public class Enemy: MonoBehaviour
     private int _pathIndex = 0;
 
     public event Action<GameObject> OnEnemyDestroyed;
+
+    private GameObject _runeInstance;
+    private Rune _rune;
+
+    private Dictionary<Rune, GameObject> _runes = new Dictionary<Rune, GameObject>();
 
     private void Start()
     {
@@ -46,19 +52,50 @@ public class Enemy: MonoBehaviour
         }
     }
     
-    public virtual void TakeDamage(int amount, Rune rune)
+    public void TakeDamage(int amount, Rune rune)
+    {
+        CurrentHp -= amount;
+
+        if (rune is not null && rune.runeType == ERuneType.Enemy)
+        {
+            Rune runeComp;
+            if (_runes.ContainsKey(rune))
+            { 
+                runeComp = _runes[rune].GetComponent<Rune>();
+            }
+            else
+            {
+                var runeInstance = Instantiate(rune.gameObject, this.transform);
+                runeComp = runeInstance.GetComponent<Rune>();
+                _runes[rune] = runeInstance;
+            }
+            
+            runeComp.Init(this);
+            runeComp.ApplyEffect();
+        }
+        
+        if (CurrentHp > 0) return;
+        DieWithMoney();
+    }
+    
+    public void TakeDamage(int amount)
     {
         CurrentHp -= amount;
         
         if (CurrentHp > 0) return;
-        UIManager.Instance.money += price;
-        Die();
+        DieWithMoney();
     }
     
-    public virtual void Die()
+    private void Die()
     {
         OnEnemyDestroyed?.Invoke(gameObject);
         Destroy(gameObject);
+    }
+
+    private void DieWithMoney()
+    {
+        UIManager.Instance.money += price;
+        Die();
     }
 
     public void SetPath(List<PathNode> path)

@@ -93,9 +93,12 @@ public class UIManager: Singleton<UIManager>
             // Get tower component
             var tower = towerObj.GetComponent<Tower>();
             var towerSprite = towerObj.GetComponent<SpriteRenderer>().sprite;
+            var towerTooltip = obj.GetComponent<HoverTooltipTrigger>();
 
             obj.GetComponentInChildren<Image>().sprite = towerSprite;
-            
+            towerTooltip.DataObject = towerObj;
+            towerTooltip.Type = TooltipType.ShopTower;
+
             txt.text = tower.cost.ToString();
             
             btn.interactable = money >= tower.cost;
