@@ -105,6 +105,7 @@ MonoBehaviour:
   cost: 100
   runeSlot: {fileID: 1127168156631113763, guid: a4aed0da45253bb4cb701a7b5e0377f1, type: 3}
   projectile: {fileID: 234386141113976813, guid: d9c91c5e58e5bf34aba689359913af52, type: 3}
+  visual: {fileID: 7790825156363946667}
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -119,6 +120,8 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  towerName: Tower
+  towerDescription: Tower Description
   rangeIndicator: {fileID: 3276433237577999033}
 --- !u!61 &8442600170891746710
 BoxCollider2D:

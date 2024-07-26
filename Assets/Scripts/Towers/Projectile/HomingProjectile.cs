@@ -15,6 +15,10 @@ public class HomingProjectile : MonoBehaviour
     [Header("Homing")]
     public bool homing = false;
 
+    [Header("Piercing")]
+    public bool piercing = false;
+    public int piercingAmount = 1;
+
     [Header("Scaling")]
     public bool scaleOverDistance = false;
     public AnimationCurve scaleCurve = AnimationCurve.Constant(0, 1, 1);
@@ -34,10 +38,11 @@ public class HomingProjectile : MonoBehaviour
     public Color colorSlow;
 
     private bool _isInitialised = false;
-    private bool _hasHitOnce = false;
     private int _damage;
+    private int _hits;
     private float _startingDistance;
     private float _actualSpeed;
+    private float _angularOffset;
     private Transform _target;
     private Vector3 _startingPosition;
     private Vector3 _lastTargetPos;
@@ -61,6 +66,8 @@ public class HomingProjectile : MonoBehaviour
             if (rune.GetType() == typeof(FireRune)) { color = colorDOT; }
             if (rune.GetType() == typeof(FreezeRune)) { color = colorSlow; }
         }
+
+        if (!piercing) piercingAmount = 1;
         
         if(visual) visual.GetComponent<SpriteRenderer>().material.color = color;
 
@@ -85,7 +92,7 @@ public class HomingProjectile : MonoBehaviour
         visual.transform.Rotate(0, 0, _actualSpeed * 100 * Time.deltaTime);
         transform.position += _direction * _actualSpeed * Time.deltaTime;
 
-        if (Vector3.Distance(_startingPosition, transform.position) > _startingDistance)
+        if ((scaleOverDistance || onHitInstantiate) && Vector3.Distance(_startingPosition, transform.position) > _startingDistance)
         {
             if(onHitInstantiate) InstantiateSplashObject();
             Destroy(gameObject);
@@ -121,7 +128,7 @@ public class HomingProjectile : MonoBehaviour
 
     protected virtual void OnHit(Collider2D col)
     {
-        if (!_hasHitOnce)
+        if (_hits < piercingAmount)
         {
             if (onHitInstantiate)
             {
@@ -132,15 +139,15 @@ public class HomingProjectile : MonoBehaviour
                 var enemy = col.gameObject.GetComponent<Enemy>();
                 enemy?.TakeDamage(_damage, _rune);
             }
-            _hasHitOnce = true;
+            _hits++;
+            homing = false;
         }
-
-        Destroy(gameObject);
+        else { Destroy(gameObject); }
     }
 
     protected virtual void InstantiateSplashObject()
     {
-        OnHitSplash splash = Instantiate(onHitObject, new Vector3(transform.position.x, transform.position.y, transform.position.z + 1), Quaternion.identity);
+        OnHitSplash splash = Instantiate(onHitObject, new Vector3(_lastTargetPos.x, _lastTargetPos.y, _lastTargetPos.z), Quaternion.identity);
         splash.Initialize(_damage, _rune);
     }
 

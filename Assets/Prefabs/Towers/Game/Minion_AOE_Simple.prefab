@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6754598471236287150
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 487236969928926469, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813771000132391586, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_Name
+      value: Minion_AOE_Simple
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: cost
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: range
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: towerName
+      value: Goblin Thumpers
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: attackRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: towerDescription
+      value: Causes shockwaves around the tower.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}

@@ -110,12 +110,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5109764645316583336, guid: d1f2109cd9900ef469fecea92e968fb6, type: 3}
       propertyPath: m_Name
-      value: Stat_Tooltip Variant
+      value: Stat_Tooltip
       objectReference: {fileID: 0}
     - target: {fileID: 5513213184202184669, guid: d1f2109cd9900ef469fecea92e968fb6, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 5723510964583966809, guid: e69d9e6f38017004aab250d96af02085, type: 2}
+    - target: {fileID: 5513213184202184669, guid: d1f2109cd9900ef469fecea92e968fb6, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 8192
+      objectReference: {fileID: 0}
     - target: {fileID: 6179196585274666088, guid: d1f2109cd9900ef469fecea92e968fb6, type: 3}
       propertyPath: m_sharedMaterial
       value: 

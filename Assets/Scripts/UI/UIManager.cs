@@ -92,7 +92,7 @@ public class UIManager: Singleton<UIManager>
             
             // Get tower component
             var tower = towerObj.GetComponent<Tower>();
-            var towerSprite = towerObj.GetComponent<SpriteRenderer>().sprite;
+            var towerSprite = tower.visual.GetComponent<SpriteRenderer>().sprite;
             var towerTooltip = obj.GetComponent<HoverTooltipTrigger>();
 
             obj.GetComponentInChildren<Image>().sprite = towerSprite;

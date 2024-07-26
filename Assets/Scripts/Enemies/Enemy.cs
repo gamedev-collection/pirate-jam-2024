@@ -12,6 +12,8 @@ public class Enemy: MonoBehaviour
     public int damage = 1;
     public int price = 1;
 
+    public ParticleSystem damageParticle;
+
     private List<PathNode> _path;
     private int _pathIndex = 0;
 
@@ -72,7 +74,7 @@ public class Enemy: MonoBehaviour
             runeComp.Init(this);
             runeComp.ApplyEffect();
         }
-        
+        damageParticle.Play();
         if (CurrentHp > 0) return;
         DieWithMoney();
     }

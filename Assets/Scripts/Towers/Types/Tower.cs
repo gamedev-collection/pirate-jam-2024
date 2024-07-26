@@ -13,6 +13,7 @@ public abstract class Tower : MonoBehaviour
     public int cost;
     public Rune runeSlot;
     public GameObject projectile;
+    public GameObject visual;
 
     public ContactFilter2D filter;
 

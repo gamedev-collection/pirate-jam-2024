@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public class AreaTower: Tower
+public class AreaTower : Tower
 {
+    [SerializeField] private ParticleSystem _aoeParticles;
     private float _lastAttackTime;
     
     private void Start()
@@ -42,6 +43,6 @@ public class AreaTower: Tower
 
     private void SpawnParticles()
     {
-        
+        if(_aoeParticles) _aoeParticles.Play();
     }
 }

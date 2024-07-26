@@ -11,7 +11,6 @@ public class OnHitSplashLingering : OnHitSplash
     [SerializeField] private CircleCollider2D _col;
 
     private float _lastAttackTime;
-    private bool _firstHit = true;
 
     public override void Initialize(int damage, Rune rune = null)
     {
