@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class HomingTower : Tower
+{
+
+    private float _lastAttackTime;
+
+    private void Start()
+    {
+        _lastAttackTime = -1f / attackRate;
+    }
+
+    private void Update()
+    {
+        if (!WaveManager.Instance.WaveActive) return;
+
+        var targets = FindTargets();
+        if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= 1f / attackRate)
+        {
+            var target = targets.OrderBy(enemy => enemy.CurrentHp).First();
+            Attack(target);
+            _lastAttackTime = Time.time;
+        }
+    }
+
+    public override void Attack(Enemy target)
+    {
+        if (projectile == null) return;
+
+        var projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity);
+        var projectileScript = projectileInstance.GetComponent<HomingProjectile>();
+
+        if (projectileScript != null)
+        {
+            projectileScript.Init(damage, runeSlot, target.transform);
+        }
+    }
+
+    public override void Delete()
+    {
+    }
+}
