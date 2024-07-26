@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -9,13 +10,13 @@ public class HomingProjectile : MonoBehaviour
 {
     public float lifetime = 2f;
     public float speed;
+    public GameObject visual;
 
     [Header("Homing")]
     public bool homing = false;
 
     [Header("Scaling")]
     public bool scaleOverDistance = false;
-    public GameObject visual;
     public AnimationCurve scaleCurve = AnimationCurve.Constant(0, 1, 1);
 
     [Header("Slowdown")]
@@ -26,6 +27,11 @@ public class HomingProjectile : MonoBehaviour
     [Header("OnHit Instantiate")]
     public bool onHitInstantiate = false;
     public OnHitSplash onHitObject;
+
+    [Header("Visual")]
+    public Color colorNormal;
+    public Color colorDOT;
+    public Color colorSlow;
 
     private bool _isInitialised = false;
     private bool _hasHitOnce = false;
@@ -48,6 +54,16 @@ public class HomingProjectile : MonoBehaviour
         _startingPosition = transform.position;
         _startingDistance = Vector3.Distance(_lastTargetPos, _startingPosition);
         _actualSpeed = speed;
+
+        Color color = colorNormal;
+        if (rune != null)
+        {
+            if (rune.GetType() == typeof(FireRune)) { color = colorDOT; }
+            if (rune.GetType() == typeof(FreezeRune)) { color = colorSlow; }
+        }
+        
+        if(visual) visual.GetComponent<SpriteRenderer>().material.color = color;
+
         _isInitialised = true;
 
     }
@@ -66,6 +82,7 @@ public class HomingProjectile : MonoBehaviour
 
         _direction.Normalize();
 
+        visual.transform.Rotate(0, 0, _actualSpeed * 100 * Time.deltaTime);
         transform.position += _direction * _actualSpeed * Time.deltaTime;
 
         if (Vector3.Distance(_startingPosition, transform.position) > _startingDistance)

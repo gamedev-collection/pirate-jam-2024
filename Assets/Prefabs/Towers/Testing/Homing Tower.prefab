@@ -100,11 +100,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  attackRate: 0.2
+  attackRate: 1
   range: 5
   cost: 100
   runeSlot: {fileID: 0}
-  projectile: {fileID: 234386141113976813, guid: 54d2ef67e9ade6349b87b1cdf4277902, type: 3}
+  projectile: {fileID: 234386141113976813, guid: b60cae78acb3a5248890d9a97e54cff3, type: 3}
   filter:
     useTriggers: 0
     useLayerMask: 0
