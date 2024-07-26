@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.Rendering.DebugUI;
@@ -8,27 +9,33 @@ public class HomingProjectile : MonoBehaviour
 {
     public float lifetime = 2f;
     public float speed;
-    public float maxSlowdown;
 
     [Header("Homing")]
     public bool homing = false;
 
     [Header("Scaling")]
     public bool scaleOverDistance = false;
-    public bool slowdownWithScale = false;
     public GameObject visual;
     public AnimationCurve scaleCurve = AnimationCurve.Constant(0, 1, 1);
+
+    [Header("Slowdown")]
+    public bool slowdownWithScale = false;
+    public float slowestSpeed;
     [Range(0,1)]public float slowestCurvePoint;
 
-    private int _damage;
-    private Rune _rune;
-    private Vector3 _direction;
+    [Header("OnHit Instantiate")]
+    public bool onHitInstantiate = false;
+    public GameObject onHitObject;
+
     private bool _isInitialised = false;
-    private Transform _target;
+    private int _damage;
     private float _startingDistance;
     private float _actualSpeed;
-    private Vector3 _lastTargetPos;
+    private Transform _target;
     private Vector3 _startingPosition;
+    private Vector3 _lastTargetPos;
+    private Vector3 _direction;
+    private Rune _rune;
 
     public void Init(int damage, Rune rune, Transform target)
     {
@@ -66,9 +73,7 @@ public class HomingProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        var enemy = col.gameObject.GetComponent<Enemy>();
-        enemy?.TakeDamage(_damage, _rune);
-        Destroy(gameObject);
+        OnHit(col);
     }
 
     private void UpdateScale(float distance)
@@ -83,13 +88,21 @@ public class HomingProjectile : MonoBehaviour
         float percentage = 1 - (distance / _startingDistance);
         if (percentage < slowestCurvePoint)
         {
-            _actualSpeed = Mathf.Lerp(speed, maxSlowdown, Mathf.InverseLerp(0f, slowestCurvePoint, percentage));
+            _actualSpeed = Mathf.Lerp(speed, slowestSpeed, Mathf.InverseLerp(0f, slowestCurvePoint, percentage));
         }
 
         if (percentage > slowestCurvePoint)
         {
-            _actualSpeed = Mathf.Lerp(maxSlowdown, speed, Mathf.InverseLerp(slowestCurvePoint, 1f, percentage));
+            _actualSpeed = Mathf.Lerp(slowestSpeed, speed, Mathf.InverseLerp(slowestCurvePoint, 1f, percentage));
         }
+    }
+
+    protected virtual void OnHit(Collider2D col)
+    {
+        var enemy = col.gameObject.GetComponent<Enemy>();
+        enemy?.TakeDamage(_damage, _rune);
+        if (onHitInstantiate) Instantiate(onHitObject);
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmos()

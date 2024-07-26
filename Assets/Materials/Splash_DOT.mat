@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pixelate
+  m_Name: Splash_DOT
   m_Shader: {fileID: -6465566751694194690, guid: 1c5853e597e648c4da48b86ade3172b1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -73,9 +73,9 @@ Material:
     - _EnableExternalAlpha: 0
     - _NoiseScale: 24
     - _Pixel_Factor: 64
-    - _Speed: 0.05
+    - _Speed: 0.01
     m_Colors:
-    - _Background_Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+    - _Background_Color: {r: 0.22448282, g: 0.38679248, b: 0.10034712, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
