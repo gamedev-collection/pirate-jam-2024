@@ -47,6 +47,7 @@ MonoBehaviour:
   runeName: BuffRune
   cost: 5
   runeType: 0
+  runeSprite: {fileID: 1884567410, guid: 33344a254a3eac641b02ae49f86409b1, type: 3}
   damageBuff: 10
   rangeBuff: 0
   attackRateBuff: 0

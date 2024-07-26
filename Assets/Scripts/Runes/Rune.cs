@@ -11,6 +11,7 @@ public abstract class Rune : MonoBehaviour
     public string runeName = "Rune";
     public int cost;
     public ERuneType runeType;
+    public Sprite runeSprite;
 
     protected Enemy Enemy;
     protected Tower Tower;

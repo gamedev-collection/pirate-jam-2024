@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runeName: FreezeRune
-  cost: 0
+  cost: 10
   runeType: 1
+  runeSprite: {fileID: 287210352, guid: 33344a254a3eac641b02ae49f86409b1, type: 3}
   slowAmount: 5
   duration: 5
