@@ -6,7 +6,6 @@ public class AreaTower : Tower
 {
     [SerializeField] private ParticleSystem _aoeParticles;
     private float _lastAttackTime;
-    private List<Enemy> targets;
 
     private void Start()
     {
@@ -18,9 +17,8 @@ public class AreaTower : Tower
     private void Update()
     {
         if (!WaveManager.Instance.WaveActive) return;
-
-        targets = FindTargets();
-        if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= attackRate)
+        
+        if (Time.time - _lastAttackTime >= attackRate)
         {
             _lastAttackTime = Time.time;
             animator.SetTrigger("Attack");
@@ -29,6 +27,9 @@ public class AreaTower : Tower
 
     public void Pulse()
     {
+        var targets = FindTargets();
+        if (targets is null || targets.Count <= 0) return;
+        
         foreach (var target in targets)
         {
             Attack(target);

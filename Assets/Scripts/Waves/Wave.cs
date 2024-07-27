@@ -6,9 +6,10 @@ using UnityEngine.Events;
 [Serializable]
 public struct Wave
 {
-    public List<EnemyCount> enemies;
-    public UnityEvent onWaveFinish;
     public float timeBetweenEnemySpawning;
+    public UnityEvent onWaveFinish;
+    public UnityEvent onWaveBegin;
+    public List<EnemyCount> enemies;
 }
 
 [Serializable]

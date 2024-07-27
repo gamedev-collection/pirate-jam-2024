@@ -4080,13 +4080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _persistent: 0
   waves:
-  - enemies:
-    - enemyPrefab: {fileID: 7759671852312040146, guid: 578c8aff51e98704888eb09f1ac892e8, type: 3}
-      count: 5
-      rate: 3
-    - enemyPrefab: {fileID: 7759671852312040146, guid: 578108c03c165c6499a0198ec05bb8dc, type: 3}
-      count: 3
-      rate: 3
+  - timeBetweenEnemySpawning: 5
     onWaveFinish:
       m_PersistentCalls:
         m_Calls:
@@ -4102,8 +4096,36 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    timeBetweenEnemySpawning: 5
-  - enemies:
+    onWaveBegin:
+      m_PersistentCalls:
+        m_Calls: []
+    enemies:
+    - enemyPrefab: {fileID: 7759671852312040146, guid: 578c8aff51e98704888eb09f1ac892e8, type: 3}
+      count: 5
+      rate: 3
+    - enemyPrefab: {fileID: 7759671852312040146, guid: 578108c03c165c6499a0198ec05bb8dc, type: 3}
+      count: 3
+      rate: 3
+  - timeBetweenEnemySpawning: 5
+    onWaveFinish:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1025991871}
+          m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
+          m_MethodName: RotateShadowsToNext
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onWaveBegin:
+      m_PersistentCalls:
+        m_Calls: []
+    enemies:
     - enemyPrefab: {fileID: 7759671852312040146, guid: 578108c03c165c6499a0198ec05bb8dc, type: 3}
       count: 10
       rate: 2
@@ -4113,22 +4135,6 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 7759671852312040146, guid: 578108c03c165c6499a0198ec05bb8dc, type: 3}
       count: 2
       rate: 5
-    onWaveFinish:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1025991871}
-          m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
-          m_MethodName: RotateShadowsToNext
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    timeBetweenEnemySpawning: 5
   spawnPoint: {fileID: 1586966164}
   waveStartupTime: 2
   pathVisualiser: {fileID: 990728902}

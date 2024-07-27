@@ -31,6 +31,8 @@ public class UIManager : Singleton<UIManager>
 
     public int money = 100;
 
+    private bool _hasActiveItem = false;
+
     private void Start()
     {
         CurrentHealth = maxHealth;
@@ -97,6 +99,26 @@ public class UIManager : Singleton<UIManager>
         {
             GameOver();
         }
+    }
+
+    public void EnableTowerShop()
+    {
+        towerShopContainer.gameObject.SetActive(true);
+    }
+    
+    public void DisableTowerShop()
+    {
+        towerShopContainer.gameObject.SetActive(false);
+    }
+    
+    public void EnableRuneShop()
+    {
+        runeShopContainer.gameObject.SetActive(true);
+    }
+    
+    public void DisableRuneShop()
+    {
+        runeShopContainer.gameObject.SetActive(false);
     }
 
     private void UpdateHealthBar()

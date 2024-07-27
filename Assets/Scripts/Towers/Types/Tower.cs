@@ -98,9 +98,9 @@ public abstract class Tower : MonoBehaviour
         runeComp.ApplyEffect();
     }
 
-    public virtual void RemoveRune(Rune rune)
+    public void RemoveRune(Rune rune)
     {
-        if (runeSlot.runeType == ERuneType.Tower)
+        if (rune is not null && rune.runeType == ERuneType.Tower)
         {
             var instance = _runes[rune];
             instance?.GetComponent<Rune>().OnEffectEnd();

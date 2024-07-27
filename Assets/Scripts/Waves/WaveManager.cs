@@ -61,6 +61,8 @@ public class WaveManager : Singleton<WaveManager>
         _waveActive = true;
         pathVisualiser?.DisablePathVisualiser();
 
+        wave.onWaveBegin?.Invoke();
+
         yield return new WaitForSeconds(waveStartupTime);
         
         yield return StartCoroutine(SpawnWave(wave));

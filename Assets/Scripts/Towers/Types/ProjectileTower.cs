@@ -7,15 +7,14 @@ using static UnityEngine.GraphicsBuffer;
 
 public class ProjectileTower : Tower
 {
-    [SerializeField] bool _volley = false;
-    [SerializeField] int _volleyAmount;
-    [SerializeField] float _volleyDelay;
-    [SerializeField] Transform _projectileSpawn;
+    [SerializeField] private bool _volley = false;
+    [SerializeField] private int _volleyAmount;
+    [SerializeField] private float _volleyDelay;
+    [SerializeField] private Transform _projectileSpawn;
     private float _lastAttackTime;
 
     private int _currentVolleyShot = 0;
     private float _currentVolleyDelay = 0;
-    private Enemy _target;
 
     private void Start()
     {
@@ -25,17 +24,9 @@ public class ProjectileTower : Tower
     private void Update()
     {
         if (!WaveManager.Instance.WaveActive || InBuildMode) return;
-
-        var targets = FindTargets();
-        if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= 1f / attackRate && _currentVolleyDelay <= 0)
+        
+        if (Time.time - _lastAttackTime >= 1f / attackRate && _currentVolleyDelay <= 0)
         {
-            switch (targetingFocus)
-            {
-                case TargetingFocus.LowestHealth: _target = targets.OrderBy(enemy => enemy.CurrentHp).First(); break;
-                case TargetingFocus.HighestHealth: _target = targets.OrderBy(enemy => enemy.CurrentHp).Last(); break;
-                case TargetingFocus.FirstIn: _target = targets.OrderBy(enemy => enemy.OrderInWave).First(); break;
-            }
-            
             _lastAttackTime = Time.time;
             animator.SetTrigger("Attack");
         }
@@ -48,35 +39,44 @@ public class ProjectileTower : Tower
 
     public void Throw()
     {
-
-        if (_currentVolleyDelay <= 0 || !_volley)
+        if (!(_currentVolleyDelay <= 0) && _volley) return;
+        //if (_savedTarget.transform.position.x > transform.position.x)
+        //{
+        //    visual.GetComponent<SpriteRenderer>().flipX = true;
+        //    _projectileSpawn.transform.position = new Vector3(_projectileSpawn.transform.position.x * - 1, _projectileSpawn.transform.position.y, _projectileSpawn.transform.position.z);
+        //}
+        //else 
+        //{
+        //    visual.GetComponent<SpriteRenderer>().flipX = false;
+        //    _projectileSpawn.transform.position = new Vector3(_projectileSpawn.transform.position.x * - 1, _projectileSpawn.transform.position.y, _projectileSpawn.transform.position.z);
+        //}
+            
+        var targets = FindTargets();
+        if (targets is not null && targets.Count > 0)
         {
-            //if (_savedTarget.transform.position.x > transform.position.x)
-            //{
-            //    visual.GetComponent<SpriteRenderer>().flipX = true;
-            //    _projectileSpawn.transform.position = new Vector3(_projectileSpawn.transform.position.x * - 1, _projectileSpawn.transform.position.y, _projectileSpawn.transform.position.z);
-            //}
-            //else 
-            //{
-            //    visual.GetComponent<SpriteRenderer>().flipX = false;
-            //    _projectileSpawn.transform.position = new Vector3(_projectileSpawn.transform.position.x * - 1, _projectileSpawn.transform.position.y, _projectileSpawn.transform.position.z);
-            //}
-
-            Attack(_target);
-
-            if (_volley)
+            var target = targetingFocus switch
             {
-                _currentVolleyShot++;
-                if (_currentVolleyShot >= _volleyAmount) { _currentVolleyDelay = _volleyDelay; _currentVolleyShot = 0; }
-            }
+                TargetingFocus.LowestHealth => targets.OrderBy(enemy => enemy.CurrentHp).First(),
+                TargetingFocus.HighestHealth => targets.OrderBy(enemy => enemy.CurrentHp).Last(),
+                TargetingFocus.FirstIn => targets.OrderBy(enemy => enemy.OrderInWave).First(),
+                _ => targets.First()
+            };
 
+            Attack(target);
         }
+
+        if (!_volley) return;
+        _currentVolleyShot++;
+        if (_currentVolleyShot < _volleyAmount) return;
+        _currentVolleyDelay = _volleyDelay; _currentVolleyShot = 0;
     }
 
     public override void Attack(Enemy target)
     {
         if (projectile == null) return;
 
+        if (target is null || target.CurrentHp <= 0) return;
+        
         var projectileInstance = Instantiate(projectile, _projectileSpawn.position, Quaternion.identity);
         var projectileScript = projectileInstance.GetComponent<HomingProjectile>();
 

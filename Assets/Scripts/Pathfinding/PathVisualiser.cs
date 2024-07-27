@@ -26,6 +26,7 @@ public class PathVisualiser : MonoBehaviour
             pathPositions[i] = new Vector3(path[i].transform.position.x, path[i].transform.position.y, 0f);
         }
 
+        _renderer ??= GetComponent<LineRenderer>();
         _renderer.positionCount = pathPositions.Length;
         _renderer.SetPositions(pathPositions);
     }
