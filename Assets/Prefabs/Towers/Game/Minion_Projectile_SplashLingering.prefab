@@ -81,6 +81,10 @@ PrefabInstance:
       value: Goblin Brewchemist
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: ShopSprite
+      value: 
+      objectReference: {fileID: -1714647415, guid: 3d06f45d4e47a244aa50c4fe69fb34e7, type: 3}
+    - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: attackRate
       value: 0.4
       objectReference: {fileID: 0}

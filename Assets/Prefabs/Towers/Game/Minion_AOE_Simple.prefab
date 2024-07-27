@@ -69,6 +69,10 @@ PrefabInstance:
       value: Goblin Thumpers
       objectReference: {fileID: 0}
     - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: ShopSprite
+      value: 
+      objectReference: {fileID: 632022147, guid: 4230f88c30d411144a2537aa4d6e82e6, type: 3}
+    - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
       propertyPath: attackRate
       value: 2
       objectReference: {fileID: 0}

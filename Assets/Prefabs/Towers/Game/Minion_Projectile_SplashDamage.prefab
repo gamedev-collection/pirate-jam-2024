@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1428386637910222246, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 71943dccc5cf8f54480fc80fb54eeb10, type: 2}
+    - target: {fileID: 2919078684983473294, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -544870772, guid: 1db5304b072560f46a84b385f17afb42, type: 3}
+    - target: {fileID: 3956995265393108759, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956995265393108759, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.502
+      objectReference: {fileID: 0}
     - target: {fileID: 6434273670561313355, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -64,6 +80,10 @@ PrefabInstance:
       propertyPath: towerName
       value: Goblin Bombadier
       objectReference: {fileID: 0}
+    - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: ShopSprite
+      value: 
+      objectReference: {fileID: -1714647415, guid: 3d06f45d4e47a244aa50c4fe69fb34e7, type: 3}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: attackRate
       value: 0.4

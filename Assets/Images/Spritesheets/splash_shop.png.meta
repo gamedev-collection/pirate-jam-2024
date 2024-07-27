@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1db5304b072560f46a84b385f17afb42
+guid: 3d06f45d4e47a244aa50c4fe69fb34e7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,106 +123,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tower_Splash_Idle_0
+      name: splash_shop_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 25
         width: 64
-        height: 128
+        height: 78
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abe6a152290a1fb45a949601d0f4ca7c
-      internalID: -544870772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tower_Splash_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 278a04a73cf15554caa916b1354ebee1
-      internalID: -422670250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tower_Splash_Idle_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c01ee931ec232a941af4a3b7da75ab6c
-      internalID: -1215625950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tower_Splash_Idle_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc19dd6a3884a314183deedaf5a7f2be
-      internalID: 1059529560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tower_Splash_Idle_4
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dc941d957fd1244ba5e454b8d44888d
-      internalID: -784871998
+      spriteID: c4210a5bc4834794499e9316d780c35b
+      internalID: -1714647415
       vertices: []
       indices: 
       edges: []
@@ -238,12 +154,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tower_Splash_Idle_0: -544870772
-      Tower_Splash_Idle_1: -422670250
-      Tower_Splash_Idle_2: -1215625950
-      Tower_Splash_Idle_3: 1059529560
-      Tower_Splash_Idle_4: -784871998
-      Tower_Splash_Shop: 953444774
+      splash_shop_0: -1714647415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

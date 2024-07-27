@@ -19,6 +19,7 @@ public abstract class Tower : MonoBehaviour
     public float speedMultiplier = 1f;
     public TargetingFocus targetingFocus = TargetingFocus.LowestHealth;
     public ContactFilter2D filter;
+    public Sprite ShopSprite;
 
     public string towerName = "Tower";
     [TextArea]public string towerDescription = "Tower Description";

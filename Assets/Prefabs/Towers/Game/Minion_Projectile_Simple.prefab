@@ -65,6 +65,10 @@ PrefabInstance:
       value: Goblin Meanie
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: ShopSprite
+      value: 
+      objectReference: {fileID: -186825399, guid: e94320a668f77ee4598d81d9132ba7ed, type: 3}
+    - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: projectile
       value: 
       objectReference: {fileID: 3265684769508188248, guid: e5c11bb5c98efcd4a98b491af684181a, type: 3}

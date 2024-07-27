@@ -69,6 +69,10 @@ PrefabInstance:
       value: Goblin Prodigy
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: ShopSprite
+      value: 
+      objectReference: {fileID: -186825399, guid: e94320a668f77ee4598d81d9132ba7ed, type: 3}
+    - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: attackRate
       value: 3
       objectReference: {fileID: 0}
