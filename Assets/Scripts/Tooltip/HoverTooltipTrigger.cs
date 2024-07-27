@@ -11,6 +11,8 @@ public class HoverTooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private string _body;
     [SerializeField] private GameObject _dataObject;
 
+    public string Header { set { _header = value; } }
+    public string Body { set { _body = value; } }
     public TooltipType Type {  get { return _type; } set { _type = value; } }
     public GameObject DataObject {  get { return _dataObject; } set { _dataObject = value; } }
 
@@ -34,7 +36,7 @@ public class HoverTooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointer
         TooltipManager.Hide();
     }
 
-    private void Show()
+    public void Show()
     {
         switch (_type)
         {

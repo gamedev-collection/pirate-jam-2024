@@ -93,6 +93,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2078760738643820230, guid: 2504cd89cac6798439877d3e4414f45c, type: 3}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: speedMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerDescription
       value: You don't want to stand in the path of this goblin when he executes
         his powerful throw.

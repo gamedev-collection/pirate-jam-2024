@@ -15,6 +15,8 @@ public abstract class Tower : MonoBehaviour
     public GameObject projectile;
     public GameObject visual;
     public Animator animator;
+    public string speedMultiplierParam = "SpeedMultiplier";
+    public float speedMultiplier = 1f;
 
     public ContactFilter2D filter;
 
@@ -41,6 +43,8 @@ public abstract class Tower : MonoBehaviour
         
         rangeIndicator.enabled = false;
         rangeIndicator.transform.localScale = new Vector2(range * 2, range * 2);
+
+        animator.SetFloat(speedMultiplierParam, speedMultiplier);
     }
     
     private void OnMouseEnter()

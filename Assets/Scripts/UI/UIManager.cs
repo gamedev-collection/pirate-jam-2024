@@ -14,6 +14,7 @@ public class UIManager : Singleton<UIManager>
     public TMP_Text enemyText;
     public TMP_Text moneyText;
     public Slider healthSlider;
+    public HoverTooltipTrigger healthTooltip;
 
     public Transform towerShopContainer;
     public GameObject towerShopPrefab;
@@ -93,6 +94,8 @@ public class UIManager : Singleton<UIManager>
     private void UpdateHealthBar()
     {
         healthSlider.value = (float)CurrentHealth / (float)maxHealth;
+        healthTooltip.Header = "Health";
+        healthTooltip.Body = CurrentHealth + "/" + maxHealth;
     }
 
     private void GameOver()

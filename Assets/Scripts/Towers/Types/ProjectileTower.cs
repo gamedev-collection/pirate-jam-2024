@@ -27,7 +27,7 @@ public class HomingTower : Tower
         if (!WaveManager.Instance.WaveActive) return;
 
         var targets = FindTargets();
-        if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= 1f / attackRate)
+        if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= 1f / attackRate && _currentVolleyDelay <= 0)
         {
             _target = targets.OrderBy(enemy => enemy.CurrentHp).First();
             _lastAttackTime = Time.time;
