@@ -22,6 +22,7 @@ public class AreaTower : Tower
         targets = FindTargets();
         if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= attackRate)
         {
+            _lastAttackTime = Time.time;
             animator.SetTrigger("Attack");
         }
     }
@@ -32,7 +33,6 @@ public class AreaTower : Tower
         {
             Attack(target);
         }
-        _lastAttackTime = Time.time;
     }
 
     public override void Attack(Enemy target)

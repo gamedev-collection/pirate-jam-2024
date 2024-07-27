@@ -43,7 +43,6 @@ public abstract class Tower : MonoBehaviour
         
         rangeIndicator.enabled = false;
         rangeIndicator.transform.localScale = new Vector2(range * 2, range * 2);
-
         animator.SetFloat(speedMultiplierParam, speedMultiplier);
     }
     
