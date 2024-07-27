@@ -89,6 +89,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7949807793346824582, guid: 7a15706f173e3b643a3b2e63b98c0581, type: 3}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: targetingFocus
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerDescription
       value: Splash your enemies with the latest in goblin Brewchemy. No goblins
         were harmed during the operation of this tower.

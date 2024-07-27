@@ -18,15 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: maxHp
-      value: 42
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: price
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: damage
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: movementSpeed

@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class HomingTower : Tower
+public class ProjectileTower : Tower
 {
     [SerializeField] bool _volley = false;
     [SerializeField] int _volleyAmount;
@@ -29,7 +29,13 @@ public class HomingTower : Tower
         var targets = FindTargets();
         if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= 1f / attackRate && _currentVolleyDelay <= 0)
         {
-            _target = targets.OrderBy(enemy => enemy.CurrentHp).First();
+            switch (targetingFocus)
+            {
+                case TargetingFocus.LowestHealth: _target = targets.OrderBy(enemy => enemy.CurrentHp).First(); break;
+                case TargetingFocus.HighestHealth: _target = targets.OrderBy(enemy => enemy.CurrentHp).Last(); break;
+                case TargetingFocus.FirstIn: _target = targets.OrderBy(enemy => enemy.OrderInWave).First(); break;
+            }
+            
             _lastAttackTime = Time.time;
             animator.SetTrigger("Attack");
         }

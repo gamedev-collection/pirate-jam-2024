@@ -4900,6 +4900,7 @@ GameObject:
   - component: {fileID: 8584771575882762951}
   - component: {fileID: 4366958328908395245}
   - component: {fileID: 8362849428405399106}
+  - component: {fileID: -5531197790273412393}
   m_Layer: 6
   m_Name: Minion_AOE_Base
   m_TagString: Untagged
@@ -4945,6 +4946,9 @@ MonoBehaviour:
   projectile: {fileID: 0}
   visual: {fileID: 7614258185081565818}
   animator: {fileID: 8362849428405399106}
+  speedMultiplierParam: SpeedMultiplier
+  speedMultiplier: 1
+  targetingFocus: 1
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -5029,6 +5033,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5531197790273412393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6813771000132391586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a10625adfd06e14f92be31652dcbcd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 1
+  _header: 
+  _body: 
+  _dataObject: {fileID: 6813771000132391586}
 --- !u!1 &7614258185081565818
 GameObject:
   m_ObjectHideFlags: 0

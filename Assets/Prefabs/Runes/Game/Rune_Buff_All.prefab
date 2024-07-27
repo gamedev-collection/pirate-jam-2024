@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
       propertyPath: runeName
-      value: Multiplication
+      value: Multiplicate
       objectReference: {fileID: 0}
     - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
       propertyPath: rangeBuff

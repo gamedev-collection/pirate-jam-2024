@@ -129,17 +129,18 @@ public class HomingProjectile : MonoBehaviour
 
     protected virtual void OnHit(Collider2D col)
     {
+        if (onHitInstantiate)
+        {
+            InstantiateSplashObject();
+        }
+        else
+        {
+            var enemy = col.gameObject.GetComponent<Enemy>();
+            enemy?.TakeDamage(_damage, _rune);
+        }
+
         if (_hits < piercingAmount)
         {
-            if (onHitInstantiate)
-            {
-                InstantiateSplashObject();
-            }
-            else
-            {
-                var enemy = col.gameObject.GetComponent<Enemy>();
-                enemy?.TakeDamage(_damage, _rune);
-            }
             _hits++;
             homing = false;
         }

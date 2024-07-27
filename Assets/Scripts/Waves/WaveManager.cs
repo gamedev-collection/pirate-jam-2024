@@ -25,6 +25,8 @@ public class WaveManager : Singleton<WaveManager>
 
     private List<PathNode> _path = new List<PathNode>();
 
+    private int _displayWaves;
+
     private void Start()
     {
         PathManager.Instance.GenerateAllPaths();
@@ -33,17 +35,17 @@ public class WaveManager : Singleton<WaveManager>
         if (waves is null || waves.Count <= 0) return;
 
         _waveQueue = new Queue<Wave>(waves);
+        _displayWaves = _waveQueue.Count;
     }
 
     public string GetWaveText()
     {
-        var currentWave = waves.Count - _waveQueue.Count;
-        return $"{currentWave} / {waves.Count}";
+        return $"{_displayWaves} / {waves.Count}";
     }
 
     public string GetEnemyText()
     {
-        return $"{_enemiesLeftForCurrentWave} / {_totalEnemiesForCurrentWave}";
+        return $"{_enemiesLeftForCurrentWave}";
     }
 
     public void QueueNextWave()
@@ -67,7 +69,8 @@ public class WaveManager : Singleton<WaveManager>
         
         _waveActive = false;
         wave.onWaveFinish?.Invoke();
-        
+        _displayWaves--;
+
         pathVisualiser?.EnablePathVisualiser();
         GetNewPath();
     }
@@ -80,7 +83,7 @@ public class WaveManager : Singleton<WaveManager>
         {
             for (var i = 0; i < enemyCount.count; i++)
             {
-                SpawnEnemy(enemyCount.enemyPrefab);
+                SpawnEnemy(enemyCount.enemyPrefab, i);
                 yield return new WaitForSeconds(1f / enemyCount.rate);
             }
             
@@ -88,13 +91,15 @@ public class WaveManager : Singleton<WaveManager>
         }
     }
 
-    private void SpawnEnemy(GameObject prefab)
+    private void SpawnEnemy(GameObject prefab, int orderInWave)
     {
         var spawnedObject = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
-        
-        spawnedObject.GetComponent<Enemy>().OnEnemyDestroyed += HandleEnemyDestroyed;
-        spawnedObject.GetComponent<Enemy>().SetPath(_path);
-        
+        Enemy spawnedEnemy = spawnedObject.GetComponent<Enemy>();
+        spawnedEnemy.OnEnemyDestroyed += HandleEnemyDestroyed;
+        spawnedEnemy.SetPath(_path);
+        spawnedEnemy.OrderInWave = orderInWave;
+
+
         _activeEnemies.Add(spawnedObject);
     }
     

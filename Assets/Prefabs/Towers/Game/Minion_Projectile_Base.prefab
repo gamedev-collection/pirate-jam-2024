@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 8851901158365467005}
   - component: {fileID: 4898787657033836981}
   - component: {fileID: 1428386637910222246}
+  - component: {fileID: 2080776478329684800}
   m_Layer: 6
   m_Name: Minion_Projectile_Base
   m_TagString: Untagged
@@ -271,6 +272,9 @@ MonoBehaviour:
   projectile: {fileID: 234386141113976813, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
   visual: {fileID: 8635921211720640233}
   animator: {fileID: 1428386637910222246}
+  speedMultiplierParam: SpeedMultiplier
+  speedMultiplier: 1
+  targetingFocus: 2
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -358,3 +362,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2080776478329684800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8977342415391896726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a10625adfd06e14f92be31652dcbcd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 1
+  _header: 
+  _body: 
+  _dataObject: {fileID: 8977342415391896726}

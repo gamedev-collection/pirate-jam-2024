@@ -1348,13 +1348,13 @@ MonoBehaviour:
   _persistent: 0
   waves:
   - enemies:
-    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 4
+    - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
+      count: 15
       rate: 2
     onWaveFinish:
       m_PersistentCalls:
         m_Calls: []
-    timeBetweenEnemySpawning: 0
+    timeBetweenEnemySpawning: 0.1
   - enemies:
     - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
       count: 10
@@ -5616,7 +5616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554670074638454374, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 140.26
+      value: 216.76
       objectReference: {fileID: 0}
     - target: {fileID: 554670074638454374, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_SizeDelta.y
@@ -5880,7 +5880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2147576026876643831, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 79.76
+      value: 123.26
       objectReference: {fileID: 0}
     - target: {fileID: 2147576026876643831, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_SizeDelta.y
@@ -6690,6 +6690,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
+      propertyPath: money
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
+      propertyPath: maxHealth
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 8907535898069328490, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6720,7 +6728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9122679654200274905, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 159.51
+      value: 246.51
       objectReference: {fileID: 0}
     - target: {fileID: 9122679654200274905, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_SizeDelta.y
@@ -6733,32 +6741,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2715723894962821243, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8002340406280791830}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
---- !u!1 &8002340406280791829 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2715723894962821243, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
-  m_PrefabInstance: {fileID: 8002340406280791828}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8002340406280791830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8002340406280791829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a10625adfd06e14f92be31652dcbcd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _type: 0
-  _header: 
-  _body: Starts the next wave
-  _dataObject: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

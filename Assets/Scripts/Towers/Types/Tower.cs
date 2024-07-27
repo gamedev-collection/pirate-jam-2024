@@ -17,7 +17,7 @@ public abstract class Tower : MonoBehaviour
     public Animator animator;
     public string speedMultiplierParam = "SpeedMultiplier";
     public float speedMultiplier = 1f;
-
+    public TargetingFocus targetingFocus = TargetingFocus.LowestHealth;
     public ContactFilter2D filter;
 
     public string towerName = "Tower";
@@ -133,4 +133,12 @@ public abstract class Tower : MonoBehaviour
         range = _originalRange;
     }
 
+}
+
+[Serializable]
+public enum TargetingFocus
+{
+    HighestHealth,
+    LowestHealth,
+    FirstIn
 }
