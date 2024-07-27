@@ -36,9 +36,31 @@ public class Obelisk : MonoBehaviour
     private Vector2 _shadowVector = Vector2.up;
     private List<Tower> _buffedTowers = new List<Tower>();
 
+    private bool isHovered = false;
+
     private void Awake()
     {
         SetShadowDirection(ShadowDirection.North);
+    }
+
+    private void OnMouseEnter()
+    {
+        isHovered = true;
+    }
+
+    private void OnMouseExit()
+    {
+        isHovered = false;
+    }
+
+    private void Update()
+    {
+        if (!isHovered) return;
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            RemoveRune();
+        }
     }
 
     public void SetNextShadowDirection()
@@ -112,6 +134,8 @@ public class Obelisk : MonoBehaviour
 
     public void RemoveRune()
     {
+        UIManager.Instance.money += Mathf.RoundToInt(_runeSlot.cost / 2f);
+        
         Destroy(_runeVisual);
         _runeSlot = null;
         _runeVisual = null;

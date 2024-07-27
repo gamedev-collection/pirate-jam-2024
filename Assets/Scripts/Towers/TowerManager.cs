@@ -70,7 +70,11 @@ public class TowerManager : Singleton<TowerManager>
             HandleMouseClick(tile);
             rangeIndicator.SetActive(false);
         }
+    }
 
+    public void RemoveActiveTower(Vector3 position)
+    {
+        _activeTowers.Remove(position);
     }
 
     public void SetActiveTower(GameObject towerPrefab)
@@ -89,9 +93,19 @@ public class TowerManager : Singleton<TowerManager>
         rangeIndicator.transform.localScale = new Vector2(towerComponent.range * 2, towerComponent.range * 2);
         _towerPlacementVisual = Instantiate(_towerPrefab, Vector3.zero, Quaternion.identity);
     }
+    
+    public void CancelActiveTower(bool deleteVisual)
+    {
+        InBuildmode = false;
+        rangeIndicator.SetActive(false);
+        if (deleteVisual) Destroy(_towerPlacementVisual);
+        else _towerPlacementVisual = null;
+    }
 
     private void HandleMouseClick(OverlayTile tile)
     {
+        if (tile is null) return;
+            
         if (_activeTowers.ContainsKey(tile.transform.position)) return;
 
         _towerPlacementVisual.transform.position = tile.transform.position;
@@ -106,14 +120,6 @@ public class TowerManager : Singleton<TowerManager>
 
         placementMap.gameObject.SetActive(false);
         UIManager.Instance.money -= _towerPrefab.GetComponent<Tower>().cost;
-    }
-
-    public void CancelActiveTower(bool deleteVisual)
-    {
-        InBuildmode = false;
-        rangeIndicator.SetActive(false);
-        if (deleteVisual) Destroy(_towerPlacementVisual);
-        else _towerPlacementVisual = null;
     }
 
     private static RaycastHit2D? GetFocusedOnTile()

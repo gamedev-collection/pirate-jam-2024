@@ -16,6 +16,8 @@ public class AreaTower : Tower
     
     private void Update()
     {
+        CheckForDeletion();
+        
         if (!WaveManager.Instance.WaveActive) return;
         
         if (Time.time - _lastAttackTime >= attackRate)
@@ -39,16 +41,6 @@ public class AreaTower : Tower
     public override void Attack(Enemy target)
     {
         target.TakeDamage(damage, runeSlot);
-    }
-
-    public override void Delete()
-    {
-        
-    }
-
-    public override void ApplyRune(Rune rune)
-    {
-        
     }
 
     private void SpawnParticles()
