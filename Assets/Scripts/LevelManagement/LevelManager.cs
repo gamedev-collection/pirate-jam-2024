@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class LevelManager : Singleton<LevelManager>
 {
     public Level[] levelList;
-    public AED_CanvasGroup blackFade;
+    public AnimatedEnableDisable blackFade;
+    public AnimatedEnableDisable levelFade;
 
     private bool isLoading = false;
 
@@ -20,7 +21,7 @@ public class LevelManager : Singleton<LevelManager>
         if(isLoading) return;
 
         UnlockScene(levelIndex);
-        if (withTransition) StartCoroutine(DoLoadWithTransition_Routine(levelList[levelIndex].scene.name));
+        if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(levelList[levelIndex].scene.name));
         else StartCoroutine(DoSceneLoad_Routine(levelList[levelIndex].scene.name));
     }
 
@@ -30,7 +31,7 @@ public class LevelManager : Singleton<LevelManager>
     {
         if (isLoading) return;
 
-        if (withTransition) StartCoroutine(DoLoadWithTransition_Routine(scene.name));
+        if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(scene.name));
         else StartCoroutine(DoSceneLoad_Routine(scene.name));
     }
 
@@ -57,7 +58,7 @@ public class LevelManager : Singleton<LevelManager>
         isLoading = false;
     }
 
-    private IEnumerator DoLoadWithTransition_Routine(string sceneName)
+    private IEnumerator DoLoadWithFadeTransition_Routine(string sceneName)
     {
         isLoading = true;
         blackFade.AnimatedEnable();
@@ -67,6 +68,19 @@ public class LevelManager : Singleton<LevelManager>
         
         blackFade.AnimatedDisable();
         while (blackFade.IsDisabling) yield return null;
+        isLoading = false;
+    }
+
+    private IEnumerator DoLoadWithLevelTransition_Routine(string sceneName)
+    {
+        isLoading = true;
+        levelFade.AnimatedEnable();
+        while (levelFade.IsEnabling) yield return null;
+
+        yield return StartCoroutine(DoSceneLoad_Routine(sceneName));
+
+        levelFade.AnimatedDisable();
+        while (levelFade.IsDisabling) yield return null;
         isLoading = false;
     }
 }

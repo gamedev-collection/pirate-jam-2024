@@ -11,12 +11,6 @@ public class AED_CanvasGroup : AnimatedEnableDisable
     [SerializeField] private float _enableDelay;
     [SerializeField] private float _disableDelay;
 
-
-
-    public bool IsAnimating { get; private set; }
-    public bool IsEnabling { get; private set; }
-    public bool IsDisabling { get; private set; }
-
     public override void AnimatedDisable()
     {
         IsDisabling = true;

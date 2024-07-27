@@ -70,6 +70,7 @@ public class TowerManager : Singleton<TowerManager>
             HandleMouseClick(tile);
             rangeIndicator.SetActive(false);
         }
+
     }
 
     public void SetActiveTower(GameObject towerPrefab)
