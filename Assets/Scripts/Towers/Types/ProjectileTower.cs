@@ -23,6 +23,8 @@ public class ProjectileTower : Tower
 
     private void Update()
     {
+        CheckForDeletion();
+        
         if (!WaveManager.Instance.WaveActive || InBuildMode) return;
         
         if (Time.time - _lastAttackTime >= 1f / attackRate && _currentVolleyDelay <= 0)
@@ -85,9 +87,5 @@ public class ProjectileTower : Tower
             projectileScript.Init(damage, runeSlot, target.transform);
         }
 
-    }
-
-    public override void Delete()
-    {
     }
 }

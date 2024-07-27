@@ -14,6 +14,8 @@ public class BasicTower : Tower
 
     private void Update()
     {
+        CheckForDeletion();
+        
         if (!WaveManager.Instance.WaveActive) return;
 
         var targets = FindTargets();
@@ -38,9 +40,5 @@ public class BasicTower : Tower
         {
             projectileScript.Init(damage, runeSlot, direction);
         }
-    }
-
-    public override void Delete()
-    {
     }
 }

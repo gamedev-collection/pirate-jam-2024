@@ -23,8 +23,7 @@ public abstract class Tower : MonoBehaviour
 
     public string towerName = "Tower";
     [TextArea] public string towerDescription = "Tower Description";
-
-
+    
     public SpriteRenderer rangeIndicator;
 
     private int _originalDamage;
@@ -32,6 +31,10 @@ public abstract class Tower : MonoBehaviour
     private float _originalRange;
     private Dictionary<Rune, GameObject> _runes = new Dictionary<Rune, GameObject>();
     public bool InBuildMode { get; set; } = true;
+
+    private bool _isMouseOver = false;
+    
+    public abstract void Attack(Enemy target);
     
     private void Awake()
     {
@@ -51,14 +54,16 @@ public abstract class Tower : MonoBehaviour
     private void OnMouseEnter()
     {
         EnableRangeIndicator();
+        _isMouseOver = true;
     }
     
     private void OnMouseExit()
     {
         DisableRangeIndicator();
+        _isMouseOver = false;
     }
 
-    public virtual List<Enemy> FindTargets()
+    public List<Enemy> FindTargets()
     {
         var results = new List<Collider2D>();
         var enemies = new List<Enemy>();
@@ -73,10 +78,7 @@ public abstract class Tower : MonoBehaviour
         return enemies;
     }
     
-    public abstract void Attack(Enemy target);
-    public abstract void Delete();
-    
-    public virtual void ApplyRune(Rune rune)
+    public void ApplyRune(Rune rune)
     {
         runeSlot = rune;
 
@@ -134,6 +136,22 @@ public abstract class Tower : MonoBehaviour
         range = _originalRange;
     }
 
+    protected void CheckForDeletion()
+    {
+        if (!_isMouseOver) return;
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Delete();
+        }
+    }
+
+    private void Delete()
+    {
+        UIManager.Instance.money += Mathf.RoundToInt(cost / 2f);
+        TowerManager.Instance.RemoveActiveTower(transform.position);
+        Destroy(gameObject);
+    }
 }
 
 [Serializable]
