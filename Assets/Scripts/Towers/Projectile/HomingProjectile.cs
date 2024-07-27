@@ -139,9 +139,9 @@ public class HomingProjectile : MonoBehaviour
             enemy?.TakeDamage(_damage, _rune);
         }
 
-        if (_hits < piercingAmount)
+        _hits++;
+        if (piercing && _hits < piercingAmount)
         {
-            _hits++;
             homing = false;
         }
         else { Destroy(gameObject); }
