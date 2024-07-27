@@ -5,6 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
+using UnityEngine.WSA;
 
 public class TowerManager : Singleton<TowerManager>
 {
@@ -22,7 +23,9 @@ public class TowerManager : Singleton<TowerManager>
     private Dictionary<Vector2Int, OverlayTile> Map { get; set; }
 
     private Dictionary<Vector3, Tower> _activeTowers = new Dictionary<Vector3, Tower>();
-    
+
+    private GameObject _towerPlacementVisual;
+
     private void Start()
     {
         if (placementMap is null)
@@ -44,6 +47,11 @@ public class TowerManager : Singleton<TowerManager>
 
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0f;
+
+        if (_towerPlacementVisual)
+        {
+            _towerPlacementVisual.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
+        }
         rangeIndicator.transform.position =mousePos;
         
         var hit = GetFocusedOnTile();
@@ -56,6 +64,11 @@ public class TowerManager : Singleton<TowerManager>
             HandleMouseClick(tile);
             rangeIndicator.SetActive(false);
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            CancelActiveTower(true);
+        }
     }
 
     public void SetActiveTower(GameObject towerPrefab)
@@ -65,26 +78,41 @@ public class TowerManager : Singleton<TowerManager>
 
         _towerPrefab = towerPrefab;
         var towerComponent = towerPrefab.GetComponent<Tower>();
+        towerComponent.InBuildMode = InBuildmode;
+        towerComponent.GetComponent<Collider2D>().enabled = false;
 
         rangeIndicator.GetComponent<SpriteOutline>().color = towerComponent.rangeIndicator.gameObject.GetComponent<SpriteOutline>().color;
         rangeIndicator.SetActive(true);
         rangeIndicator.transform.localScale = new Vector2(towerComponent.range * 2, towerComponent.range * 2);
+        _towerPlacementVisual = Instantiate(_towerPrefab, Vector3.zero, Quaternion.identity);
     }
 
     private void HandleMouseClick(OverlayTile tile)
     {
         if (_activeTowers.ContainsKey(tile.transform.position)) return;
 
-        var newTower = Instantiate(_towerPrefab, tile.transform.position, Quaternion.identity);
-        var towerComp = newTower.GetComponent<Tower>();
-        _activeTowers.Add(newTower.transform.position, towerComp);
-        OnTowerPlaced?.Invoke(towerComp);
+        _towerPlacementVisual.transform.position = tile.transform.position;
 
-        InBuildmode = false;
+        var towerComp = _towerPlacementVisual.GetComponent<Tower>();
+        _activeTowers.Add(_towerPlacementVisual.transform.position, towerComp);
+
+        OnTowerPlaced?.Invoke(towerComp);
+        CancelActiveTower(false);
+        towerComp.GetComponent<Collider2D>().enabled = true;
+        towerComp.InBuildMode = InBuildmode;
+
         placementMap.gameObject.SetActive(false);
         UIManager.Instance.money -= _towerPrefab.GetComponent<Tower>().cost;
     }
-    
+
+    public void CancelActiveTower(bool deleteVisual)
+    {
+        InBuildmode = false;
+
+        if (deleteVisual) Destroy(_towerPlacementVisual);
+        else _towerPlacementVisual = null;
+    }
+
     private static RaycastHit2D? GetFocusedOnTile()
     {
         var mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);

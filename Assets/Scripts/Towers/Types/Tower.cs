@@ -22,7 +22,7 @@ public abstract class Tower : MonoBehaviour
     public Sprite ShopSprite;
 
     public string towerName = "Tower";
-    [TextArea]public string towerDescription = "Tower Description";
+    [TextArea] public string towerDescription = "Tower Description";
 
 
     public SpriteRenderer rangeIndicator;
@@ -31,6 +31,7 @@ public abstract class Tower : MonoBehaviour
     private float _originalRate;
     private float _originalRange;
     private Dictionary<Rune, GameObject> _runes = new Dictionary<Rune, GameObject>();
+    public bool InBuildMode { get; set; } = true;
     
     private void Awake()
     {

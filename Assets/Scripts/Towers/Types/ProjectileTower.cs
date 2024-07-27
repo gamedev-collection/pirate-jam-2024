@@ -24,7 +24,7 @@ public class ProjectileTower : Tower
 
     private void Update()
     {
-        if (!WaveManager.Instance.WaveActive) return;
+        if (!WaveManager.Instance.WaveActive || InBuildMode) return;
 
         var targets = FindTargets();
         if (targets is not null && targets.Count > 0 && Time.time - _lastAttackTime >= 1f / attackRate && _currentVolleyDelay <= 0)
