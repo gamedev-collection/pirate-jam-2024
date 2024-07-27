@@ -16,9 +16,9 @@ public class TowerManager : Singleton<TowerManager>
     public Transform overlayContainer;
 
     public GameObject rangeIndicator;
-    
+
     public event Action<Tower> OnTowerPlaced;
-    
+
     private GameObject _towerPrefab;
     private Dictionary<Vector2Int, OverlayTile> Map { get; set; }
 
@@ -33,7 +33,7 @@ public class TowerManager : Singleton<TowerManager>
             Debug.LogWarning("Placement map is empty");
             return;
         }
-        
+
         ConstructMapDict();
         placementMap.gameObject.SetActive(false);
 
@@ -52,22 +52,23 @@ public class TowerManager : Singleton<TowerManager>
         {
             _towerPlacementVisual.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
         }
-        rangeIndicator.transform.position =mousePos;
-        
-        var hit = GetFocusedOnTile();
+        rangeIndicator.transform.position = mousePos;
 
-        if (!hit.HasValue) return;
-        var tile = hit.Value.collider.GetComponent<OverlayTile>();
-                
-        if (Input.GetMouseButtonDown(0))
-        {
-            HandleMouseClick(tile);
-            rangeIndicator.SetActive(false);
-        }
+        var hit = GetFocusedOnTile();
 
         if (Input.GetMouseButtonDown(1))
         {
             CancelActiveTower(true);
+
+        }
+
+        if (!hit.HasValue) return;
+        var tile = hit.Value.collider.GetComponent<OverlayTile>();
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            HandleMouseClick(tile);
+            rangeIndicator.SetActive(false);
         }
     }
 
@@ -82,6 +83,7 @@ public class TowerManager : Singleton<TowerManager>
         towerComponent.GetComponent<Collider2D>().enabled = false;
 
         rangeIndicator.GetComponent<SpriteOutline>().color = towerComponent.rangeIndicator.gameObject.GetComponent<SpriteOutline>().color;
+        rangeIndicator.GetComponent<SpriteRenderer>().color = towerComponent.rangeIndicator.gameObject.GetComponent<SpriteRenderer>().color;
         rangeIndicator.SetActive(true);
         rangeIndicator.transform.localScale = new Vector2(towerComponent.range * 2, towerComponent.range * 2);
         _towerPlacementVisual = Instantiate(_towerPrefab, Vector3.zero, Quaternion.identity);
@@ -108,7 +110,7 @@ public class TowerManager : Singleton<TowerManager>
     public void CancelActiveTower(bool deleteVisual)
     {
         InBuildmode = false;
-
+        rangeIndicator.SetActive(false);
         if (deleteVisual) Destroy(_towerPlacementVisual);
         else _towerPlacementVisual = null;
     }
@@ -141,11 +143,11 @@ public class TowerManager : Singleton<TowerManager>
                 for (var x = bound.min.x; x < bound.max.x; x++)
                 {
                     var cellPosition = new Vector3Int(x, y, z);
-                    
+
                     if (!placementMap.HasTile(cellPosition)) continue;
 
                     var gridPosition = new Vector2Int(x, y);
-                    
+
                     if (Map.ContainsKey(gridPosition)) continue;
 
                     var overlayTile = Instantiate(overlayPrefab, overlayContainer);
@@ -153,7 +155,7 @@ public class TowerManager : Singleton<TowerManager>
                     overlayTile.transform.position =
                         new Vector3(cellWorldPosition.x, cellWorldPosition.y, cellWorldPosition.y);
                     overlayTile.GetComponent<SpriteRenderer>().sortingOrder = sortingOrder;
-                    
+
                     Map.Add(gridPosition, overlayTile);
                 }
             }

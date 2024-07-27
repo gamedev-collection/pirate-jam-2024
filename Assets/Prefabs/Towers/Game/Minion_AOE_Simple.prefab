@@ -48,6 +48,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4366958328908395245, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6813771000132391586, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
       propertyPath: m_Name
       value: Minion_AOE_Simple

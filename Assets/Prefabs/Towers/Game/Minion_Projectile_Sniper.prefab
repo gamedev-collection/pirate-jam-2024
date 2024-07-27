@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: outlineSize
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4898787657033836981, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6434273670561313355, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

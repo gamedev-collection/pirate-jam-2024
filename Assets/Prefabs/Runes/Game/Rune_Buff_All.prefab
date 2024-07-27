@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rune_Buff_All
       objectReference: {fileID: 0}
+    - target: {fileID: 4582684622212593956, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd1a2cdb850cb1a4fac5b729c631aadf, type: 3}
     - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
       propertyPath: cost
       value: 100

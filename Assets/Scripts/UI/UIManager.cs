@@ -73,12 +73,20 @@ public class UIManager : Singleton<UIManager>
 
     public void SetActiveTower(GameObject towerPrefab)
     {
+        CancelActiveObjects();
         TowerManager.Instance.SetActiveTower(towerPrefab);
     }
 
     public void SetActiveRune(Rune runePrefab)
     {
+        CancelActiveObjects();
         ObeliskManager.Instance.SetActiveRune(runePrefab);
+    }
+
+    public void CancelActiveObjects()
+    {
+        TowerManager.Instance.CancelActiveTower(true);
+        ObeliskManager.Instance.CancelActiveRune(true);
     }
 
     public void TakeDamage(int amount)
