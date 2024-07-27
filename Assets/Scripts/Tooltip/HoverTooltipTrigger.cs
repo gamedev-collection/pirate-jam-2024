@@ -42,6 +42,15 @@ public class HoverTooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointer
             case TooltipType.ShopTower:
                 _dataObject.TryGetComponent<Tower>(out Tower tower);
                 TooltipManager.ShowShopTowerTooltip(tower.towerName, tower.towerDescription, tower.cost.ToString(), tower.damage.ToString(), tower.attackRate.ToString(), tower.range.ToString()); break;
+            case TooltipType.ShopBuffRune:
+                _dataObject.TryGetComponent<BuffRune>(out BuffRune buffRune);
+                TooltipManager.ShowShopTowerTooltip(buffRune.runeName, buffRune.runeDescription, buffRune.cost.ToString(), buffRune.damageBuff.ToString(), buffRune.attackRateBuff.ToString(), buffRune.rangeBuff.ToString()); break;
+            case TooltipType.ShopFireRune:
+                _dataObject.TryGetComponent<FireRune>(out FireRune fireRune);
+                TooltipManager.ShowShopRuneTooltip(fireRune.runeName, fireRune.runeDescription, fireRune.cost.ToString(), "Damage per tick", fireRune.damagePerTick.ToString(), "Ticks", fireRune.tickTimes.ToString()); break;
+            case TooltipType.ShopFreezeRune:
+                _dataObject.TryGetComponent<FreezeRune>(out FreezeRune freezeRune);
+                TooltipManager.ShowShopRuneTooltip(freezeRune.runeName, freezeRune.runeDescription, freezeRune.cost.ToString(), "Slow amount", freezeRune.slowAmount.ToString(), "Duration", freezeRune.duration.ToString()); break;
         }
     }
 }
@@ -49,5 +58,8 @@ public class HoverTooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointer
 public enum TooltipType
 {
     Basic,
-    ShopTower
+    ShopTower,
+    ShopBuffRune,
+    ShopFireRune,
+    ShopFreezeRune
 }

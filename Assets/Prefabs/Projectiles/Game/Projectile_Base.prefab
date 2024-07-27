@@ -128,8 +128,8 @@ MonoBehaviour:
   onHitInstantiate: 0
   onHitObject: {fileID: 0}
   colorNormal: {r: 0.83137256, g: 0.627451, b: 0.9843137, a: 1}
-  colorDOT: {r: 0.83137256, g: 1, b: 0.49803922, a: 1}
-  colorSlow: {r: 0.49411765, g: 0.8901961, b: 1, a: 1}
+  colorDOT: {r: 1, g: 0.68594474, b: 0.49803925, a: 1}
+  colorSlow: {r: 0.640753, g: 0.7078217, b: 0.7264151, a: 1}
 --- !u!50 &-1159821256378331509
 Rigidbody2D:
   serializedVersion: 4

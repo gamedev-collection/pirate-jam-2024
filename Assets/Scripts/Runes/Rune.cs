@@ -8,7 +8,8 @@ public enum ERuneType
 
 public abstract class Rune : MonoBehaviour
 {
-    public string runeName = "Rune";
+    public string runeName = "Rune"; 
+    [TextArea] public string runeDescription = "Rune Description";
     public int cost;
     public ERuneType runeType;
     public Sprite runeSprite;

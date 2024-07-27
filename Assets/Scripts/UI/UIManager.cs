@@ -4,8 +4,9 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.Collections.Unicode;
 
-public class UIManager: Singleton<UIManager>
+public class UIManager : Singleton<UIManager>
 {
     public Button nextWaveButton;
 
@@ -23,7 +24,7 @@ public class UIManager: Singleton<UIManager>
     public GameObject runeShopPrefab;
     public List<GameObject> runePrefabs = new List<GameObject>();
     private List<KeyValuePair<int, Button>> _runeShopButtons = new List<KeyValuePair<int, Button>>();
-    
+
     public int maxHealth;
     public int CurrentHealth { get; private set; }
 
@@ -110,7 +111,7 @@ public class UIManager: Singleton<UIManager>
             var obj = Instantiate(towerShopPrefab, towerShopContainer);
             var btn = obj.GetComponentInChildren<Button>();
             var txt = obj.GetComponentInChildren<TMP_Text>();
-            
+
             // Get tower component
             var tower = towerObj.GetComponent<Tower>();
             var towerSprite = tower.visual.GetComponent<SpriteRenderer>().sprite;
@@ -121,11 +122,11 @@ public class UIManager: Singleton<UIManager>
             towerTooltip.Type = TooltipType.ShopTower;
 
             txt.text = tower.cost.ToString();
-            
+
             btn.interactable = money >= tower.cost;
 
             btn.onClick.AddListener(delegate { SetActiveTower(towerObj); });
-            
+
             _towerShopButtons.Add(new KeyValuePair<int, Button>(tower.cost, btn));
         }
     }
@@ -133,26 +134,32 @@ public class UIManager: Singleton<UIManager>
     private void CreateRuneShop()
     {
         if (runeShopContainer is null || runeShopPrefab is null || runePrefabs.Count <= 0) return;
-        
+
         foreach (var runeObj in runePrefabs)
         {
             // Instantiate shop item
             var obj = Instantiate(runeShopPrefab, runeShopContainer);
             var btn = obj.GetComponentInChildren<Button>();
             var txt = obj.GetComponentInChildren<TMP_Text>();
-            
+            Sprite runeSprite = null;
             // Get rune component
-            var rune = runeObj.GetComponent<Rune>();
-            var runeSprite = rune.runeSprite;
-            
+            Rune rune = runeObj.GetComponent<Rune>();
+
+            var runeTooltip = obj.GetComponent<HoverTooltipTrigger>();
+            runeTooltip.DataObject = runeObj;
+            if (rune.GetType() == typeof(BuffRune)) runeTooltip.Type = TooltipType.ShopBuffRune;
+            if (rune.GetType() == typeof(FireRune)) runeTooltip.Type = TooltipType.ShopFireRune;
+            if (rune.GetType() == typeof(FreezeRune)) runeTooltip.Type = TooltipType.ShopFreezeRune;
+
+            runeSprite = rune.runeSprite;
             obj.GetComponentInChildren<Image>().sprite = runeSprite;
 
             txt.text = rune.cost.ToString();
-            
+
             btn.interactable = money >= rune.cost;
 
             btn.onClick.AddListener(delegate { SetActiveRune(rune); });
-            
+
             _towerShopButtons.Add(new KeyValuePair<int, Button>(rune.cost, btn));
         }
     }

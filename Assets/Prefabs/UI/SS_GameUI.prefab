@@ -581,6 +581,9 @@ MonoBehaviour:
   towerPrefabs:
   - {fileID: 7790825156363946667, guid: 7ff3f62759f39b44d9e47f6492374a2b, type: 3}
   - {fileID: 7790825156363946667, guid: 737053d8501549a47a7082989d10dd9f, type: 3}
+  runeShopContainer: {fileID: 8501757994186280295}
+  runeShopPrefab: {fileID: 5143130970292174358, guid: 6777cbbb804a7cb409c5c67436be1549, type: 3}
+  runePrefabs: []
   maxHealth: 10
   money: 1000
 --- !u!1 &5774392340761309190
@@ -2890,6 +2893,11 @@ PrefabInstance:
 --- !u!224 &92353239854316253 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6356499440604362747, guid: 89bd53f6d6187594095c0a1b5ed04961, type: 3}
+  m_PrefabInstance: {fileID: 6448811998391979302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &8501757994186280295 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3207274875356037185, guid: 89bd53f6d6187594095c0a1b5ed04961, type: 3}
   m_PrefabInstance: {fileID: 6448811998391979302}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7211597080651648286
