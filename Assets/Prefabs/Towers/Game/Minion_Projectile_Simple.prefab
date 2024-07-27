@@ -70,10 +70,8 @@ PrefabInstance:
       objectReference: {fileID: 3265684769508188248, guid: e5c11bb5c98efcd4a98b491af684181a, type: 3}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerDescription
-      value: 'Throwing rocks is a basic need for goblins.
-
-        This guy will
-        throw rocks consistently. You can count on him.'
+      value: "Throwing rocks is a basic need for goblins. This guy will throw rocks
+        consistently. \nYou can count on him."
       objectReference: {fileID: 0}
     - target: {fileID: 8977342415391896726, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_Name

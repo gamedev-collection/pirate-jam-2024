@@ -13,6 +13,7 @@ public class Enemy: MonoBehaviour
     public int price = 1;
 
     public ParticleSystem damageParticle;
+    public Vector3 pathOffset;
 
     private List<PathNode> _path;
     private int _pathIndex = 0;
@@ -39,7 +40,7 @@ public class Enemy: MonoBehaviour
         if (_pathIndex < _path.Count)
         {
             var target = _path[_pathIndex];
-            var direction = target.transform.position - transform.position;
+            var direction = (target.transform.position + pathOffset) - transform.position;
             transform.Translate(direction.normalized * (movementSpeed * Time.deltaTime), Space.World);
 
             if (Vector3.Distance(transform.position, target.transform.position) < 0.2f)

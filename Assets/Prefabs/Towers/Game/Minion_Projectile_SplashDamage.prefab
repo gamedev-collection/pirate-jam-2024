@@ -74,10 +74,8 @@ PrefabInstance:
       objectReference: {fileID: 4103912859368463676, guid: df9f1e27c2c98764798e7aca9723ef06, type: 3}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerDescription
-      value: 'The next logical step in goblin rock throwing technology.
-
-        Bombs
-        explode on impact.'
+      value: The next logical step in goblin rock throwing technology.Bombs explode
+        on impact.
       objectReference: {fileID: 0}
     - target: {fileID: 8977342415391896726, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_Name
