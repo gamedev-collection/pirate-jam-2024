@@ -7,7 +7,6 @@ using static Unity.Collections.Unicode;
 public class OnHitSplashLingering : OnHitSplash
 {
     [Header("Lingering")]
-    [SerializeField] private float _duration = 3;
     [SerializeField] private CircleCollider2D _col;
 
     private float _lastAttackTime;
@@ -25,10 +24,5 @@ public class OnHitSplashLingering : OnHitSplash
         {
             enemy.TakeDamage(_damage, _rune);
         }
-    }
-
-    private void Update()
-    {
-        Destroy(gameObject, _duration);
     }
 }

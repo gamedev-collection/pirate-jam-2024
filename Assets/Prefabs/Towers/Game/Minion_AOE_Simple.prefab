@@ -74,7 +74,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8584771575882762951, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
       propertyPath: towerDescription
-      value: Causes shockwaves around the tower.
+      value: "Thumping is the favourite pastime of some goblins. \nThey love to create
+        shockwaves around their tower."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

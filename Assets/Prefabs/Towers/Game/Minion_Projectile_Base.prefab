@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4511116454805313006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3956995265393108759}
+  m_Layer: 6
+  m_Name: ProjectileSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3956995265393108759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511116454805313006}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.195, y: 0.339, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6434273670561313355}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5844902599086956702
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +156,7 @@ Transform:
   m_GameObject: {fileID: 8635921211720640233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -172,7 +203,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1395290736, guid: 33344a254a3eac641b02ae49f86409b1, type: 3}
+  m_Sprite: {fileID: -987356916, guid: 0cd2ee9a305aa3b408349a36cd5d09f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -194,6 +225,7 @@ GameObject:
   - component: {fileID: 6434273670561313355}
   - component: {fileID: 8851901158365467005}
   - component: {fileID: 4898787657033836981}
+  - component: {fileID: 1428386637910222246}
   m_Layer: 6
   m_Name: Minion_Projectile_Base
   m_TagString: Untagged
@@ -216,6 +248,7 @@ Transform:
   m_Children:
   - {fileID: 6400208517278371154}
   - {fileID: 26528755852547458}
+  - {fileID: 3956995265393108759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8851901158365467005
@@ -237,6 +270,7 @@ MonoBehaviour:
   runeSlot: {fileID: 0}
   projectile: {fileID: 234386141113976813, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
   visual: {fileID: 8635921211720640233}
+  animator: {fileID: 1428386637910222246}
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -257,6 +291,7 @@ MonoBehaviour:
   _volley: 0
   _volleyAmount: 3
   _volleyDelay: 1
+  _projectileSpawn: {fileID: 3956995265393108759}
 --- !u!61 &4898787657033836981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -302,3 +337,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1428386637910222246
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8977342415391896726}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 554b0302521075640aebdebfb5d2881e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

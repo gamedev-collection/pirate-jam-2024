@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _range: 1
+  _duration: 0.2
   filter:
     useTriggers: 0
     useLayerMask: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 public class OnHitSplash : MonoBehaviour
 {
     [SerializeField] protected float _range = 1;
+    [SerializeField] private float _duration = 0.2f;
     [SerializeField] protected ContactFilter2D filter;
 
     [Header("Visuals")]
@@ -58,6 +59,6 @@ public class OnHitSplash : MonoBehaviour
             enemy.TakeDamage(_damage, _rune);
         }
 
-        Destroy(gameObject, 0.2f);
+        Destroy(gameObject, _duration);
     }
 }

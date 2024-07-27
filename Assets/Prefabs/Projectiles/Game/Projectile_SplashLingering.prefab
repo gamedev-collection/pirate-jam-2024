@@ -55,7 +55,19 @@ PrefabInstance:
     - target: {fileID: 7272575282811870787, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d407c1db16293834da5630b12ae245d2, type: 3}
+      objectReference: {fileID: 21300000, guid: e917a526ddbd21f4e91562d085b10f2f, type: 3}
+    - target: {fileID: 7272575282811870787, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272575282811870787, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272575282811870787, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: speed
       value: 8
@@ -65,12 +77,44 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: colorDOT.b
+      value: 0.4117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: colorDOT.g
+      value: 0.4117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: colorSlow.b
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: colorSlow.g
+      value: 0.72156864
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: colorSlow.r
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: onHitObject
       value: 
       objectReference: {fileID: 2069740664158890589, guid: c39f5338ce27f6845b32a47e67d19cd0, type: 3}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: slowestSpeed
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: colorNormal.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: colorNormal.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: colorNormal.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: onHitInstantiate
@@ -83,6 +127,10 @@ PrefabInstance:
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: slowdownWithScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: scaleCurve.m_Curve.Array.data[2].value
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

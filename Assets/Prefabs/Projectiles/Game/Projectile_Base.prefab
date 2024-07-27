@@ -69,7 +69,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.3
 --- !u!114 &7285891747573180368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
       outWeight: 0.07601035
     - serializedVersion: 3
       time: 1
-      value: 1
+      value: 1.1
       inSlope: -8.961812
       outSlope: -8.961812
       tangentMode: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   slowestCurvePoint: 0.5
   onHitInstantiate: 0
   onHitObject: {fileID: 0}
-  colorNormal: {r: 0.83137256, g: 0.627451, b: 0.9843137, a: 1}
+  colorNormal: {r: 1, g: 1, b: 1, a: 1}
   colorDOT: {r: 1, g: 0.68594474, b: 0.49803925, a: 1}
   colorSlow: {r: 0.640753, g: 0.7078217, b: 0.7264151, a: 1}
 --- !u!50 &-1159821256378331509
@@ -184,8 +184,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2748721544879590921}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -230,8 +230,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 3209d8e8553612b4b8cc474f1a7d8468, type: 3}
-  m_Color: {r: 0.8290295, g: 0.6247775, b: 0.9811321, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0c6ffc1157e76a440939a0945a7869b0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

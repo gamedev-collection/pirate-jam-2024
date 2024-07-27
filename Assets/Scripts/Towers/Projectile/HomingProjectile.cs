@@ -42,9 +42,9 @@ public class HomingProjectile : MonoBehaviour
     private int _hits;
     private float _startingDistance;
     private float _actualSpeed;
-    private float _angularOffset;
     private Transform _target;
     private Vector3 _startingPosition;
+    private Vector3 _startingScale;
     private Vector3 _lastTargetPos;
     private Vector3 _direction;
     private Rune _rune;
@@ -57,6 +57,7 @@ public class HomingProjectile : MonoBehaviour
         _lastTargetPos = _target.position;
         _direction = target.position - transform.position;
         _startingPosition = transform.position;
+        _startingScale = visual.transform.localScale;
         _startingDistance = Vector3.Distance(_lastTargetPos, _startingPosition);
         _actualSpeed = speed;
 
@@ -109,7 +110,7 @@ public class HomingProjectile : MonoBehaviour
     {
         float percentage = 1 - (distance / _startingDistance);
         float value = scaleCurve.Evaluate(percentage);
-        visual.transform.localScale = new Vector3(value, value, 1);
+        visual.transform.localScale = new Vector3(_startingScale.x * value, _startingScale.y * value, 1);
     }
 
     private void UpdateSpeed(float distance)

@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1428386637910222246, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 71943dccc5cf8f54480fc80fb54eeb10, type: 2}
+    - target: {fileID: 2919078684983473294, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -544870772, guid: 1db5304b072560f46a84b385f17afb42, type: 3}
+    - target: {fileID: 3956995265393108759, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956995265393108759, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.502
+      objectReference: {fileID: 0}
     - target: {fileID: 6434273670561313355, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -62,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerName
-      value: Goblin Alchemist
+      value: Goblin Brewchemist
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: attackRate
@@ -74,7 +90,8 @@ PrefabInstance:
       objectReference: {fileID: 7949807793346824582, guid: 7a15706f173e3b643a3b2e63b98c0581, type: 3}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerDescription
-      value: Throws potions at enemies that leave a damaging splat behind.
+      value: "Splash your enemies with the latest in goblin Brewchemy. \nNo goblins
+        were harmed by the operation of this tower."
       objectReference: {fileID: 0}
     - target: {fileID: 8977342415391896726, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_Name

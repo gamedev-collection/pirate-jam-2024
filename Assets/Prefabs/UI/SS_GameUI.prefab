@@ -579,11 +579,18 @@ MonoBehaviour:
   towerShopContainer: {fileID: 1356665937484201539}
   towerShopPrefab: {fileID: 5143130970292174358, guid: 6777cbbb804a7cb409c5c67436be1549, type: 3}
   towerPrefabs:
-  - {fileID: 7790825156363946667, guid: 7ff3f62759f39b44d9e47f6492374a2b, type: 3}
-  - {fileID: 7790825156363946667, guid: 737053d8501549a47a7082989d10dd9f, type: 3}
+  - {fileID: 8257917725070810076, guid: 9c059e64f3a2c9a46ba63697dbbbde11, type: 3}
+  - {fileID: 8257917725070810076, guid: c64d6b20767e41c4eb327ce1f5138020, type: 3}
+  - {fileID: 230324708041598988, guid: c9f7138baf3b41242957b96a80810636, type: 3}
+  - {fileID: 8257917725070810076, guid: c7b4746d739f88b4998ca6ccd1f9447e, type: 3}
+  - {fileID: 8257917725070810076, guid: 5b5eb1044f7c240469fdaee16202384a, type: 3}
+  - {fileID: 8257917725070810076, guid: b404da87df98edf43bcf704cd93b3dd5, type: 3}
   runeShopContainer: {fileID: 8501757994186280295}
   runeShopPrefab: {fileID: 5143130970292174358, guid: 6777cbbb804a7cb409c5c67436be1549, type: 3}
-  runePrefabs: []
+  runePrefabs:
+  - {fileID: 2475462215633341489, guid: f4f7315ef29406e4e9b2a31948baea6d, type: 3}
+  - {fileID: 8095299867131642806, guid: 29ff7d34a0a75d3429edf9cec7df8e6f, type: 3}
+  - {fileID: 6546761466857326911, guid: 4518214c1639ac946b8a37d23ecd54f2, type: 3}
   maxHealth: 10
   money: 1000
 --- !u!1 &5774392340761309190

@@ -14,6 +14,7 @@ public abstract class Tower : MonoBehaviour
     public Rune runeSlot;
     public GameObject projectile;
     public GameObject visual;
+    public Animator animator;
 
     public ContactFilter2D filter;
 
