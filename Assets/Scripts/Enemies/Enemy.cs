@@ -26,9 +26,14 @@ public class Enemy: MonoBehaviour
 
     private Dictionary<Rune, GameObject> _runes = new Dictionary<Rune, GameObject>();
 
+    public AudioClip deathAudio;
+    private AudioSource _audioSource;
+
     private void Start()
     {
         CurrentHp = maxHp;
+        
+        _audioSource ??= GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -36,7 +41,7 @@ public class Enemy: MonoBehaviour
         Move();
     }
 
-    public virtual void Move()
+    private void Move()
     {
         if (_pathIndex < _path.Count)
         {
@@ -76,7 +81,7 @@ public class Enemy: MonoBehaviour
             runeComp.Init(this);
             runeComp.ApplyEffect();
         }
-        damageParticle.Play();
+        damageParticle?.Play();
         if (CurrentHp > 0) return;
         DieWithMoney();
     }
@@ -91,6 +96,8 @@ public class Enemy: MonoBehaviour
     
     private void Die()
     {
+        if (deathAudio) _audioSource?.PlayOneShot(deathAudio);
+        
         OnEnemyDestroyed?.Invoke(gameObject);
         Destroy(gameObject);
     }

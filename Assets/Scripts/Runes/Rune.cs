@@ -13,6 +13,7 @@ public abstract class Rune : MonoBehaviour
     public int cost;
     public ERuneType runeType;
     public Sprite runeSprite;
+    public Color runeColor;
 
     protected Enemy Enemy;
     protected Tower Tower;

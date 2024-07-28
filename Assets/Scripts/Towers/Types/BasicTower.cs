@@ -31,6 +31,8 @@ public class BasicTower : Tower
     {
         if (projectile == null) return;
         
+        PlayAttackClip();
+        
         var projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity);
         var projectileScript = projectileInstance.GetComponent<Projectile>();
         

@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
-using static Unity.Collections.Unicode;
 
 public abstract class Tower : MonoBehaviour
 {
@@ -13,7 +11,6 @@ public abstract class Tower : MonoBehaviour
     public int cost;
     public Rune runeSlot;
     public GameObject projectile;
-    public GameObject visual;
     public Animator animator;
     public string speedMultiplierParam = "SpeedMultiplier";
     public float speedMultiplier = 1f;
@@ -33,6 +30,12 @@ public abstract class Tower : MonoBehaviour
     public bool InBuildMode { get; set; } = true;
 
     private bool _isMouseOver = false;
+
+    public SpriteRenderer towerMask;
+    private Color _maskColor;
+
+    public AudioClip attackAudio;
+    private AudioSource _audioSource;
     
     public abstract void Attack(Enemy target);
     
@@ -49,6 +52,10 @@ public abstract class Tower : MonoBehaviour
         rangeIndicator.enabled = false;
         rangeIndicator.transform.localScale = new Vector2(range * 2, range * 2);
         animator.SetFloat(speedMultiplierParam, speedMultiplier);
+
+        if (towerMask) _maskColor = towerMask.color;
+
+        _audioSource ??= GetComponent<AudioSource>();
     }
     
     private void OnMouseEnter()
@@ -82,6 +89,8 @@ public abstract class Tower : MonoBehaviour
     {
         runeSlot = rune;
 
+        if (towerMask) towerMask.color = rune.runeColor;
+
         if (rune.runeType != ERuneType.Tower) return;
         
         Rune runeComp;
@@ -109,6 +118,8 @@ public abstract class Tower : MonoBehaviour
 
             ResetStats();
         }
+
+        if (towerMask) towerMask.color = _maskColor;
         
         runeSlot = null;
     }
@@ -144,6 +155,11 @@ public abstract class Tower : MonoBehaviour
         {
             Delete();
         }
+    }
+    
+    protected void PlayAttackClip()
+    {
+        if (attackAudio) _audioSource.PlayOneShot(attackAudio);
     }
 
     private void Delete()

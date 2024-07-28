@@ -34,6 +34,8 @@ public class AreaTower : Tower
         var targets = FindTargets();
         if (targets is null || targets.Count <= 0) return;
         
+        PlayAttackClip();
+        
         foreach (var target in targets)
         {
             Attack(target);
