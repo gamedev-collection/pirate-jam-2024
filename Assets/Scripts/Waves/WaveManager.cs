@@ -10,6 +10,7 @@ public class WaveManager : Singleton<WaveManager>
     public List<Wave> waves;
     public Transform spawnPoint;
     public float waveStartupTime = 2f;
+    public bool autoStart = true;
 
     public float spawnOffset = 0.2f;
     
@@ -32,12 +33,10 @@ public class WaveManager : Singleton<WaveManager>
     private void Start()
     {
         PathManager.Instance.GenerateAllPaths();
-        GetNewPath();
-
-        if (waves is null || waves.Count <= 0) return;
-
-        _waveQueue = new Queue<Wave>(waves);
-        _displayWaves = _waveQueue.Count;
+        if (autoStart)
+        {
+            StartUp();
+        }
     }
 
     public string GetWaveText()
@@ -128,5 +127,18 @@ public class WaveManager : Singleton<WaveManager>
         var randomIndex = Random.Range(0, PathManager.Instance.AllPaths.Count);
         _path = PathManager.Instance.AllPaths[randomIndex];
         pathVisualiser?.VisualisePath(_path);
+    }
+
+    public void StartUp()
+    {
+        GetNewPath();
+        if (waves is null || waves.Count <= 0) return;
+        _waveQueue = new Queue<Wave>(waves);
+        _displayWaves = _waveQueue.Count;
+    }
+
+    public void GetDummyPath()
+    {
+        GetNewPath();
     }
 }
