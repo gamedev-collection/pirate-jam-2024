@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Enemy: MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class Enemy: MonoBehaviour
     public float size = 1;
     public int damage = 1;
     public int price = 1;
-    public float offsetWidth = 0.5f;
+    public float pathingOffset = 0.2f;
 
     public ParticleSystem damageParticle;
     public int OrderInWave {  get; set; }
 
     private List<PathNode> _path;
+    private List<Vector3> _offsetPath;
     private int _pathIndex = 0;
 
     public event Action<GameObject> OnEnemyDestroyed;
@@ -43,13 +45,13 @@ public class Enemy: MonoBehaviour
 
     private void Move()
     {
-        if (_pathIndex < _path.Count)
+        if (_pathIndex < _offsetPath.Count)
         {
-            var target = _path[_pathIndex];
-            var direction = target.transform.position - transform.position;
+            var target = _offsetPath[_pathIndex];
+            var direction = target - transform.position;
             transform.Translate(direction.normalized * (movementSpeed * Time.deltaTime), Space.World);
 
-            if (Vector3.Distance(transform.position, target.transform.position) < 0.2f)
+            if (Vector3.Distance(transform.position, target) < 0.2f)
             {
                 _pathIndex++;
             }
@@ -111,5 +113,17 @@ public class Enemy: MonoBehaviour
     public void SetPath(List<PathNode> path)
     {
         _path = path;
+        _offsetPath = new List<Vector3>();
+
+        foreach (var node in _path)
+        {
+            var offset = new Vector3(
+                UnityEngine.Random.Range(-pathingOffset, pathingOffset),
+                UnityEngine.Random.Range(-pathingOffset, pathingOffset),
+                0
+            );
+
+            _offsetPath.Add(node.transform.position + offset);
+        }
     }
 }
