@@ -108,6 +108,17 @@ public class ObeliskManager : Singleton<ObeliskManager>
         }
     }
 
+    public void OnTowerSold(Tower tower)
+    {
+        foreach (Obelisk obelisk in _obelisks)
+        {
+            if (obelisk.BuffedTowers.Contains(tower))
+            {
+                obelisk.BuffedTowers.Remove(tower);
+            }
+        }
+    }
+
     #region RUNES
 
     public void SetActiveRune(Rune runePrefab)
@@ -139,13 +150,17 @@ public class ObeliskManager : Singleton<ObeliskManager>
             if (firstHit.transform.TryGetComponent<Obelisk>(out Obelisk clickedObelisk) && clickedObelisk.RuneSlot == null) return clickedObelisk;
         }
 
+        
+
         return null;
     }
 
     private void HandleRunePlacement(Obelisk obelisk)
     {
         _runePlacementVisual.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
-        obelisk.ApplyRune(_runePlacementVisual.GetComponent<Rune>());
+        Rune rune = _runePlacementVisual.GetComponent<Rune>();
+        obelisk.ApplyRune(rune);
+        UIManager.Instance.money -= rune.cost;
         CancelActiveRune(false);
     }
 

@@ -40,6 +40,7 @@ public class Obelisk : MonoBehaviour
     private GameObject _runeVisual;
     private Vector2 _shadowVector = Vector2.up;
     private List<Tower> _buffedTowers = new List<Tower>();
+    public List<Tower> BuffedTowers { get{ return _buffedTowers; } }
 
     private bool isHovered = false;
 
@@ -86,6 +87,7 @@ public class Obelisk : MonoBehaviour
     public void SetShadowDirection(ShadowDirection direction)
     {
         DebuffTowers();
+        _buffedTowers.Clear();
         _shadowDirection = direction;
 
         foreach (GameObject obj in _shadowVisuals)
@@ -145,19 +147,21 @@ public class Obelisk : MonoBehaviour
         _runeVisual = rune.gameObject;
         _runeVisual.transform.position = transform.position + new Vector3(0,0.5f,0);
         _runeVisual.transform.parent = transform;
-        
+
+        BuffTowers();
+
         if (runePlaceAudio) _audioSource?.PlayOneShot(runePlaceAudio);
     }
 
     public void RemoveRune()
     {
         UIManager.Instance.money += Mathf.RoundToInt(_runeSlot.cost / 2f);
-        
+        DebuffTowers();
+
         Destroy(_runeVisual);
         _runeSlot = null;
         _runeVisual = null;
 
-        DebuffTowers();
         
         if (runeRemoveAudio) _audioSource?.PlayOneShot(runeRemoveAudio);
     }
@@ -176,7 +180,7 @@ public class Obelisk : MonoBehaviour
         {
             tower.RemoveRune(_runeSlot);
         }
-        _buffedTowers.Clear();
+        
     }
 
     private void LockShadowedPaths()

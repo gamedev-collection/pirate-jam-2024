@@ -36,7 +36,7 @@ public abstract class Tower : MonoBehaviour
 
     public AudioClip attackAudio;
     private AudioSource _audioSource;
-    
+   
     public abstract void Attack(Enemy target);
     
     private void Awake()
@@ -101,6 +101,7 @@ public abstract class Tower : MonoBehaviour
         else
         {
             var runeInstance = Instantiate(rune.gameObject, this.transform);
+            runeInstance.GetComponent<SpriteRenderer>().enabled = false;
             runeComp = runeInstance.GetComponent<Rune>();
             _runes[rune] = runeInstance;
         }
@@ -166,6 +167,7 @@ public abstract class Tower : MonoBehaviour
     {
         UIManager.Instance.money += Mathf.RoundToInt(cost / 2f);
         TowerManager.Instance.RemoveActiveTower(transform.position);
+        ObeliskManager.Instance.OnTowerSold(this);
         Destroy(gameObject);
     }
 }

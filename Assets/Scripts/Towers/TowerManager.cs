@@ -125,13 +125,13 @@ public class TowerManager : Singleton<TowerManager>
         var towerComp = _towerPlacementVisual.GetComponent<Tower>();
         _activeTowers.Add(_towerPlacementVisual.transform.position, towerComp);
 
-        OnTowerPlaced?.Invoke(towerComp);
         CancelActiveTower(false);
         towerComp.GetComponent<Collider2D>().enabled = true;
         towerComp.InBuildMode = InBuildmode;
 
         placementMap.gameObject.SetActive(false);
         UIManager.Instance.money -= _towerPrefab.GetComponent<Tower>().cost;
+        OnTowerPlaced?.Invoke(towerComp);
         
         if (placeAudioClip) _audioSource?.PlayOneShot(placeAudioClip);
     }

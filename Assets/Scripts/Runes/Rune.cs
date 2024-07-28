@@ -32,7 +32,7 @@ public abstract class Rune : MonoBehaviour
     
     public void OnEffectEnd()
     {
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
     public abstract void ApplyEffect();
