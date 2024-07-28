@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: range
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: damage
@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 3265684769508188248, guid: 6f425b8ba4ad5ac4882ce58618d513ae, type: 3}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: targetingFocus
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: speedMultiplier

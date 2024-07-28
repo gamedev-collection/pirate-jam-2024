@@ -56,10 +56,10 @@ Material:
     - PixelSnap: 0
     - _EnableExternalAlpha: 0
     - _NoiseScale: 24
-    - _Pixel_Factor: 64
+    - _Pixel_Factor: 128
     - _Speed: 0.05
     m_Colors:
-    - _Background_Color: {r: 0.39622638, g: 0.39622638, b: 0.39622638, a: 0}
+    - _Background_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

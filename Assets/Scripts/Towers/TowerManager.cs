@@ -59,7 +59,6 @@ public class TowerManager : Singleton<TowerManager>
         if (Input.GetMouseButtonDown(1))
         {
             CancelActiveTower(true);
-
         }
 
         if (!hit.HasValue) return;
@@ -97,6 +96,7 @@ public class TowerManager : Singleton<TowerManager>
     public void CancelActiveTower(bool deleteVisual)
     {
         InBuildmode = false;
+        placementMap.gameObject.SetActive(false);
         rangeIndicator.SetActive(false);
         if (deleteVisual) Destroy(_towerPlacementVisual);
         else _towerPlacementVisual = null;

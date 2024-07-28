@@ -11,18 +11,20 @@ public class AreaTower : Tower
     {
         _lastAttackTime = -attackRate;
         var main = _aoeParticles.main;
-        main.startSize = new ParticleSystem.MinMaxCurve(range + 1);
+        main.startSize = new ParticleSystem.MinMaxCurve(range + 1.5f);
     }
     
     private void Update()
     {
         CheckForDeletion();
         
-        if (!WaveManager.Instance.WaveActive) return;
+        if (!WaveManager.Instance.WaveActive || InBuildMode) return;
         
         if (Time.time - _lastAttackTime >= attackRate)
         {
             _lastAttackTime = Time.time;
+            var targets = FindTargets();
+            if (targets is null || targets.Count <= 0) return;
             animator.SetTrigger("Attack");
         }
     }

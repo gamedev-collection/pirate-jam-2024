@@ -26,10 +26,12 @@ public class ProjectileTower : Tower
         CheckForDeletion();
         
         if (!WaveManager.Instance.WaveActive || InBuildMode) return;
-        
+
         if (Time.time - _lastAttackTime >= 1f / attackRate && _currentVolleyDelay <= 0)
         {
             _lastAttackTime = Time.time;
+            var targets = FindTargets();
+            if (targets is null || targets.Count <= 0) return;
             animator.SetTrigger("Attack");
         }
 
