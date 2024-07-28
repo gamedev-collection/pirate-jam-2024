@@ -12,13 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Walker_SlowStrong
       objectReference: {fileID: 0}
+    - target: {fileID: 5307183009054487199, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1990572201, guid: 4e7cca6f858a316438ad1e9a64945f4e, type: 3}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: maxHp
-      value: 32
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: price
@@ -31,6 +35,18 @@ PrefabInstance:
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: movementSpeed
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483787030660918004, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483787030660918004, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483787030660918004, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 8483787030660918004, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: m_LocalPosition.x

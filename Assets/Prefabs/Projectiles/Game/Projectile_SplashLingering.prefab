@@ -73,6 +73,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: homing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: lifetime
       value: 10
       objectReference: {fileID: 0}

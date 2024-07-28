@@ -14,10 +14,10 @@ public class WaveManager : Singleton<WaveManager>
     public PathVisualiser pathVisualiser;
 
     public bool WaveActive => _activeEnemies.Count > 0 || _waveActive;
-    
+
     private int _totalEnemiesForCurrentWave = 0;
     private int _enemiesLeftForCurrentWave = 0;
-    
+
     private readonly List<GameObject> _activeEnemies = new List<GameObject>();
 
     private Queue<Wave> _waveQueue = new Queue<Wave>();
@@ -50,7 +50,7 @@ public class WaveManager : Singleton<WaveManager>
 
     public void QueueNextWave()
     {
-        if (_waveQueue.Count <= 0) return;
+        if (_waveQueue.Count <= 0 || UIManager.Instance.IsGameOver) { pathVisualiser?.DisablePathVisualiser(); return; }
 
         var wave = _waveQueue.Dequeue();
         StartCoroutine(StartNextWave(wave));
@@ -73,7 +73,7 @@ public class WaveManager : Singleton<WaveManager>
         wave.onWaveFinish?.Invoke();
         _displayWaves--;
 
-        pathVisualiser?.EnablePathVisualiser();
+        if(UIManager.Instance.IsGameOver) pathVisualiser?.EnablePathVisualiser();
         GetNewPath();
     }
     

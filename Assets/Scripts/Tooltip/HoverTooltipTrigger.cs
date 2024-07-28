@@ -43,7 +43,7 @@ public class HoverTooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointer
             case TooltipType.Basic: TooltipManager.ShowBasicTooltip(_body, _header); break;
             case TooltipType.ShopTower:
                 _dataObject.TryGetComponent<Tower>(out Tower tower);
-                TooltipManager.ShowShopTowerTooltip(tower.towerName, tower.towerDescription, tower.cost.ToString(), tower.damage.ToString(), tower.attackRate.ToString(), tower.range.ToString()); break;
+                TooltipManager.ShowShopTowerTooltip(tower.towerName, tower.towerDescription, tower.cost.ToString(), tower.damage.ToString(), tower.attackRate.ToString(), (tower.range - 0.5f).ToString()); break;
             case TooltipType.ShopBuffRune:
                 _dataObject.TryGetComponent<BuffRune>(out BuffRune buffRune);
                 TooltipManager.ShowShopTowerTooltip(buffRune.runeName, buffRune.runeDescription, buffRune.cost.ToString(), buffRune.damageBuff.ToString(), buffRune.attackRateBuff.ToString(), buffRune.rangeBuff.ToString()); break;

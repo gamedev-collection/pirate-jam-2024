@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6356499440604362747}
   - component: {fileID: 3772787519819659523}
   - component: {fileID: 3544286717313374842}
+  - component: {fileID: 5099042619800631882}
   m_Layer: 5
   m_Name: SpellbookPanel
   m_TagString: Untagged
@@ -75,6 +76,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!225 &5099042619800631882
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630526630497485139}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2008751569848501359
 GameObject:
   m_ObjectHideFlags: 0

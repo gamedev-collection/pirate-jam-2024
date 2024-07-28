@@ -10,13 +10,21 @@ public class AED_CanvasGroup : AnimatedEnableDisable
     [SerializeField] private AnimationCurve _curve = AnimationCurve.Linear(0, 0, 1, 1);
     [SerializeField] private float _enableDelay;
     [SerializeField] private float _disableDelay;
+    [SerializeField] private bool _disableOnEnable = false;
+    [SerializeField] private bool _enableOnEnable = false;
 
+
+    private void OnEnable()
+    {
+        if (_disableOnEnable) AnimatedDisable();
+        if (_enableOnEnable) AnimatedEnable();
+    }
     public override void AnimatedDisable()
     {
         IsDisabling = true;
         _canvasGroup.interactable = false;
         _canvasGroup.blocksRaycasts = false;
-        if(!IsAnimating) StartCoroutine(DoAnimateCanvasGroup(1, 0, _duration, _disableDelay));
+        if(!IsAnimating) StartCoroutine(DoAnimateCanvasGroup(_canvasGroup.alpha, 0, _duration, _disableDelay));
     }
 
     public override void AnimatedEnable()

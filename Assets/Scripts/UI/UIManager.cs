@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using static Unity.Collections.Unicode;
 
@@ -19,6 +20,8 @@ public class UIManager : Singleton<UIManager>
     public Transform towerShopContainer;
     public GameObject towerShopPrefab;
     public List<GameObject> towerPrefabs = new List<GameObject>();
+    public UnityEvent onTowerBought;
+    public UnityEvent onRuneBought;
     private List<KeyValuePair<int, Button>> _towerShopButtons = new List<KeyValuePair<int, Button>>();
 
     public Transform runeShopContainer;
@@ -31,7 +34,11 @@ public class UIManager : Singleton<UIManager>
 
     public int money = 100;
 
+    public AnimatedEnableDisable VictoryUI;
+    public AnimatedEnableDisable LoseUI;
+
     private bool _hasActiveItem = false;
+    public bool IsGameOver { get; private set; } = false;
 
     private void Start()
     {
@@ -75,12 +82,14 @@ public class UIManager : Singleton<UIManager>
 
     public void SetActiveTower(GameObject towerPrefab)
     {
+        onTowerBought?.Invoke();
         CancelActiveObjects();
         TowerManager.Instance.SetActiveTower(towerPrefab);
     }
 
     public void SetActiveRune(Rune runePrefab)
     {
+        onRuneBought?.Invoke();
         CancelActiveObjects();
         ObeliskManager.Instance.SetActiveRune(runePrefab);
     }
@@ -95,7 +104,7 @@ public class UIManager : Singleton<UIManager>
     {
         CurrentHealth -= amount;
         UpdateHealthBar();
-        if (CurrentHealth <= 0)
+        if (CurrentHealth <= 0 && !IsGameOver)
         {
             GameOver();
         }
@@ -128,10 +137,25 @@ public class UIManager : Singleton<UIManager>
         healthTooltip.Body = CurrentHealth + "/" + maxHealth;
     }
 
+    public void AddMoney(int amount)
+    {
+        money += amount;
+    }
+
     private void GameOver()
     {
-        // TODO: Gameover
-        Debug.Log("Game Over");
+        IsGameOver = true;
+        WaveManager.Instance.pathVisualiser?.DisablePathVisualiser();
+        nextWaveButton.gameObject.SetActive(false);
+        LoseUI.AnimatedEnable();
+    }
+
+    public void Win()
+    {
+        IsGameOver = true;
+        WaveManager.Instance.pathVisualiser?.DisablePathVisualiser();
+        nextWaveButton.gameObject.SetActive(false);
+        VictoryUI.AnimatedEnable();
     }
 
     private void CreateTowerShop()
