@@ -38,9 +38,9 @@ public class Obelisk : MonoBehaviour
 
     private bool isHovered = false;
 
-    private void Awake()
+    private void OnEnable()
     {
-        SetShadowDirection(ShadowDirection.North);
+        SetShadowDirection(_shadowDirection);
     }
 
     private void OnMouseEnter()
@@ -76,7 +76,6 @@ public class Obelisk : MonoBehaviour
     public void SetShadowDirection(ShadowDirection direction)
     {
         DebuffTowers();
-
         _shadowDirection = direction;
 
         foreach (GameObject obj in _shadowVisuals)
@@ -162,35 +161,44 @@ public class Obelisk : MonoBehaviour
 
     private void LockShadowedPaths()
     {
+        Debug.Log("Locking " + _shadowDirection);
         switch (_shadowDirection)
         {
             case ShadowDirection.North:
                 foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.DisableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
                 break;
             case ShadowDirection.East:
-                foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
                 foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.DisableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
                 break;
             case ShadowDirection.South:
-                foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
                 foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.DisableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
                 break;
             case ShadowDirection.West:
-                foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
-                foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
+                //foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
                 foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.DisableWalkable(path._direction);
                 break;
             case ShadowDirection.None:
                 break;
         }
+    }
+
+    public void UnlockPaths()
+    {
+        foreach (PathNodeWithDir path in _pathNodesNorth) path._pathNode.EnableWalkable(path._direction);
+        foreach (PathNodeWithDir path in _pathNodesEast) path._pathNode.EnableWalkable(path._direction);
+        foreach (PathNodeWithDir path in _pathNodesSouth) path._pathNode.EnableWalkable(path._direction);
+        foreach (PathNodeWithDir path in _pathNodesWest) path._pathNode.EnableWalkable(path._direction);
     }
 
     private ShadowDirection GetNextShadowDirection()
@@ -199,10 +207,10 @@ public class Obelisk : MonoBehaviour
 
         switch (_shadowDirection)
         {
-            case ShadowDirection.North: newDirection = ShadowDirection.West; break;
-            case ShadowDirection.West: newDirection = ShadowDirection.South; break;
-            case ShadowDirection.South: newDirection = ShadowDirection.East; break;
-            case ShadowDirection.East: newDirection = ShadowDirection.North; break;
+            case ShadowDirection.North: newDirection = ShadowDirection.East; break;
+            case ShadowDirection.East: newDirection = ShadowDirection.South; break;
+            case ShadowDirection.South: newDirection = ShadowDirection.West; break;
+            case ShadowDirection.West: newDirection = ShadowDirection.North; break;
         }
 
         return newDirection;
@@ -214,10 +222,10 @@ public class Obelisk : MonoBehaviour
 
         switch (_shadowDirection)
         {
-            case ShadowDirection.North: newDirection = ShadowDirection.East; break;
-            case ShadowDirection.East: newDirection = ShadowDirection.South; break;
-            case ShadowDirection.South: newDirection = ShadowDirection.West; break;
-            case ShadowDirection.West: newDirection = ShadowDirection.North; break;
+            case ShadowDirection.North: newDirection = ShadowDirection.West; break;
+            case ShadowDirection.West: newDirection = ShadowDirection.South; break;
+            case ShadowDirection.South: newDirection = ShadowDirection.East; break;
+            case ShadowDirection.East: newDirection = ShadowDirection.North; break;
         }
 
         return newDirection;

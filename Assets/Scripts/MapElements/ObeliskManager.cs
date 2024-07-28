@@ -10,7 +10,12 @@ public class ObeliskManager : Singleton<ObeliskManager>
 {
     [SerializeField] private Obelisk[] _obelisks;
 
+    [Tooltip("Optional - Searches for Obelisks in Children of Parent. Overrides Array")]
+    [SerializeField] private GameObject _ObeliskParent;
+
     [SerializeField] private LayerMask _obeliskLayerMask;
+
+    public List<PathNodeWithDir> DisabledPaths = new List<PathNodeWithDir>();
 
     private Rune _selectedRunePrefab;
     private GameObject _runePlacementVisual;
@@ -20,6 +25,10 @@ public class ObeliskManager : Singleton<ObeliskManager>
     private void Awake()
     {
         TowerManager.Instance.OnTowerPlaced += OnNewTowerPlaced;
+        if (_ObeliskParent)
+        {
+            _obelisks = _ObeliskParent.GetComponentsInChildren<Obelisk>();
+        }
     }
 
     private void OnDestroy()
@@ -52,6 +61,7 @@ public class ObeliskManager : Singleton<ObeliskManager>
 
     public void RotateShadowsToNext()
     {
+        UnlockAllPaths();
         foreach (Obelisk obelisk in _obelisks)
         {
             obelisk.SetNextShadowDirection();
@@ -60,6 +70,7 @@ public class ObeliskManager : Singleton<ObeliskManager>
 
     public void RotateShadowsToPrev()
     {
+        UnlockAllPaths();
         foreach (Obelisk obelisk in _obelisks)
         {
             obelisk.SetPrevShadowDirection();
@@ -68,8 +79,15 @@ public class ObeliskManager : Singleton<ObeliskManager>
 
     public void RotateShadows(ShadowDirection direction)
     {
+        UnlockAllPaths();
         foreach (Obelisk obelisk in _obelisks) { obelisk.SetShadowDirection(direction); }
     }
+
+    public void UnlockAllPaths()
+    {
+        foreach (Obelisk obelisk in _obelisks) { obelisk.UnlockPaths(); }
+    }
+
 
     private void OnNewTowerPlaced(Tower tower)
     {
