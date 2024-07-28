@@ -16,6 +16,7 @@ public class TowerManager : Singleton<TowerManager>
     public Transform overlayContainer;
 
     public GameObject rangeIndicator;
+
     
     public AudioClip placeAudioClip;
     public AudioClip removeAudioClip;
@@ -100,7 +101,7 @@ public class TowerManager : Singleton<TowerManager>
         rangeIndicator.SetActive(true);
         rangeIndicator.transform.localScale = new Vector2(towerComponent.range * 2, towerComponent.range * 2);
         _towerPlacementVisual = Instantiate(_towerPrefab, Vector3.zero, Quaternion.identity);
-        _towerPlacementVisual.GetComponent<Tower>().visual.GetComponent<SpriteRenderer>().sortingLayerName = "UI";
+        _towerPlacementVisual.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "UI";
     }
     
     public void CancelActiveTower(bool deleteVisual)
@@ -119,7 +120,7 @@ public class TowerManager : Singleton<TowerManager>
         if (_activeTowers.ContainsKey(tile.transform.position)) return;
 
         _towerPlacementVisual.transform.position = tile.transform.position;
-        _towerPlacementVisual.GetComponent<Tower>().visual.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
+        _towerPlacementVisual.GetComponentInChildren<SpriteRenderer>().sortingLayerName = "Game";
 
         var towerComp = _towerPlacementVisual.GetComponent<Tower>();
         _activeTowers.Add(_towerPlacementVisual.transform.position, towerComp);
