@@ -13,24 +13,33 @@ public class LevelManager : Singleton<LevelManager>
     public AnimatedEnableDisable levelFade;
 
     private bool isLoading = false;
+    private int currentIndex = 0;
 
+    public void LoadNextGameLevel()
+    {
+        LoadGameLevelWithTransition(currentIndex + 1);
+    }
+    public void ReloadCurrentGameLevel()
+    {
+        LoadGameLevelWithTransition(currentIndex);
+    }
     public void LoadGameLevel(int levelIndex) { LoadGameLevel(levelIndex, false); }
     public void LoadGameLevelWithTransition(int levelIndex) { LoadGameLevel(levelIndex, true); }
     private void LoadGameLevel(int levelIndex, bool withTransition = false)
     {
         if(isLoading) return;
-
+        currentIndex = levelIndex;
         UnlockScene(levelIndex);
         if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(levelList[levelIndex].scene.name));
         else StartCoroutine(DoSceneLoad_Routine(levelList[levelIndex].scene.name));
     }
+
 
     public void LoadScene(Scene scene) { LoadScene(scene, false); }
     public void LoadSceneWithTranstiion(Scene scene) { LoadScene(scene, true); }
     public void LoadScene(Scene scene, bool withTransition = false)
     {
         if (isLoading) return;
-
         if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(scene.name));
         else StartCoroutine(DoSceneLoad_Routine(scene.name));
     }
