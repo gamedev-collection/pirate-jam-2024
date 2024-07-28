@@ -81,6 +81,8 @@ public class ProjectileTower : Tower
 
         if (target is null || target.CurrentHp <= 0) return;
         
+        PlayAttackClip();
+        
         var projectileInstance = Instantiate(projectile, _projectileSpawn.position, Quaternion.identity);
         var projectileScript = projectileInstance.GetComponent<HomingProjectile>();
 

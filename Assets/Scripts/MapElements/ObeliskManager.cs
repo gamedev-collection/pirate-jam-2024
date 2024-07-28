@@ -38,24 +38,23 @@ public class ObeliskManager : Singleton<ObeliskManager>
 
     private void Update()
     {
-        if (InRunePlacementMode)
+        if (!InRunePlacementMode) return;
+        
+        if (_runePlacementVisual)
         {
-            if (_runePlacementVisual)
-            {
-                Vector3 mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
-                _runePlacementVisual.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-            }
+            Vector3 mousePos = Camera.main!.ScreenToWorldPoint(Input.mousePosition);
+            _runePlacementVisual.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
+        }
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                Obelisk clickedObelisk = GetClickedObelisk();
-                if (clickedObelisk) HandleRunePlacement(clickedObelisk);
-            }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Obelisk clickedObelisk = GetClickedObelisk();
+            if (clickedObelisk) HandleRunePlacement(clickedObelisk);
+        }
 
-            if (Input.GetMouseButtonDown(1))
-            {
-                CancelActiveRune(true);
-            }
+        if (Input.GetMouseButtonDown(1))
+        {
+            CancelActiveRune(true);
         }
     }
 

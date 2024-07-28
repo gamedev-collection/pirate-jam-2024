@@ -11,12 +11,17 @@ public class Projectile : MonoBehaviour
     private Vector3 _direction;
     private bool _isInitialised = false;
 
+    public AudioClip detonateAudio;
+    private AudioSource _audioSource;
+
     public void Init(int damage, Rune rune, Vector3 direction)
     {
         _damage = damage;
         _rune = rune;
         _direction = direction;
         _isInitialised = true;
+
+        _audioSource ??= GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -31,6 +36,9 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         var enemy = col.gameObject.GetComponent<Enemy>();
+        
+        if (detonateAudio) _audioSource?.PlayOneShot(detonateAudio);
+        
         enemy?.TakeDamage(_damage, _rune);
         Destroy(gameObject);
     }

@@ -32,11 +32,20 @@ public class Obelisk : MonoBehaviour
     public int ShadowDistance { get { return _shadowDistance; } set { _shadowDistance = value; } }
     public Rune RuneSlot { get { return _runeSlot; } }
 
+    public AudioClip runePlaceAudio;
+    public AudioClip runeRemoveAudio;
+    private AudioSource _audioSource;
+
     private GameObject _runeVisual;
     private Vector2 _shadowVector = Vector2.up;
     private List<Tower> _buffedTowers = new List<Tower>();
 
     private bool isHovered = false;
+
+    private void Start()
+    {
+        _audioSource ??= GetComponent<AudioSource>();
+    }
 
     private void OnEnable()
     {
@@ -129,6 +138,8 @@ public class Obelisk : MonoBehaviour
         _runeVisual = rune.gameObject;
         _runeVisual.transform.position = transform.position;
         _runeVisual.transform.parent = transform;
+        
+        if (runePlaceAudio) _audioSource?.PlayOneShot(runePlaceAudio);
     }
 
     public void RemoveRune()
@@ -140,6 +151,8 @@ public class Obelisk : MonoBehaviour
         _runeVisual = null;
 
         DebuffTowers();
+        
+        if (runeRemoveAudio) _audioSource?.PlayOneShot(runeRemoveAudio);
     }
 
     private void BuffTowers()

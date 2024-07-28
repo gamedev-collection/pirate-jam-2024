@@ -37,6 +37,10 @@ public class HomingProjectile : MonoBehaviour
     public Color colorDOT;
     public Color colorSlow;
 
+    [Header("Audio")] 
+    public AudioClip detonateAudio;
+    public AudioClip onHitAudio;
+    
     private bool _isInitialised = false;
     private int _damage;
     private int _hits;
@@ -48,6 +52,7 @@ public class HomingProjectile : MonoBehaviour
     private Vector3 _lastTargetPos;
     private Vector3 _direction;
     private Rune _rune;
+    private AudioSource _audioSource;
 
     public void Init(int damage, Rune rune, Transform target)
     {
@@ -60,6 +65,7 @@ public class HomingProjectile : MonoBehaviour
         _startingScale = visual.transform.localScale;
         _startingDistance = Vector3.Distance(_lastTargetPos, _startingPosition);
         _actualSpeed = speed;
+        _audioSource ??= GetComponent<AudioSource>();
 
         Color color = colorNormal;
         if (rune != null)
