@@ -12,6 +12,8 @@ public class WaveManager : Singleton<WaveManager>
     public float waveStartupTime = 2f;
     public bool autoStart = true;
 
+    public float spawnOffset = 0.2f;
+    
     public PathVisualiser pathVisualiser;
 
     public bool WaveActive => _activeEnemies.Count > 0 || _waveActive;
@@ -96,13 +98,18 @@ public class WaveManager : Singleton<WaveManager>
 
     private void SpawnEnemy(GameObject prefab, int orderInWave)
     {
-        var spawnedObject = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        var offset = new Vector3(
+            Random.Range(-spawnOffset, spawnOffset),
+            Random.Range(-spawnOffset, spawnOffset),
+            0
+        );
+
+        var spawnedObject = Instantiate(prefab, spawnPoint.position + offset, Quaternion.identity);
         Enemy spawnedEnemy = spawnedObject.GetComponent<Enemy>();
         spawnedEnemy.OnEnemyDestroyed += HandleEnemyDestroyed;
         spawnedEnemy.SetPath(_path);
         spawnedEnemy.OrderInWave = orderInWave;
-
-
+        
         _activeEnemies.Add(spawnedObject);
     }
     
