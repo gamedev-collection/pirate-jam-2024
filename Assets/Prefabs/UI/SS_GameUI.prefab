@@ -3163,9 +3163,9 @@ MonoBehaviour:
   runePrefabs:
   - {fileID: 5989471735002592547, guid: b49f6cf9cce3a2445a0987a091ec09c1, type: 3}
   - {fileID: 1838210658537526507, guid: 7a4dedec02613314091360897be11914, type: 3}
+  - {fileID: 6406795086051125836, guid: c7350c64a43adde4283028e8417a601b, type: 3}
   - {fileID: 2475462215633341489, guid: f4f7315ef29406e4e9b2a31948baea6d, type: 3}
   - {fileID: 8095299867131642806, guid: 29ff7d34a0a75d3429edf9cec7df8e6f, type: 3}
-  - {fileID: 6406795086051125836, guid: c7350c64a43adde4283028e8417a601b, type: 3}
   maxHealth: 20
   money: 250
   VictoryUI: {fileID: 0}
