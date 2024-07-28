@@ -693,7 +693,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 4
       m_TileObjectToInstantiateIndex: 65535
@@ -743,7 +743,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 4
       m_TileObjectToInstantiateIndex: 65535
@@ -1293,7 +1293,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 4
       m_TileObjectToInstantiateIndex: 65535
@@ -1343,7 +1343,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 4
       m_TileObjectToInstantiateIndex: 65535
@@ -1413,7 +1413,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 4
       m_TileObjectToInstantiateIndex: 65535
@@ -1703,7 +1703,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 4
       m_TileObjectToInstantiateIndex: 65535
@@ -2064,14 +2064,14 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 465972862, guid: ae27befc50a7f36488ccc3c628aa9e5e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1672870329, guid: ae27befc50a7f36488ccc3c628aa9e5e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1732204369, guid: ae27befc50a7f36488ccc3c628aa9e5e, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: -1023850730, guid: ae27befc50a7f36488ccc3c628aa9e5e, type: 3}
   - m_RefCount: 16
     m_Data: {fileID: 2015613546, guid: ae27befc50a7f36488ccc3c628aa9e5e, type: 3}
   - m_RefCount: 5
@@ -2088,7 +2088,7 @@ Tilemap:
     m_Data: {fileID: 26561675, guid: ae27befc50a7f36488ccc3c628aa9e5e, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: -1799023482, guid: ae27befc50a7f36488ccc3c628aa9e5e, type: 3}
-  - m_RefCount: 70
+  - m_RefCount: 64
     m_Data: {fileID: -1944943945, guid: ae27befc50a7f36488ccc3c628aa9e5e, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 154
@@ -2678,9 +2678,9 @@ MonoBehaviour:
         m_Calls: []
     enemies:
     - enemyPrefab: {fileID: 6000695891694140655, guid: 9375985aa5b473d4eb9d03e476b66cfa, type: 3}
-      count: 4
-      rate: 1.25
-  - timeBetweenEnemySpawning: 1.5
+      count: 3
+      rate: 1.5
+  - timeBetweenEnemySpawning: 0
     onWaveFinish:
       m_PersistentCalls:
         m_Calls: []
@@ -2689,11 +2689,8 @@ MonoBehaviour:
         m_Calls: []
     enemies:
     - enemyPrefab: {fileID: 6000695891694140655, guid: 9375985aa5b473d4eb9d03e476b66cfa, type: 3}
-      count: 3
-      rate: 1.25
-    - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
-      count: 3
-      rate: 2
+      count: 6
+      rate: 1.5
   - timeBetweenEnemySpawning: 1
     onWaveFinish:
       m_PersistentCalls:
@@ -2715,14 +2712,11 @@ MonoBehaviour:
         m_Calls: []
     enemies:
     - enemyPrefab: {fileID: 6000695891694140655, guid: 9375985aa5b473d4eb9d03e476b66cfa, type: 3}
-      count: 2
-      rate: 1.25
+      count: 4
+      rate: 1.5
     - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
-      count: 6
-      rate: 2
-    - enemyPrefab: {fileID: 6000695891694140655, guid: 9375985aa5b473d4eb9d03e476b66cfa, type: 3}
-      count: 2
-      rate: 1.25
+      count: 4
+      rate: 2.5
   spawnPoint: {fileID: 1042233801}
   waveStartupTime: 1
   pathVisualiser: {fileID: 1170343977}
@@ -3089,6 +3083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966503863}
+  - component: {fileID: 966503865}
   - component: {fileID: 966503864}
   m_Layer: 5
   m_Name: Blocker
@@ -3116,18 +3111,44 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!225 &966503864
-CanvasGroup:
+--- !u!114 &966503864
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966503862}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &966503865
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966503862}
+  m_CullTransparentMesh: 1
 --- !u!1001 &981159690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3549,11 +3570,8 @@ MonoBehaviour:
         m_Calls: []
     continueOnClick: 1
   - title: Recruit a vile force...
-    body: The following function LayoutRebuilder.ForceRebuildLayoutImmediate 23 should
-      prove useful. Instead of forcing a rebuild of all the Canvases which can have
-      a significant performance impact, you can call this function on the root (top
-      parent) object in the hierarchy the contains the layout component affecting
-      the object in question.
+    body: Recruit new minions to help you defeat the enemies. These minions cost
+      essence to recruit, so spend wisely! You will gain essence when defeating enemies.
     objectsToEnableDuringStep:
     - {fileID: 981159692}
     - {fileID: 877408860}
@@ -4660,7 +4678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: money
-      value: 500
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: LoseUI
@@ -6904,6 +6922,6 @@ SceneRoots:
   - {fileID: 1456207253}
   - {fileID: 1054032611}
   - {fileID: 146231969}
+  - {fileID: 1870385989}
   - {fileID: 1415902893}
   - {fileID: 1713741942}
-  - {fileID: 1870385989}

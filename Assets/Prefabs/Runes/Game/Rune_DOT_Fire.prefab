@@ -11,22 +11,34 @@ PrefabInstance:
     - target: {fileID: -540256611663856722, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 71f662ee2bae7af4cb58d45869030cd5, type: 3}
+      objectReference: {fileID: -2086116515, guid: 203f5fccdb8d5834786b9fb6aae203b1, type: 3}
     - target: {fileID: 3864418695524574848, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
       propertyPath: cost
       value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3864418695524574848, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
       propertyPath: runeName
-      value: Phlogistonate
+      value: Fire Rune
       objectReference: {fileID: 0}
     - target: {fileID: 3864418695524574848, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
       propertyPath: runeSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 71f662ee2bae7af4cb58d45869030cd5, type: 3}
+      objectReference: {fileID: 1419390527, guid: 203f5fccdb8d5834786b9fb6aae203b1, type: 3}
     - target: {fileID: 3864418695524574848, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
       propertyPath: runeDescription
       value: All affected minions deal fire damage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509661783266749918, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509661783266749918, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509661783266749918, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 4509661783266749918, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
       propertyPath: m_LocalPosition.x

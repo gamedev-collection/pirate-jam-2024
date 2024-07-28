@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: maxHp
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: price
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: damage
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: movementSpeed
-      value: 1.25
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8483787030660918004, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: m_LocalPosition.x

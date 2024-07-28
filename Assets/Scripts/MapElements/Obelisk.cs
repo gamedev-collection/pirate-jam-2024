@@ -28,6 +28,7 @@ public class Obelisk : MonoBehaviour
 
     [Header("Shadow Objects - N E S W")]
     [SerializeField] private GameObject[] _shadowVisuals;
+    [SerializeField] private Animator _shadowAnimator;
 
     public int ShadowDistance { get { return _shadowDistance; } set { _shadowDistance = value; } }
     public Rune RuneSlot { get { return _runeSlot; } }
@@ -87,21 +88,27 @@ public class Obelisk : MonoBehaviour
         {
             case ShadowDirection.North:
                 _shadowVector = Vector2.up;
-                _shadowVisuals[0].SetActive(true);
+                _shadowAnimator.SetTrigger("North");
+                //_shadowVisuals[0].SetActive(true);
                 break;
             case ShadowDirection.East:
                 _shadowVector = Vector2.right;
-                _shadowVisuals[1].SetActive(true);
+                _shadowAnimator.SetTrigger("East");
+                //_shadowVisuals[1].SetActive(true);
                 break;
             case ShadowDirection.South:
                 _shadowVector = Vector2.down;
-                _shadowVisuals[2].SetActive(true);
+                _shadowAnimator.SetTrigger("South");
+                //_shadowVisuals[2].SetActive(true);
                 break;
             case ShadowDirection.West:
                 _shadowVector = Vector2.left;
-                _shadowVisuals[3].SetActive(true);
+                _shadowAnimator.SetTrigger("West");
+                //_shadowVisuals[3].SetActive(true);
                 break;
             case ShadowDirection.None:
+                _shadowVector = Vector2.zero;
+                _shadowAnimator.SetTrigger("None");
                 break;
         }
 
@@ -127,7 +134,7 @@ public class Obelisk : MonoBehaviour
     {
         _runeSlot = rune;
         _runeVisual = rune.gameObject;
-        _runeVisual.transform.position = transform.position;
+        _runeVisual.transform.position = transform.position + new Vector3(0,0.5f,0);
         _runeVisual.transform.parent = transform;
     }
 

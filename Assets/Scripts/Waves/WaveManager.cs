@@ -73,7 +73,7 @@ public class WaveManager : Singleton<WaveManager>
         wave.onWaveFinish?.Invoke();
         _displayWaves--;
 
-        if(UIManager.Instance.IsGameOver) pathVisualiser?.EnablePathVisualiser();
+        if(!UIManager.Instance.IsGameOver) pathVisualiser?.EnablePathVisualiser();
         GetNewPath();
     }
     

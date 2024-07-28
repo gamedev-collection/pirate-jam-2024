@@ -9,7 +9,7 @@ public class AreaTower : Tower
 
     private void Start()
     {
-        _lastAttackTime = -attackRate;
+        _lastAttackTime = 1f / attackRate;
         var main = _aoeParticles.main;
         main.startSize = new ParticleSystem.MinMaxCurve(range + 1.5f);
     }
@@ -20,7 +20,7 @@ public class AreaTower : Tower
         
         if (!WaveManager.Instance.WaveActive || InBuildMode) return;
         
-        if (Time.time - _lastAttackTime >= attackRate)
+        if (Time.time - _lastAttackTime >= 1 / attackRate)
         {
             _lastAttackTime = Time.time;
             var targets = FindTargets();

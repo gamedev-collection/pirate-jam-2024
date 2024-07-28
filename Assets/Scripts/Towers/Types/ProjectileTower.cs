@@ -18,7 +18,7 @@ public class ProjectileTower : Tower
 
     private void Start()
     {
-        _lastAttackTime = 0;
+        _lastAttackTime = 1f / attackRate;
     }
 
     private void Update()

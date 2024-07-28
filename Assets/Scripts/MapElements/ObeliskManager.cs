@@ -14,6 +14,7 @@ public class ObeliskManager : Singleton<ObeliskManager>
     [SerializeField] private GameObject _ObeliskParent;
 
     [SerializeField] private LayerMask _obeliskLayerMask;
+    [SerializeField] private float _delay;
 
     public List<PathNodeWithDir> DisabledPaths = new List<PathNodeWithDir>();
 
@@ -57,6 +58,17 @@ public class ObeliskManager : Singleton<ObeliskManager>
                 CancelActiveRune(true);
             }
         }
+    }
+
+    public void RotateToNextWithDelay()
+    {
+        StartCoroutine(RotateToNextWithDelay_Routine());
+    }
+
+    public IEnumerator RotateToNextWithDelay_Routine()
+    {
+        yield return new WaitForSeconds(_delay);
+        RotateShadowsToNext();
     }
 
     public void RotateShadowsToNext()
@@ -103,6 +115,7 @@ public class ObeliskManager : Singleton<ObeliskManager>
     {
         _selectedRunePrefab = runePrefab;
         _runePlacementVisual = Instantiate(_selectedRunePrefab, Vector3.zero, Quaternion.identity, this.transform).gameObject;
+        _runePlacementVisual.GetComponent<SpriteRenderer>().sortingLayerName = "UI";
         InRunePlacementMode = true;
     }
 
@@ -132,6 +145,7 @@ public class ObeliskManager : Singleton<ObeliskManager>
 
     private void HandleRunePlacement(Obelisk obelisk)
     {
+        _runePlacementVisual.GetComponent<SpriteRenderer>().sortingLayerName = "Game";
         obelisk.ApplyRune(_runePlacementVisual.GetComponent<Rune>());
         CancelActiveRune(false);
     }
