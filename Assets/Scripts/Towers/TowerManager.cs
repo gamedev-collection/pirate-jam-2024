@@ -16,6 +16,9 @@ public class TowerManager : Singleton<TowerManager>
     public Transform overlayContainer;
 
     public GameObject rangeIndicator;
+    
+    public AudioClip placeAudioClip;
+    public AudioClip removeAudioClip;
 
     public event Action<Tower> OnTowerPlaced;
 
@@ -25,6 +28,8 @@ public class TowerManager : Singleton<TowerManager>
     private Dictionary<Vector3, Tower> _activeTowers = new Dictionary<Vector3, Tower>();
 
     private GameObject _towerPlacementVisual;
+
+    private AudioSource _audioSource;
 
     private void Start()
     {
@@ -39,6 +44,8 @@ public class TowerManager : Singleton<TowerManager>
 
         if (rangeIndicator is null) return;
         rangeIndicator.SetActive(false);
+
+        _audioSource ??= GetComponent<AudioSource>();
     }
 
     private void LateUpdate()
@@ -74,6 +81,8 @@ public class TowerManager : Singleton<TowerManager>
     public void RemoveActiveTower(Vector3 position)
     {
         _activeTowers.Remove(position);
+        
+        if (removeAudioClip) _audioSource?.PlayOneShot(removeAudioClip);
     }
 
     public void SetActiveTower(GameObject towerPrefab)
@@ -120,6 +129,8 @@ public class TowerManager : Singleton<TowerManager>
 
         placementMap.gameObject.SetActive(false);
         UIManager.Instance.money -= _towerPrefab.GetComponent<Tower>().cost;
+        
+        if (placeAudioClip) _audioSource?.PlayOneShot(placeAudioClip);
     }
 
     private static RaycastHit2D? GetFocusedOnTile()
