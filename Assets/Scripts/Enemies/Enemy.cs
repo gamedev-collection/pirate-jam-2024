@@ -36,7 +36,7 @@ public class Enemy: MonoBehaviour
         Move();
     }
 
-    public virtual void Move()
+    private void Move()
     {
         if (_pathIndex < _path.Count)
         {
