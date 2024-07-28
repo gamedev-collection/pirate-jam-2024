@@ -27,6 +27,7 @@ public class WaveManager : Singleton<WaveManager>
     private List<PathNode> _path = new List<PathNode>();
 
     private int _displayWaves;
+    private int _enemyCounter = 0;
 
     private void Start()
     {
@@ -50,7 +51,7 @@ public class WaveManager : Singleton<WaveManager>
     public void QueueNextWave()
     {
         if (_waveQueue.Count <= 0 || UIManager.Instance.IsGameOver) { pathVisualiser?.DisablePathVisualiser(); return; }
-
+        _enemyCounter = 0;
         var wave = _waveQueue.Dequeue();
         StartCoroutine(StartNextWave(wave));
     }
@@ -84,7 +85,8 @@ public class WaveManager : Singleton<WaveManager>
         {
             for (var i = 0; i < enemyCount.count; i++)
             {
-                SpawnEnemy(enemyCount.enemyPrefab, i);
+                _enemyCounter++;
+                SpawnEnemy(enemyCount.enemyPrefab, _enemyCounter);
                 yield return new WaitForSeconds(1f / enemyCount.rate);
             }
             

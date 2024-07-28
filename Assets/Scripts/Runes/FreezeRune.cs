@@ -19,6 +19,7 @@ public class FreezeRune : Rune
         {
             EffectApplied = true;
             _originalSpeed = Enemy.movementSpeed;
+            StartFreezeCoroutine();
         }
     }
 
@@ -35,12 +36,13 @@ public class FreezeRune : Rune
     {
         _freezeCoroutine = StartCoroutine(Freeze());
     }
-    
+
     private IEnumerator Freeze()
     {
-        if (Enemy.movementSpeed <= slowAmount) Enemy.movementSpeed = 1;
-        else 
-            Enemy.movementSpeed = _originalSpeed - slowAmount;
+        Enemy.movementSpeed = _originalSpeed;
+        if (Enemy.movementSpeed < slowAmount) Enemy.movementSpeed = 0.1f;
+        else
+            Enemy.movementSpeed = _originalSpeed * slowAmount + Enemy.slowReist;
         
         yield return new WaitForSeconds(duration);
         

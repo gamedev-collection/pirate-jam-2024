@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8483787030660918004}
   - component: {fileID: 7081904618661412934}
   - component: {fileID: 4473117502108463639}
+  - component: {fileID: 77342999222780704}
   m_Layer: 8
   m_Name: Enemy_Walker_Base
   m_TagString: Untagged
@@ -52,8 +53,11 @@ MonoBehaviour:
   size: 0
   damage: 0
   price: 0
-  offsetWidth: 0.5
+  pathingOffset: 0.2
+  animationSpeedOffset: 0
   damageParticle: {fileID: 8818125168324667950}
+  animator: {fileID: 77342999222780704}
+  deathAudio: {fileID: 0}
 --- !u!61 &4473117502108463639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -97,8 +101,29 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &77342999222780704
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464880470023768284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 2a0c808b7c482944cbd5d8aeb2c9c2a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8831082227942023256
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,8 +151,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 8483787030660918004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,7 +197,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1662009896, guid: 4e7cca6f858a316438ad1e9a64945f4e, type: 3}
+  m_Sprite: {fileID: 1608127108, guid: 446c0411612520e459f38b33d0016134, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

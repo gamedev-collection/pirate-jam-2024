@@ -22,15 +22,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: price
-      value: 60
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: damage
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: slowReist
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: movementSpeed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: animationSpeedOffset
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8483787030660918004, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: m_LocalPosition.x

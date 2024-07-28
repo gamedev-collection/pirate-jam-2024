@@ -8,33 +8,53 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77342999222780704, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: a8c094cf01017b547b674537a621346a, type: 2}
     - target: {fileID: 464880470023768284, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: m_Name
       value: Enemy_Walker_SlowStrong
       objectReference: {fileID: 0}
+    - target: {fileID: 4473117502108463639, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473117502108463639, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5307183009054487199, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1990572201, guid: 4e7cca6f858a316438ad1e9a64945f4e, type: 3}
+      objectReference: {fileID: -287270949, guid: bf8b6fb41d563b64480dffb3d8a292be, type: 3}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: maxHp
-      value: 22
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: price
-      value: 100
+      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: damage
-      value: 4
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: slowReist
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: movementSpeed
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: animationSpeedOffset
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8483787030660918004, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: m_LocalScale.x

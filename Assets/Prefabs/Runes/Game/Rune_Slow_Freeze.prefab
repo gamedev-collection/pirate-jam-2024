@@ -69,6 +69,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
+      propertyPath: duration
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: runeName
       value: Ice Rune
       objectReference: {fileID: 0}
@@ -78,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: -1446075477, guid: 38b1073f7fbfc914ea1fbf525e590f5b, type: 3}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: slowAmount
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: runeDescription

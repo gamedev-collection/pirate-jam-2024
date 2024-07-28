@@ -13,13 +13,17 @@ public class Enemy: MonoBehaviour
     public int damage = 1;
     public int price = 1;
     public float pathingOffset = 0.2f;
+    public float animationSpeedOffset = -0.5f;
+    public float slowReist = 0f;
 
     public ParticleSystem damageParticle;
+    public Animator animator;
     public int OrderInWave {  get; set; }
 
     private List<PathNode> _path;
     private List<Vector3> _offsetPath;
     private int _pathIndex = 0;
+    private bool _isDead = false;
 
     public event Action<GameObject> OnEnemyDestroyed;
 
@@ -34,13 +38,15 @@ public class Enemy: MonoBehaviour
     private void Start()
     {
         CurrentHp = maxHp;
-        
+        animator.SetFloat("SpeedMultiplier", animationSpeedOffset);
         _audioSource ??= GetComponent<AudioSource>();
+
+        Debug.Log(this.name + " has index " + OrderInWave);
     }
 
     private void Update()
     {
-        Move();
+        if(!_isDead) Move();
     }
 
     private void Move()
@@ -83,6 +89,7 @@ public class Enemy: MonoBehaviour
             runeComp.Init(this);
             runeComp.ApplyEffect();
         }
+        Debug.Log(this.name + " took " + amount + " damage");
         damageParticle?.Play();
         if (CurrentHp > 0) return;
         DieWithMoney();
@@ -91,17 +98,21 @@ public class Enemy: MonoBehaviour
     public void TakeDamage(int amount)
     {
         CurrentHp -= amount;
-        
         if (CurrentHp > 0) return;
         DieWithMoney();
     }
     
     private void Die()
     {
+        _isDead = true;
         if (deathAudio) _audioSource?.PlayOneShot(deathAudio);
-        
+        animator.SetTrigger("Die");
         OnEnemyDestroyed?.Invoke(gameObject);
-        Destroy(gameObject);
+    }
+
+    public void DestroyEnemy()
+    {
+        Destroy(this.gameObject);
     }
 
     private void DieWithMoney()
