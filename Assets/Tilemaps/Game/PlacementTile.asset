@@ -12,9 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: PlacementTile
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 877488858, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
+  - {fileID: -1677842758, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
+  - {fileID: -470581193, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
+  - {fileID: -1670586412, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
+  - {fileID: 402065145, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
+  - {fileID: 2123851711, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
+  - {fileID: 1873087358, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
+  - {fileID: -1616835468, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
+  m_MinSpeed: 2
+  m_MaxSpeed: 2
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
