@@ -504,8 +504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3984492eca8c664f925dd2eb0e44895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu:
-    m_Handle: 0
 --- !u!1 &383187638145399653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,8 +1298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3984492eca8c664f925dd2eb0e44895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu:
-    m_Handle: 0
 --- !u!1 &2152562241123436877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,8 +1919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3984492eca8c664f925dd2eb0e44895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu:
-    m_Handle: 0
 --- !u!1 &2715723894962821243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,8 +2771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3984492eca8c664f925dd2eb0e44895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu:
-    m_Handle: 0
 --- !u!1 &4756162573222639511
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,11 +3090,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 64
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3211,8 +3203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3984492eca8c664f925dd2eb0e44895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu:
-    m_Handle: 0
 --- !u!82 &18088056269700245
 AudioSource:
   m_ObjectHideFlags: 0

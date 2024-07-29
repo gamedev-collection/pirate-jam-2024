@@ -25,6 +25,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1419390527, guid: 203f5fccdb8d5834786b9fb6aae203b1, type: 3}
     - target: {fileID: 3864418695524574848, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
+      propertyPath: runeColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864418695524574848, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
+      propertyPath: runeColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864418695524574848, guid: f7cd8e67c53fa1a4b9fdada189d7f475, type: 3}
       propertyPath: runeDescription
       value: All affected minions deal fire damage.
       objectReference: {fileID: 0}
