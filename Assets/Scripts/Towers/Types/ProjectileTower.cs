@@ -18,7 +18,7 @@ public class ProjectileTower : Tower
 
     private void Start()
     {
-        _lastAttackTime = 1f / attackRate;
+        _lastAttackTime = 0;
     }
 
     private void Update()
@@ -27,10 +27,10 @@ public class ProjectileTower : Tower
         CheckForHover();
         
         if (!WaveManager.Instance.WaveActive || InBuildMode) return;
-
-        if (Time.time - _lastAttackTime >= 1f / attackRate && _currentVolleyDelay <= 0)
+        _lastAttackTime -= Time.deltaTime;
+        if (_lastAttackTime <= 0 && _currentVolleyDelay <= 0)
         {
-            _lastAttackTime = Time.time;
+            
             var targets = FindTargets();
             if (targets is null || targets.Count <= 0) return;
             animator.SetTrigger("Attack");
@@ -70,11 +70,12 @@ public class ProjectileTower : Tower
 
             Attack(target);
         }
-
-        if (!_volley) return;
+        
+        if (!_volley) { _lastAttackTime = 1f / attackRate; return; }
         _currentVolleyShot++;
         if (_currentVolleyShot < _volleyAmount) return;
         _currentVolleyDelay = _volleyDelay; _currentVolleyShot = 0;
+        _lastAttackTime = 1f / attackRate;
     }
 
     public override void Attack(Enemy target)

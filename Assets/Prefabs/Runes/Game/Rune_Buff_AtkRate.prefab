@@ -82,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 815157488, guid: 780c847485edd104ea7647eeeb2c73fe, type: 3}
     - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
       propertyPath: attackRateBuff
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
       propertyPath: runeDescription
-      value: Increases attack speed by 1
+      value: Increases attack speed by 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

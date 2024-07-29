@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29aa42634a45e9349acaffd1e4f47f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _range: 0.6
-  _duration: 3
+  _range: 0.5
+  _duration: 2.5
   filter:
     useTriggers: 0
     useLayerMask: 0

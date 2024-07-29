@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: damage
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerName
@@ -111,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerDescription
       value: The next logical step in goblin rock throwing technology. Bombs explode
-        on impact. Targets smallest first.
+        on impact. Targets lowest health enemy first.
       objectReference: {fileID: 0}
     - target: {fileID: 8977342415391896726, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_Name

@@ -3152,7 +3152,6 @@ MonoBehaviour:
   - {fileID: 8257917725070810076, guid: c64d6b20767e41c4eb327ce1f5138020, type: 3}
   - {fileID: 8257917725070810076, guid: b404da87df98edf43bcf704cd93b3dd5, type: 3}
   - {fileID: 8257917725070810076, guid: c7b4746d739f88b4998ca6ccd1f9447e, type: 3}
-  - {fileID: 8257917725070810076, guid: 5b5eb1044f7c240469fdaee16202384a, type: 3}
   onTowerBought:
     m_PersistentCalls:
       m_Calls: []
@@ -3169,8 +3168,8 @@ MonoBehaviour:
   - {fileID: 8095299867131642806, guid: 29ff7d34a0a75d3429edf9cec7df8e6f, type: 3}
   maxHealth: 20
   money: 250
-  VictoryUI: {fileID: 0}
-  LoseUI: {fileID: 0}
+  VictoryUI: {fileID: 7510299912618304963}
+  LoseUI: {fileID: 6310468205190651737}
 --- !u!114 &6229266396967770997
 MonoBehaviour:
   m_ObjectHideFlags: 0

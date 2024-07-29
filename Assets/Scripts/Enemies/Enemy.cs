@@ -75,9 +75,9 @@ public class Enemy: MonoBehaviour
         if (rune is not null && rune.runeType == ERuneType.Enemy)
         {
             Rune runeComp;
-            if (_runes.ContainsKey(rune))
+            if (_runes.Count > 0 && _runes.ContainsKey(rune))
             { 
-                runeComp = _runes[rune].GetComponent<Rune>();
+                runeComp = _runes[rune]?.GetComponent<Rune>();
             }
             else
             {

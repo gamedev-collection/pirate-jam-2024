@@ -9,7 +9,7 @@ public class AreaTower : Tower
 
     private void Start()
     {
-        _lastAttackTime = 1f / attackRate;
+        _lastAttackTime = 0;
         var main = _aoeParticles.main;
         main.startSize = new ParticleSystem.MinMaxCurve(range + 1.5f);
     }
@@ -20,10 +20,10 @@ public class AreaTower : Tower
         CheckForHover();
         
         if (!WaveManager.Instance.WaveActive || InBuildMode) return;
-        
+        _lastAttackTime -= Time.deltaTime;
         if (Time.time - _lastAttackTime >= 1 / attackRate)
         {
-            _lastAttackTime = Time.time;
+            _lastAttackTime = 1f / attackRate;
             var targets = FindTargets();
             if (targets is null || targets.Count <= 0) return;
             animator.SetTrigger("Attack");
@@ -46,6 +46,7 @@ public class AreaTower : Tower
 
     public override void Attack(Enemy target)
     {
+        _lastAttackTime = 1f / attackRate;
         target.TakeDamage(damage, runeSlot);
     }
 

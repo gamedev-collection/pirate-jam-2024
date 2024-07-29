@@ -445,7 +445,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6266942453470832854, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: _shadowDirection
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6466846568706653520, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -493,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710695
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.x
@@ -505,11 +505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.70710665
+      value: -0.0000004172325
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _persistent: 0
   waves:
-  - timeBetweenEnemySpawning: 0
+  - timeBetweenEnemySpawning: 0.3
     onWaveFinish:
       m_PersistentCalls:
         m_Calls:
@@ -836,7 +836,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -857,13 +857,13 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     enemies:
+    - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
+      count: 4
+      rate: 3
     - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 3
-      rate: 1.5
-    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 3
-      rate: 1.5
-  - timeBetweenEnemySpawning: 0
+      count: 4
+      rate: 2
+  - timeBetweenEnemySpawning: 0.3
     onWaveFinish:
       m_PersistentCalls:
         m_Calls:
@@ -884,53 +884,18 @@ MonoBehaviour:
         m_Calls: []
     enemies:
     - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 4
-      rate: 1.5
-    - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
-      count: 3
-      rate: 2.5
-    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 4
-      rate: 1.5
-    - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
-      count: 3
-      rate: 2.5
-  - timeBetweenEnemySpawning: 0
-    onWaveFinish:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1395843120}
-          m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
-          m_MethodName: RotateShadowsToNext
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    onWaveBegin:
-      m_PersistentCalls:
-        m_Calls: []
-    enemies:
-    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 4
+      count: 6
       rate: 1.5
     - enemyPrefab: {fileID: 526354062741862975, guid: 1d3ed4e1811b32b4f97eb4d20c17bc41, type: 3}
-      count: 4
-      rate: 1.5
-    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 4
-      rate: 1.5
-  - timeBetweenEnemySpawning: 0
+      count: 3
+      rate: 1
+  - timeBetweenEnemySpawning: 0.3
     onWaveFinish:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1395843120}
-          m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
-          m_MethodName: RotateShadowsToNext
+        - m_Target: {fileID: 1415902894}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: Win
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -947,15 +912,15 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
       count: 6
       rate: 2.5
-    - enemyPrefab: {fileID: 526354062741862975, guid: 1d3ed4e1811b32b4f97eb4d20c17bc41, type: 3}
-      count: 4
-      rate: 1.5
     - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
       count: 6
       rate: 1.5
+    - enemyPrefab: {fileID: 526354062741862975, guid: 1d3ed4e1811b32b4f97eb4d20c17bc41, type: 3}
+      count: 4
+      rate: 1
   spawnPoint: {fileID: 1042233801}
   waveStartupTime: 1
-  autoStart: 0
+  autoStart: 1
   spawnOffset: 0.2
   pathVisualiser: {fileID: 1170343977}
 --- !u!1 &875553755
@@ -1070,7 +1035,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6266942453470832854, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: _shadowDirection
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6466846568706653520, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1118,7 +1083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710695
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1130,11 +1095,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.70710665
+      value: -0.0000004172325
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1399,7 +1364,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6266942453470832854, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: _shadowDirection
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6266942453470832854, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: _pathNodesEast.Array.size
@@ -1495,7 +1460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70710695
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1507,11 +1472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.70710665
+      value: -0.0000004172325
       objectReference: {fileID: 0}
     - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3035,11 +3000,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: money
-      value: 350
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: maxHealth
-      value: 45
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8957872750352671831, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6747,18 +6712,6 @@ MonoBehaviour:
     onItem:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 842939133}
-          m_TargetAssemblyTypeName: WaveManager, Assembly-CSharp
-          m_MethodName: GetDummyPath
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 1415902894}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
           m_MethodName: EnableTowerShop
@@ -6788,31 +6741,7 @@ MonoBehaviour:
     objectsToDisableAfterStepDone: []
     onItem:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1395843120}
-          m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
-          m_MethodName: RotateShadowsToNext
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 842939133}
-          m_TargetAssemblyTypeName: WaveManager, Assembly-CSharp
-          m_MethodName: StartUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
     continueOnClick: 1
   - title: They are on the approach!
     body: Press the Next Wave button to start.

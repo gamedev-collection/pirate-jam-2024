@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: cost
-      value: 175
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: range
@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: targetingFocus
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: speedMultiplier
@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: towerDescription
       value: This guy throws rocks like no other. But he has to take a break sometimes.
-        Targets smallest first.
+        Targets lowest health enemy first.
       objectReference: {fileID: 0}
     - target: {fileID: 8977342415391896726, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_Name
