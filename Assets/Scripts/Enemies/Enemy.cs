@@ -29,7 +29,7 @@ public class Enemy: MonoBehaviour
     private GameObject _runeInstance;
     private Rune _rune;
 
-    private Dictionary<Rune, GameObject> _runes = new Dictionary<Rune, GameObject>();
+    public float OriginalMovementSpeed { get; private set; }
 
     public AudioClip deathAudio;
     private AudioSource _audioSource;
@@ -40,7 +40,7 @@ public class Enemy: MonoBehaviour
         animator.SetFloat("SpeedMultiplier", animationSpeedOffset);
         _audioSource ??= GetComponent<AudioSource>();
 
-        Debug.Log(this.name + " has index " + OrderInWave);
+        OriginalMovementSpeed = movementSpeed;
     }
 
     private void Update()
@@ -73,22 +73,23 @@ public class Enemy: MonoBehaviour
         CurrentHp -= amount;
         if (rune is not null && rune.runeType == ERuneType.Enemy)
         {
-            Rune runeComp;
-            if (_runes.Count > 0 && _runes.ContainsKey(rune))
-            { 
-                runeComp = _runes[rune]?.GetComponent<Rune>();
-            }
-            else
+            var runeType = rune.GetType();
+            if (runeType == typeof(FreezeRune))
             {
-                var runeInstance = Instantiate(rune.gameObject, this.transform);
-                runeComp = runeInstance.GetComponent<Rune>();
-                _runes[rune] = runeInstance;
+                var fr = gameObject.GetComponentInChildren<FreezeRune>();
+                fr?.OnEffectEnd();
+            } else if (runeType == typeof(FireRune))
+            {
+                var fr = gameObject.GetComponentInChildren<FireRune>();
+                fr?.OnEffectEnd();
             }
             
-            runeComp.Init(this);
-            runeComp.ApplyEffect();
+            var runeInstance = Instantiate(rune.gameObject, this.transform);
+            var runeComp = runeInstance.GetComponent<Rune>();
+
+            runeComp?.Init(this);
+            runeComp?.ApplyEffect();
         }
-        Debug.Log(this.name + " took " + amount + " damage");
         damageParticle?.Play();
         if (CurrentHp > 0) return;
         DieWithMoney();

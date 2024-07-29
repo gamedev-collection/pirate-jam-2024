@@ -32,6 +32,7 @@ public abstract class Rune : MonoBehaviour
     
     public void OnEffectEnd()
     {
+        if (Enemy) Enemy.movementSpeed = Enemy.OriginalMovementSpeed;
         Destroy(this.gameObject);
     }
 

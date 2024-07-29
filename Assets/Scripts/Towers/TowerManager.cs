@@ -63,7 +63,7 @@ public class TowerManager : Singleton<TowerManager>
 
         var hit = GetFocusedOnTile();
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && InBuildmode)
         {
             CancelActiveTower(true);
         }
