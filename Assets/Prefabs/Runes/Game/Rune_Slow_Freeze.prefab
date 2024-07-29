@@ -66,11 +66,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: cost
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: duration
-      value: 3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: runeName
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: -1446075477, guid: 38b1073f7fbfc914ea1fbf525e590f5b, type: 3}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: slowAmount
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: runeDescription

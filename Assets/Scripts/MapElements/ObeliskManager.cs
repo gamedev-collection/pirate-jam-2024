@@ -77,6 +77,20 @@ public class ObeliskManager : Singleton<ObeliskManager>
         }
     }
 
+    public void RotateShadowsToIndex(int index)
+    {
+        ShadowDirection dir = ShadowDirection.None;
+        switch (index)
+        {
+            case 0: dir =ShadowDirection.None; break;
+            case 1: dir =ShadowDirection.North; break;
+            case 2: dir =ShadowDirection.East; break;
+            case 3: dir =ShadowDirection.South; break;
+            case 4: dir =ShadowDirection.West; break;
+        }
+        RotateShadows(dir);
+    }
+
     public void RotateShadows(ShadowDirection direction)
     {
         UnlockAllPaths();

@@ -40,7 +40,7 @@ public class FreezeRune : Rune
     private IEnumerator Freeze()
     {
         Enemy.movementSpeed = _originalSpeed;
-        if (Enemy.movementSpeed < slowAmount) Enemy.movementSpeed = 0.1f;
+        if (Enemy.movementSpeed < 0.1f) Enemy.movementSpeed = 0.1f;
         else
             Enemy.movementSpeed = _originalSpeed * slowAmount + Enemy.slowReist;
         

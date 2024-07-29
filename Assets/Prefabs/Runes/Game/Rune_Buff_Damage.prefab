@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: -407206156, guid: 56ffa28156e1acb4d85525f5f57fce28, type: 3}
     - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
       propertyPath: cost
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
       propertyPath: runeName

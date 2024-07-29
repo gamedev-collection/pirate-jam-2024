@@ -3151,7 +3151,6 @@ MonoBehaviour:
   - {fileID: 8257917725070810076, guid: c64d6b20767e41c4eb327ce1f5138020, type: 3}
   - {fileID: 8257917725070810076, guid: b404da87df98edf43bcf704cd93b3dd5, type: 3}
   - {fileID: 8257917725070810076, guid: c7b4746d739f88b4998ca6ccd1f9447e, type: 3}
-  - {fileID: 8257917725070810076, guid: 5b5eb1044f7c240469fdaee16202384a, type: 3}
   onTowerBought:
     m_PersistentCalls:
       m_Calls: []
