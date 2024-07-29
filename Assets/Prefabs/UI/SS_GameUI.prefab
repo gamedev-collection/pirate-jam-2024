@@ -2893,7 +2893,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _enableDelay: 0
+  _enableDelay: 1
   _disableDelay: 0
   _disableOnEnable: 1
   _enableOnEnable: 0
@@ -4854,7 +4854,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _enableDelay: 0
+  _enableDelay: 1
   _disableDelay: 0
   _disableOnEnable: 1
   _enableOnEnable: 0

@@ -445,7 +445,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6266942453470832854, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: _shadowDirection
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6466846568706653520, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,7 +831,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1395843120}
           m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
-          m_MethodName: RotateToNextWithDelay
+          m_MethodName: RotateShadowsToNext
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -857,12 +857,106 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     enemies:
+    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
+      count: 3
+      rate: 1.5
+    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
+      count: 3
+      rate: 1.5
+  - timeBetweenEnemySpawning: 0
+    onWaveFinish:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1395843120}
+          m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
+          m_MethodName: RotateShadowsToNext
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onWaveBegin:
+      m_PersistentCalls:
+        m_Calls: []
+    enemies:
+    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
+      count: 4
+      rate: 1.5
     - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
-      count: 1
-      rate: 1
+      count: 3
+      rate: 2.5
+    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
+      count: 4
+      rate: 1.5
+    - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
+      count: 3
+      rate: 2.5
+  - timeBetweenEnemySpawning: 0
+    onWaveFinish:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1395843120}
+          m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
+          m_MethodName: RotateShadowsToNext
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onWaveBegin:
+      m_PersistentCalls:
+        m_Calls: []
+    enemies:
+    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
+      count: 4
+      rate: 1.5
+    - enemyPrefab: {fileID: 526354062741862975, guid: 1d3ed4e1811b32b4f97eb4d20c17bc41, type: 3}
+      count: 4
+      rate: 1.5
+    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
+      count: 4
+      rate: 1.5
+  - timeBetweenEnemySpawning: 0
+    onWaveFinish:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1395843120}
+          m_TargetAssemblyTypeName: ObeliskManager, Assembly-CSharp
+          m_MethodName: RotateShadowsToNext
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onWaveBegin:
+      m_PersistentCalls:
+        m_Calls: []
+    enemies:
+    - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
+      count: 6
+      rate: 2.5
+    - enemyPrefab: {fileID: 526354062741862975, guid: 1d3ed4e1811b32b4f97eb4d20c17bc41, type: 3}
+      count: 4
+      rate: 1.5
+    - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
+      count: 6
+      rate: 1.5
   spawnPoint: {fileID: 1042233801}
   waveStartupTime: 1
   autoStart: 0
+  spawnOffset: 0.2
   pathVisualiser: {fileID: 1170343977}
 --- !u!1 &875553755
 GameObject:
@@ -976,7 +1070,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6266942453470832854, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: _shadowDirection
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6466846568706653520, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1305,7 +1399,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6266942453470832854, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: _shadowDirection
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6266942453470832854, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: _pathNodesEast.Array.size
@@ -1779,6 +1873,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1415902894}
           m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
           m_MethodName: EnableRuneShop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1415902894}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: EnableTowerShop
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2926,6 +3032,14 @@ PrefabInstance:
     - target: {fileID: 8879000869293948974, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
+      propertyPath: money
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
+      propertyPath: maxHealth
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8957872750352671831, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4690,7 +4804,7 @@ MonoBehaviour:
   _persistent: 0
   placementMap: {fileID: 1484095112}
   overlayPrefab: {fileID: 2722215804292138876, guid: c9df68bf530bc3a4eb36372eb8d675ec, type: 3}
-  overlayContainer: {fileID: 0}
+  overlayContainer: {fileID: 33707076}
   rangeIndicator: {fileID: 912282072}
   placeAudioClip: {fileID: 0}
   removeAudioClip: {fileID: 0}
@@ -6626,8 +6740,8 @@ MonoBehaviour:
       m_Calls: []
   tutorials:
   - title: They are right where we want them...
-    body: Incredible planning your Wickedness! The humies are walking right into
-      the obelisk fields!
+    body: Incredible planning, your Black-Heartedness! The humies are walking right
+      into the obelisk fields!
     objectsToEnableDuringStep: []
     objectsToDisableAfterStepDone: []
     onItem:
@@ -6659,8 +6773,8 @@ MonoBehaviour:
           m_CallState: 2
     continueOnClick: 1
   - title: 
-    body: These powerful artifacts will stop any human from crossing their magical
-      shadows. Enemies will have to find paths that are not blocked by them.
+    body: These powerful artifacts will stop any enemy from crossing their magical
+      shadows. They will have to find paths that are not blocked by them.
     objectsToEnableDuringStep: []
     objectsToDisableAfterStepDone: []
     onItem:

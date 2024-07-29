@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5069944796995074995, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: m_Radius
+      value: 0.125
+      objectReference: {fileID: 0}
     - target: {fileID: 7272575282811870787, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -70,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: speed
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: homing
@@ -106,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 2069740664158890589, guid: c39f5338ce27f6845b32a47e67d19cd0, type: 3}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: slowestSpeed
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: colorNormal.b
@@ -133,8 +137,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: scaleCurve.m_Curve.Array.data[1].value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
       propertyPath: scaleCurve.m_Curve.Array.data[2].value
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: scaleCurve.m_Curve.Array.data[0].inSlope
+      value: 5.079205
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: scaleCurve.m_Curve.Array.data[2].inSlope
+      value: -4.074333
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: scaleCurve.m_Curve.Array.data[0].outSlope
+      value: 5.079205
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: scaleCurve.m_Curve.Array.data[2].inWeight
+      value: 0.09121263
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: scaleCurve.m_Curve.Array.data[2].outSlope
+      value: -4.074333
+      objectReference: {fileID: 0}
+    - target: {fileID: 7285891747573180368, guid: 70632ca608a24db4ca4ea042c222b00d, type: 3}
+      propertyPath: scaleCurve.m_Curve.Array.data[0].outWeight
+      value: 0.09566184
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

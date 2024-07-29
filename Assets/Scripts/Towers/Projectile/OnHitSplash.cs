@@ -20,7 +20,6 @@ public class OnHitSplash : MonoBehaviour
 
     public virtual void Initialize(int damage, Rune rune = null)
     {
-        _visualContainer.transform.localScale *= _range;
         _visualDOT.SetActive(false);
         _visualSlow.SetActive(false);
         _visualNormal.SetActive(false);

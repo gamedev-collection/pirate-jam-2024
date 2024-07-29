@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5069944796995074995}
   - component: {fileID: 7285891747573180368}
   - component: {fileID: -1159821256378331509}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Projectile_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -130,6 +130,8 @@ MonoBehaviour:
   colorNormal: {r: 1, g: 1, b: 1, a: 1}
   colorDOT: {r: 1, g: 0.68594474, b: 0.49803925, a: 1}
   colorSlow: {r: 0.640753, g: 0.7078217, b: 0.7264151, a: 1}
+  detonateAudio: {fileID: 0}
+  onHitAudio: {fileID: 0}
 --- !u!50 &-1159821256378331509
 Rigidbody2D:
   serializedVersion: 4
@@ -167,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2913974088368413324}
   - component: {fileID: 7272575282811870787}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,9 +229,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: -285353513
+  m_SortingLayer: 2
+  m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 0c6ffc1157e76a440939a0945a7869b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -59,17 +59,6 @@ public class ObeliskManager : Singleton<ObeliskManager>
         }
     }
 
-    public void RotateToNextWithDelay()
-    {
-        StartCoroutine(RotateToNextWithDelay_Routine());
-    }
-
-    public IEnumerator RotateToNextWithDelay_Routine()
-    {
-        yield return new WaitForSeconds(_delay);
-        RotateShadowsToNext();
-    }
-
     public void RotateShadowsToNext()
     {
         UnlockAllPaths();
