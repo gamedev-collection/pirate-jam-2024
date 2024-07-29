@@ -30,18 +30,18 @@ public class LevelManager : Singleton<LevelManager>
         if(isLoading) return;
         currentIndex = levelIndex;
         UnlockScene(levelIndex);
-        if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(levelList[levelIndex].scene.name));
-        else StartCoroutine(DoSceneLoad_Routine(levelList[levelIndex].scene.name));
+        if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(levelList[levelIndex].levelIndex));
+        else StartCoroutine(DoSceneLoad_Routine(levelList[levelIndex].levelIndex));
     }
 
 
-    public void LoadScene(Scene scene) { LoadScene(scene, false); }
-    public void LoadSceneWithTranstiion(Scene scene) { LoadScene(scene, true); }
-    public void LoadScene(Scene scene, bool withTransition = false)
+    public void LoadScene(int index) { LoadScene(index, false); }
+    public void LoadSceneWithTranstiion(int index) { LoadScene(index, true); }
+    public void LoadScene(int index, bool withTransition = false)
     {
         if (isLoading) return;
-        if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(scene.name));
-        else StartCoroutine(DoSceneLoad_Routine(scene.name));
+        if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(index));
+        else StartCoroutine(DoSceneLoad_Routine(index));
     }
 
     public void UnlockScene(int levelIndex)
@@ -57,36 +57,36 @@ public class LevelManager : Singleton<LevelManager>
         }
     }
 
-    private IEnumerator DoSceneLoad_Routine(string sceneName)
+    private IEnumerator DoSceneLoad_Routine(int index)
     {
         isLoading = true;
-        Debug.Log("Loading Scene - " + sceneName);
-        var asyncLoad = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        Debug.Log("Loading Scene - " + index);
+        var asyncLoad = SceneManager.LoadSceneAsync(index, LoadSceneMode.Single);
         while (!asyncLoad.isDone) { yield return null; }
-        Debug.Log("Finishid Loading Scene - " + sceneName);
+        Debug.Log("Finishid Loading Scene - " + index);
         isLoading = false;
     }
 
-    private IEnumerator DoLoadWithFadeTransition_Routine(string sceneName)
+    private IEnumerator DoLoadWithFadeTransition_Routine(int index)
     {
         isLoading = true;
         blackFade.AnimatedEnable();
         while (blackFade.IsEnabling) yield return null;
         
-        yield return StartCoroutine(DoSceneLoad_Routine(sceneName));
+        yield return StartCoroutine(DoSceneLoad_Routine(index));
         
         blackFade.AnimatedDisable();
         while (blackFade.IsDisabling) yield return null;
         isLoading = false;
     }
 
-    private IEnumerator DoLoadWithLevelTransition_Routine(string sceneName)
+    private IEnumerator DoLoadWithLevelTransition_Routine(int index)
     {
         isLoading = true;
         levelFade.AnimatedEnable();
         while (levelFade.IsEnabling) yield return null;
 
-        yield return StartCoroutine(DoSceneLoad_Routine(sceneName));
+        yield return StartCoroutine(DoSceneLoad_Routine(index));
 
         levelFade.AnimatedDisable();
         while (levelFade.IsDisabling) yield return null;
@@ -97,7 +97,7 @@ public class LevelManager : Singleton<LevelManager>
 [Serializable]
 public struct Level
 {
-    public SceneAsset scene;
+    //public SceneAsset scene;
     public int levelIndex;
     public bool isUnlocked;
 }

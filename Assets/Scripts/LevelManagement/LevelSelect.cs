@@ -21,9 +21,9 @@ public class LevelSelect : MonoBehaviour
     }
     private void UnlockButton(int index)
     {
-       foreach(UnlockableLevelButton button in unlockableLevelButtons)
+        foreach (UnlockableLevelButton button in unlockableLevelButtons)
         {
-            if(button.levelIndex == index) button.UnlockButton();
+            if (button.levelIndex == index -1) button.UnlockButton();
         }
     }
 

@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class ButtonLoadScene : MonoBehaviour
 {
-    [SerializeField] private Scene mainMenu;
     public void Load(int index)
     {
         LevelManager.Instance.LoadGameLevelWithTransition(index);
@@ -26,6 +25,6 @@ public class ButtonLoadScene : MonoBehaviour
 
     public void Menu()
     {
-        LevelManager.Instance.LoadSceneWithTranstiion(mainMenu);
+        LevelManager.Instance.LoadSceneWithTranstiion(0);
     }
 }
