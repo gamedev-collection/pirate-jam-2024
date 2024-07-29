@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4993801911715699178}
   - component: {fileID: 2722215804292138876}
   - component: {fileID: -8013661394879238042}
+  - component: {fileID: 755457412145719714}
   m_Layer: 6
   m_Name: OverlayTile
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1751520492, guid: 33344a254a3eac641b02ae49f86409b1, type: 3}
+  m_Sprite: {fileID: 877488858, guid: 0fc30a3f08742d442bf6dd4e0c69b424, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,3 +144,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!111 &755457412145719714
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2961834431699020862}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 535c1bb16d7182744a06aebe77d86465, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 535c1bb16d7182744a06aebe77d86465, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
