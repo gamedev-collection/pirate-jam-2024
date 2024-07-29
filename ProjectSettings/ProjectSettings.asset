@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: pirate-jam
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: efa0f99b5708e5847be37424ea7b9a70, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -160,7 +160,8 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.DefaultCompany.pirate-jam
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -688,7 +689,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: pirate-jam
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -696,7 +697,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: pirate-jam
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: pirate-jam
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
