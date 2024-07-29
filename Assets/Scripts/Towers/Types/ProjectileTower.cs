@@ -24,6 +24,7 @@ public class ProjectileTower : Tower
     private void Update()
     {
         CheckForDeletion();
+        CheckForHover();
         
         if (!WaveManager.Instance.WaveActive || InBuildMode) return;
         _lastAttackTime -= Time.deltaTime;
@@ -33,6 +34,7 @@ public class ProjectileTower : Tower
             var targets = FindTargets();
             if (targets is null || targets.Count <= 0) return;
             animator.SetTrigger("Attack");
+            maskAnimator.SetTrigger("Attack");
         }
 
         if (_volley && _currentVolleyDelay > 0)

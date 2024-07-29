@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5642132106120345799, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -652855983, guid: b79a31e4c7f429f4b81443d82cefd16e, type: 3}
     - target: {fileID: 6434273670561313355, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -68,6 +72,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6982264260298133575, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cb728e4d9667a224e93e29bd773e736a, type: 2}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: cost
       value: 250
