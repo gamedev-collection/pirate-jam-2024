@@ -85,6 +85,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1824518930, guid: 56ffa28156e1acb4d85525f5f57fce28, type: 3}
     - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
+      propertyPath: runeColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
+      propertyPath: runeColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
+      propertyPath: runeColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
+      propertyPath: runeColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8333297464787727710, guid: 777d216b960fa514a90ad66f8939cd71, type: 3}
       propertyPath: runeDescription
       value: Increases damage by 1
       objectReference: {fileID: 0}

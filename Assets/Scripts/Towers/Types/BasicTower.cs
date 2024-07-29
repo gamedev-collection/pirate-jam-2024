@@ -15,6 +15,7 @@ public class BasicTower : Tower
     private void Update()
     {
         CheckForDeletion();
+        CheckForHover();
         
         if (!WaveManager.Instance.WaveActive) return;
 

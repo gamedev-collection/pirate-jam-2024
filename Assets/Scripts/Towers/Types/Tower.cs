@@ -12,6 +12,7 @@ public abstract class Tower : MonoBehaviour
     public Rune runeSlot;
     public GameObject projectile;
     public Animator animator;
+    public Animator maskAnimator;
     public string speedMultiplierParam = "SpeedMultiplier";
     public float speedMultiplier = 1f;
     public TargetingFocus targetingFocus = TargetingFocus.LowestHealth;
@@ -52,22 +53,27 @@ public abstract class Tower : MonoBehaviour
         rangeIndicator.enabled = false;
         rangeIndicator.transform.localScale = new Vector2(range * 2, range * 2);
         animator.SetFloat(speedMultiplierParam, speedMultiplier);
+        maskAnimator.SetFloat(speedMultiplierParam, speedMultiplier);
 
         if (towerMask) _maskColor = towerMask.color;
 
         _audioSource ??= GetComponent<AudioSource>();
     }
     
-    private void OnMouseEnter()
+    protected void CheckForHover()
     {
-        EnableRangeIndicator();
-        _isMouseOver = true;
-    }
-    
-    private void OnMouseExit()
-    {
-        DisableRangeIndicator();
-        _isMouseOver = false;
+        var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition = new Vector3(mousePosition.x, mousePosition.y, 0);
+        if (Vector3.Distance(new Vector3(transform.position.x, transform.position.y, 0), mousePosition) < 0.4)
+        {
+            EnableRangeIndicator();
+            _isMouseOver = true;
+        }
+        else
+        {
+            DisableRangeIndicator();
+            _isMouseOver = false;
+        }
     }
 
     public List<Enemy> FindTargets()
@@ -128,6 +134,7 @@ public abstract class Tower : MonoBehaviour
     public void EnableRangeIndicator()
     {
         rangeIndicator.enabled = true;
+        rangeIndicator.transform.localScale = new Vector2(range * 2, range * 2);
     }
     
     public void DisableRangeIndicator()
