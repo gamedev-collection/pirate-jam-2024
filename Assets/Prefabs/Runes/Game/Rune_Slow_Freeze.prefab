@@ -85,6 +85,22 @@ PrefabInstance:
       value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
+      propertyPath: runeColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
+      propertyPath: runeColor.b
+      value: 0.9622642
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
+      propertyPath: runeColor.g
+      value: 0.81178445
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
+      propertyPath: runeColor.r
+      value: 0.16642918
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205861048040621738, guid: 59162dac2c114a243b1cbc1d0d5503b3, type: 3}
       propertyPath: runeDescription
       value: All affected minions slow enemies on hit.
       objectReference: {fileID: 0}
