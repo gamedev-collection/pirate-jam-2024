@@ -55,6 +55,7 @@ MonoBehaviour:
   price: 0
   pathingOffset: 0.2
   animationSpeedOffset: 0
+  slowReist: 0
   damageParticle: {fileID: 8818125168324667950}
   animator: {fileID: 77342999222780704}
   deathAudio: {fileID: 0}
@@ -221,6 +222,18 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: ShapeModule.m_Position.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
       propertyPath: ShapeModule.radiusThickness
       value: 1
       objectReference: {fileID: 0}
@@ -231,6 +244,42 @@ PrefabInstance:
     - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
       propertyPath: ShapeModule.randomPositionAmount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minMaxState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minCurve.m_Curve.Array.data[1].value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minCurve.m_Curve.Array.data[1].inSlope
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minCurve.m_Curve.Array.data[0].outSlope
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minCurve.m_Curve.Array.data[0].tangentMode
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387934390281058784, guid: 6822391fc76fed840a47773f995efa87, type: 3}
+      propertyPath: UVModule.frameOverTime.minCurve.m_Curve.Array.data[1].tangentMode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6285089487770302166, guid: 6822391fc76fed840a47773f995efa87, type: 3}
       propertyPath: m_SortMode
@@ -258,15 +307,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8400854706520366769, guid: 6822391fc76fed840a47773f995efa87, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8400854706520366769, guid: 6822391fc76fed840a47773f995efa87, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8400854706520366769, guid: 6822391fc76fed840a47773f995efa87, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8400854706520366769, guid: 6822391fc76fed840a47773f995efa87, type: 3}
       propertyPath: m_LocalPosition.x

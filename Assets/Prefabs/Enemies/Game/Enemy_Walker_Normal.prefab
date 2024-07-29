@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_Walker_Normal
       objectReference: {fileID: 0}
+    - target: {fileID: 4473117502108463639, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473117502108463639, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 7081904618661412934, guid: 5c9fe29cd64bb574fa3d7d9e9e1a9cf5, type: 3}
       propertyPath: size
       value: 1

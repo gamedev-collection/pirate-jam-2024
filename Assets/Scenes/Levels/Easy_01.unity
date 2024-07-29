@@ -833,7 +833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _persistent: 0
   waves:
-  - timeBetweenEnemySpawning: 1
+  - timeBetweenEnemySpawning: 0.7
     onWaveFinish:
       m_PersistentCalls:
         m_Calls:
@@ -854,14 +854,17 @@ MonoBehaviour:
         m_Calls: []
     enemies:
     - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
-      count: 3
+      count: 6
       rate: 3
     - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 3
+      count: 4
       rate: 2
+    - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
+      count: 3
+      rate: 3
     - enemyPrefab: {fileID: 526354062741862975, guid: 1d3ed4e1811b32b4f97eb4d20c17bc41, type: 3}
       count: 3
-      rate: 1
+      rate: 0.7
   - timeBetweenEnemySpawning: 0
     onWaveFinish:
       m_PersistentCalls:
@@ -934,6 +937,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1042233801}
   waveStartupTime: 1
   autoStart: 1
+  spawnOffset: 0.2
   pathVisualiser: {fileID: 1170343977}
 --- !u!1 &875553755
 GameObject:

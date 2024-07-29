@@ -52,6 +52,30 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5373878501744319478, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373878501744319478, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.54509807
+      objectReference: {fileID: 0}
+    - target: {fileID: 5373878501744319478, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: m_Color.r
+      value: 0.24313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147016188638436943, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: color.b
+      value: 0.8745098
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147016188638436943, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: color.g
+      value: 0.54509807
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147016188638436943, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
+      propertyPath: color.r
+      value: 0.24313726
+      objectReference: {fileID: 0}
     - target: {fileID: 6813771000132391586, guid: b2adf7f86dcc31a429ec44a69209a1b5, type: 3}
       propertyPath: m_Name
       value: Minion_AOE_Simple
