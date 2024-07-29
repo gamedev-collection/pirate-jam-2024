@@ -4652,18 +4652,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5021694161140784501, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
-      propertyPath: m_ScreenMatchMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021694161140784501, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021694161140784501, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
-      propertyPath: m_ReferencePixelsPerUnit
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 5111264438713094790, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
