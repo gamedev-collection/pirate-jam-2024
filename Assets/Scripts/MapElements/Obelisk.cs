@@ -185,7 +185,6 @@ public class Obelisk : MonoBehaviour
 
     private void LockShadowedPaths()
     {
-        Debug.Log("Locking " + _shadowDirection);
         switch (_shadowDirection)
         {
             case ShadowDirection.North:
