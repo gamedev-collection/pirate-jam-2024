@@ -40,6 +40,7 @@ public class LevelManager : Singleton<LevelManager>
     public void LoadScene(int index, bool withTransition = false)
     {
         if (isLoading) return;
+        Time.timeScale = 1;
         if (withTransition) StartCoroutine(DoLoadWithFadeTransition_Routine(index));
         else StartCoroutine(DoSceneLoad_Routine(index));
     }

@@ -1083,6 +1083,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obelisk
       objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710695
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710665
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3235,7 +3255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6522459023587879585, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_Alpha
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6703246480272908077, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3352,10 +3372,6 @@ PrefabInstance:
     - target: {fileID: 7095872819348829065, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7529740456003742759, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
-      propertyPath: m_text
-      value: "Thanks for \nplaying our Game!"
       objectReference: {fileID: 0}
     - target: {fileID: 7766297930008931477, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3521,9 +3537,7 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -17.005
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8135060650383970207, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
-    - {fileID: 9213875289602035194, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5292,6 +5306,26 @@ PrefabInstance:
     - target: {fileID: 7079361178735271420, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
       propertyPath: m_Name
       value: Obelisk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710695
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70710665
+      objectReference: {fileID: 0}
+    - target: {fileID: 7681907588611361177, guid: 14baba6b1c5ff174888f0a07d879cc41, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

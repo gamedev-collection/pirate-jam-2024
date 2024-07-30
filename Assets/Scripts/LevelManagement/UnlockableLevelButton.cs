@@ -15,7 +15,7 @@ public class UnlockableLevelButton : MonoBehaviour
     private void Awake()
     {
         loadLevelButton.interactable = isUnlocked;
-        textField.text = levelIndex.ToString();
+        textField.text = (levelIndex + 1).ToString();
         if (loadLevelButton) loadLevelButton.onClick.AddListener(OnLevelButtonClicked);
     }
 
