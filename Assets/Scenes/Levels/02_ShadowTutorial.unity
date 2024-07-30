@@ -8539,8 +8539,8 @@ MonoBehaviour:
       m_Calls: []
   tutorials:
   - title: They are right where we want them...
-    body: Incredible planning, your Black-Heartedness! The humies are walking right
-      into the obelisk fields!
+    body: Incredible planning, your Evilness! The humies are walking right into the
+      obelisk fields!
     objectsToEnableDuringStep: []
     objectsToDisableAfterStepDone: []
     onItem:
