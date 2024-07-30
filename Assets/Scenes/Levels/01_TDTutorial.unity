@@ -3606,7 +3606,7 @@ MonoBehaviour:
     continueOnClick: 1
   - title: Recruit a vile force...
     body: Recruit new minions to help you defeat enemies. They cost essence, so spend
-      wisely! You will gain  more essence when defeating enemies.
+      wisely! You will gain more essence when defeating enemies.
     objectsToEnableDuringStep:
     - {fileID: 981159692}
     - {fileID: 877408860}
@@ -3628,6 +3628,14 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    continueOnClick: 1
+  - title: 
+    body: You can sell minions with the right mouse button.
+    objectsToEnableDuringStep: []
+    objectsToDisableAfterStepDone: []
+    onItem:
+      m_PersistentCalls:
+        m_Calls: []
     continueOnClick: 1
   - title: Don't let them through!
     body: Every enemy that slips through will lower your shadow magic. Without it
@@ -5102,7 +5110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: money
-      value: 250
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: LoseUI

@@ -445,7 +445,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 380.11, y: -405.055}
-  m_SizeDelta: {x: 499.51, y: 0}
+  m_SizeDelta: {x: 409.51, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171350815
 MonoBehaviour:
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RiskyBiznu & OneSleepyBoi
+  m_text: riskybiznu & zexzeed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e34d8c1f7882f1242a5902be3037346a, type: 2}
   m_sharedMaterial: {fileID: -1313234696917667197, guid: e34d8c1f7882f1242a5902be3037346a, type: 2}

@@ -854,15 +854,27 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1415902894}
+          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_MethodName: AddMoney
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 35
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     onWaveBegin:
       m_PersistentCalls:
         m_Calls: []
     enemies:
     - enemyPrefab: {fileID: 2419517937697904549, guid: 6a0d01e0d1135404689f998bd8e4d43d, type: 3}
-      count: 4
+      count: 3
       rate: 3
     - enemyPrefab: {fileID: 6000695891694140655, guid: 1e016b347ae6a4e4d985add1505557cc, type: 3}
-      count: 4
+      count: 3
       rate: 2
   - timeBetweenEnemySpawning: 0.3
     onWaveFinish:
@@ -3021,7 +3033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: money
-      value: 375
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 8885008427919530222, guid: 07cf404be061676488f852e6ddd4cd10, type: 3}
       propertyPath: maxHealth
