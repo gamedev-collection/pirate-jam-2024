@@ -27,36 +27,31 @@ public class ProjectileTower : Tower
         CheckForHover();
         
         if (!WaveManager.Instance.WaveActive || InBuildMode) return;
+        
         _lastAttackTime -= Time.deltaTime;
-        if (_lastAttackTime <= 0 && _currentVolleyDelay <= 0)
+        
+        if (_lastAttackTime <= 0)
         {
-            
+            if (_volley && _currentVolleyDelay > 0)
+            {
+                _currentVolleyDelay -= Time.deltaTime;
+                return;
+            }
+
             var targets = FindTargets();
             if (targets is null || targets.Count <= 0) return;
+            
             animator.SetTrigger("Attack");
             maskAnimator.SetTrigger("Attack");
-        }
-
-        if (_volley && _currentVolleyDelay > 0)
-        {
-            _currentVolleyDelay -= Time.deltaTime;
+            
+            _lastAttackTime = 1f / attackRate;
         }
     }
 
     public void Throw()
     {
-        if (!(_currentVolleyDelay <= 0) && _volley) return;
-        //if (_savedTarget.transform.position.x > transform.position.x)
-        //{
-        //    visual.GetComponent<SpriteRenderer>().flipX = true;
-        //    _projectileSpawn.transform.position = new Vector3(_projectileSpawn.transform.position.x * - 1, _projectileSpawn.transform.position.y, _projectileSpawn.transform.position.z);
-        //}
-        //else 
-        //{
-        //    visual.GetComponent<SpriteRenderer>().flipX = false;
-        //    _projectileSpawn.transform.position = new Vector3(_projectileSpawn.transform.position.x * - 1, _projectileSpawn.transform.position.y, _projectileSpawn.transform.position.z);
-        //}
-            
+        if (_volley && _currentVolleyDelay > 0) return;
+        
         var targets = FindTargets();
         if (targets is not null && targets.Count > 0)
         {
@@ -70,12 +65,20 @@ public class ProjectileTower : Tower
 
             Attack(target);
         }
-        
-        if (!_volley) { _lastAttackTime = 1f / attackRate; return; }
-        _currentVolleyShot++;
-        if (_currentVolleyShot < _volleyAmount) return;
-        _currentVolleyDelay = _volleyDelay; _currentVolleyShot = 0;
-        _lastAttackTime = 1f / attackRate;
+
+        if (_volley)
+        {
+            _currentVolleyShot++;
+            if (_currentVolleyShot >= _volleyAmount)
+            {
+                _currentVolleyDelay = _volleyDelay;
+                _currentVolleyShot = 0;
+            }
+        }
+        else
+        {
+            _lastAttackTime = 1f / attackRate;
+        }
     }
 
     public override void Attack(Enemy target)

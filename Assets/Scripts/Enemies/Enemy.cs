@@ -104,6 +104,8 @@ public class Enemy: MonoBehaviour
     
     private void Die()
     {
+        if (_isDead) return;
+        
         _isDead = true;
         if (deathAudio) _audioSource?.PlayOneShot(deathAudio);
         animator.SetTrigger("Die");
