@@ -159,7 +159,7 @@ public abstract class Tower : MonoBehaviour
     {
         if (!_isMouseOver) return;
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !TowerManager.Instance.InBuildmode)
         {
             Delete();
         }

@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: cb728e4d9667a224e93e29bd773e736a, type: 2}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: cost
-      value: 250
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: range
@@ -104,6 +104,10 @@ PrefabInstance:
       propertyPath: projectile
       value: 
       objectReference: {fileID: 4103912859368463676, guid: df9f1e27c2c98764798e7aca9723ef06, type: 3}
+    - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
+      propertyPath: _volleyAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8851901158365467005, guid: cca740972f272d549a5641baa3f557b2, type: 3}
       propertyPath: targetingFocus
       value: 1
